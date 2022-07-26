@@ -3774,5 +3774,9 @@ button.dropdown-toggle {
       text-align: center;
       background-color: #ea5c4d;
       color: #fff; }
-
+@media (min-width: 1024px) {
+  .header__menu .navbar__list {
+    flex-direction: row;
+  }
+}
 /*# sourceMappingURL=main.css.map */
