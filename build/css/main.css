@@ -1,5 +1,3 @@
-/* stylelint-disable */
-/* stylelint-enable */
 @font-face {
   font-family: Lato;
   src: url("../fonts/lato-regular.woff2") format("woff2"), url("../fonts/lato-regular.woff") format("woff");
@@ -2701,16 +2699,19 @@ button.dropdown-toggle {
 
 .hero__image p {
   display: block;
-  max-width: 468px;
   color: #838383;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.4;
   line-height: 24px;
-  margin-left: 8px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 34px; }
   @media (min-width: 768px) {
     .hero__image p {
+      max-width: 468px;
+      margin-right: 0;
+      margin-left: 8px;
       font-size: 18px; } }
   @media (min-width: 1024px) {
     .hero__image p {
@@ -2758,9 +2759,10 @@ button.dropdown-toggle {
   margin-right: auto;
   margin-bottom: 44px;
   margin-left: auto;
-  height: 400px; }
+  max-height: 400px; }
   @media (min-width: 1024px) {
     .hero__image img {
+      max-height: 100%;
       height: auto; } }
   @media (min-width: 1440px) {
     .hero__image img {
