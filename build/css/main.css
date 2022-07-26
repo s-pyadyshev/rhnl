@@ -2709,7 +2709,6 @@ button.dropdown-toggle {
   margin-bottom: 34px; }
   @media (min-width: 768px) {
     .hero__image p {
-      max-width: 468px;
       margin-right: 0;
       margin-left: 8px;
       font-size: 18px; } }
