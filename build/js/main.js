@@ -12306,23 +12306,6 @@ var dropdown = function () {
         return;
       }
     }
-
-    function toggleParentClass(elem, className) {
-      elem.parentNode.classList.toggle(className);
-    }
-
-    function addParentClass(elem, className) {
-      elem.parentNode.classList.add(className);
-    }
-
-    function removeParentClass(elem, className) {
-      elem.parentNode.classList.remove(className);
-    }
-
-    function toggleMenu() {
-      var elem = document.getElementById("main-nav");
-      elem.classList.toggle("menu-on");
-    }
   };
 
   return {
@@ -12351,9 +12334,11 @@ var mobileMenu = function () {
     }
 
     var $headerMenu = $(".header__menu");
+    var $html = $("html");
     $mobileMenuToggle.on("click", function () {
       $headerMenu.toggleClass("is-open");
       $(this).toggleClass("is-open");
+      $html.toggleClass("is-lock-scroll");
     });
   };
 

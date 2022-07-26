@@ -16,24 +16,20 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-		<link rel="stylesheet" href="./css/main.css?v=1658819298827">
+		<link rel="stylesheet" href="./css/main.css?v=1658867531707">
 	</head>
 	<body>
 		<div class="page-wrapper">
 			<header class="header">
 				<div class="container">
 					<div class="header__menu-toggle">
-						<button class="menu-button js-toggle-menu" type="button">
-							<div> </div>
-							<div> </div>
-							<div></div>
-						</button>
+						<button class="menu-button js-toggle-menu" type="button"><span> </span><span> </span><span></span></button>
 					</div>
-					<div class="header__inner"><a class="header__logo" href="/"><img src="images/logo.svg" alt="RefugeeHomeNL logo." width="122px" height="70px"></a>
+					<div class="header__inner"><a class="header__logo" href="/"><img src="images/logo.svg" alt="RefugeeHomeNL logo." width="122" height="70"></a>
 						<div class="header__menu">
 							<nav class="navbar" role="navigation" aria-label="main navigation">
 								<ul class="navbar__list">
-									<li><a class="navbar__link" href="/">Home</a></li>
+									<li class="current-menu-item"><a class="navbar__link" href="/">Home</a></li>
 									<li><a class="navbar__link" href="guests.html">For guests</a></li>
 									<li><a class="navbar__link" href="families.html">For host families</a></li>
 									<li><a class="navbar__link" href="municipalities.html">For municipalities</a></li>
@@ -59,7 +55,7 @@
 						<div class="hero__inner">
 							<div class="hero__text"> 
 								<p class="hero__greeting">Welcome! </p>
-								<h1 class="hero__title">The <a href="">safe solution</a> for your homestay in the Netherlands</h1>
+								<h1 class="hero__title">The <span>safe solution</span> for your homestay in the Netherlands</h1>
 								<div class="hero__buttons"> <a class="button button-primary">I would like to apply for a <span>guest stay</span></a><a class="button button-secondary">I am interested in <span>hosting</span></a>
 									<p>RefugeehomeNL is an initiative of the Dutch government to provide homes for refugees from Ukraine via host families. Leading NGO partners (The Netherlands Red Cross, Dutch Council For Refugees, Salvation Army, and Takecarebnb) work together to support refugees in finding shelter in the Netherlands.</p>
 								</div>
@@ -68,42 +64,40 @@
 								<p>RefugeehomeNL is an initiative of the Dutch government to provide homes for refugees from Ukraine via host families. Leading NGO partners (The Netherlands Red Cross, Dutch Council For Refugees, Salvation Army, and Takecarebnb) work together to support refugees in finding shelter in the Netherlands.</p>
 							</div>
 						</div>
-						<div class="hero__logos"><img src="images/rodekruis.svg" alt="logo Rode kruis."><img src="images/vluchtelingenwerknl.svg" alt="logo Vluchtelingenwerknl."><img src="images/legerdesheils.svg" alt="logo Leger des heils."><img src="images/takecarebnb.svg" alt="logo Take care bnb."><img src="images/mjv.svg" alt="logo Ministerie van justitie en Veligheid."></div>
+						<ul class="hero__logos">
+							<li><img src="images/rodekruis.svg" alt="logo Rode kruis."></li>
+							<li><img src="images/vluchtelingenwerknl.svg" alt="logo Vluchtelingenwerknl."></li>
+							<li><img src="images/legerdesheils.svg" alt="logo Leger des heils."></li>
+							<li><img src="images/takecarebnb.svg" alt="logo Take care bnb."></li>
+							<li><img src="images/mjv.svg" alt="logo Ministerie van justitie en Veligheid."></li>
+						</ul>
 					</div>
 				</section>
 				<section class="section">
 					<div class="container"> 
 						<div class="info-box-wrap">
 							<div class="info-box">
-								<div class="image-wrap-red"><img class="info-box__image" src="images/refugee.svg" alt="group of people with luggage."></div>
+								<div class="image-wrap background-primary"><img class="info-box__image" src="images/refugee.svg" alt="refugees."></div>
 								<div class="info-box__content">
 									<h2 class="info__title">Would you like to apply for a guest stay?</h2>
 									<p>When you first arrive in the Netherlands and you can’t stay with family or friends, a lot is uncertain. The Dutch Government offers shelter, but maybe you prefer to stay with private individuals, such as families who want to welcome you in the Netherlands by offering a private space within their home. Through RefugeeHomeNL you and your family can stay with a Dutch host for a predetermined period of time. During this period you will live in a safe and homely environment in a private individual’s home.</p>
-									<div class="buttons-wrap"> 
-										<button class="button button-primary">More information</button>
-										<button class="button button-ghost">Sign up</button>
-									</div>
+									<div class="buttons-wrap"> <a class="button button-primary" href="#">More information</a><a class="button button-ghost" href="#">Sign up</a></div>
 								</div>
 							</div>
 							<div class="info-box info-box--reverse">
-								<div class="image-wrap-teal"><img class="info-box__image" src="images/home.svg" alt="home's image."></div>
+								<div class="image-wrap background-secondary"><img class="info-box__image" src="images/home.svg" alt="house."></div>
 								<div class="info-box__content">
 									<h2 class="info__title">Are you interested in hosting a family?</h2>
 									<p>Right now thousands of refugees with residence permits are waiting in Asylum Seekers’ Centres for permanent accommodation. RegufeeHomeNL enables them to temporarily stay with a host family. Have you got a spare room in your home for the period of three months? Would you like to have a rewarding experience of giving your refugee guest a warm welcome and a positive start to life in the Netherlands?</p>
-									<div class="buttons-wrap"> 
-										<button class="button button-secondary">More information</button>
-										<button class="button button-ghost">Sign up</button>
-									</div>
+									<div class="buttons-wrap"> <a class="button button-secondary" href="#">More information</a><a class="button button-ghost" href="#">Sign up</a></div>
 								</div>
 							</div>
 							<div class="info-box">
-								<div class="image-wrap-beige"><img class="info-box__image" src="images/municipalities.svg" alt="municipalities's image."></div>
+								<div class="image-wrap background-antique"><img class="info-box__image" src="images/municipalities.svg" alt="municipality."></div>
 								<div class="info-box__content">
 									<h2 class="info__title">Municipalities</h2>
 									<p>RefugeeHomeNL is a collaboration of a number of aid organizations to organize safe shelter for Ukrainian refugees in Dutch host households. Now on a small scale in four pilot municipalities, but eventually also in your region or municipality.</p>
-									<div class="buttons-wrap"> 
-										<button class="button button-primary">More information</button>
-									</div>
+									<div class="buttons-wrap"> <a class="button button-primary" href="#">More information</a></div>
 								</div>
 							</div>
 						</div>
@@ -236,6 +230,6 @@
 				</div>
 			</footer>
 		</div><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-		<script src="./js/main.js?v=1658819298828"></script>
+		<script src="./js/main.js?v=1658867531707"></script>
 	</body>
 </html>
