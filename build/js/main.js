@@ -12282,6 +12282,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dropdown", function() { return dropdown; });
 var dropdown = function () {
   var init = function init() {
+    if (!document.querySelectorAll("[data-toggle~=dropdown]").length) {
+      return;
+    }
+
     document.querySelectorAll("[data-toggle~=dropdown]").forEach(setupDropdown);
 
     function setupDropdown(dropdownToggle) {
@@ -12363,6 +12367,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var slider = function () {
   var init = function init() {
+    if (!$(".slider").length) {
+      return;
+    }
+
     var $swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".slider", {
       slidesPerView: 1,
       spaceBetween: 30,
