@@ -1995,7 +1995,8 @@ h2 {
           -ms-flex-direction: column;
               flex-direction: column; }
       @media (min-width: 1024px) {
-        .header__menu .navbar__list {
+        .header__menu .
+        __list {
           -webkit-box-orient: horizontal;
           -webkit-box-direction: normal;
               -ms-flex-direction: row;
@@ -2198,7 +2199,10 @@ h2 {
       font-weight: 900;
       color: #ea5c4d;
       border-bottom: solid 1px #ea5c4d; }
-
+.navbar__list li.current-menu-item {
+    color: #ea5c4d;
+    border-bottom: solid 1px #ea5c4d;
+}
 .navbar__link {
   font-size: 30px;
   font-weight: 600;
