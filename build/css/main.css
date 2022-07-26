@@ -1995,8 +1995,7 @@ h2 {
           -ms-flex-direction: column;
               flex-direction: column; }
       @media (min-width: 1024px) {
-        .header__menu .
-        __list {
+        .header__menu .navbar__list {
           -webkit-box-orient: horizontal;
           -webkit-box-direction: normal;
               -ms-flex-direction: row;
