@@ -4733,10 +4733,6 @@ button.dropdown-toggle span {
     font-size: 20px;
   }
 
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-
   .dropdown-menu > * {
     padding: 16px;
     font-weight: 400;
