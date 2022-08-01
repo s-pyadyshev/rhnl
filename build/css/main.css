@@ -1882,6 +1882,11 @@ h2 {
   background: transparent linear-gradient(101deg, #f5f5f5 0%, #dedede 100%) 0% 0% no-repeat padding-box;
 }
 
+.dropdown-menu > *:hover,
+.dropdown-menu > *:focus {
+  color: #33a6a7;
+}
+
 .dropdown-on > .dropdown-menu {
   display: block;
 }
@@ -3832,7 +3837,7 @@ button.dropdown-toggle span {
     right: auto;
     top: 50%;
     height: 159%;
-    width: 2px;
+    width: 1px;
   }
 
   .container.divided [class^="col-"]:first-child {
@@ -4205,6 +4210,7 @@ button.dropdown-toggle span {
 
   .card__body {
     padding: 40px 40px;
+    min-height: 260px;
   }
 
   .card__footer {
@@ -4261,7 +4267,7 @@ button.dropdown-toggle span {
 
   .section.section-news {
     padding-top: 100px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
   }
 
   .article {
@@ -4727,6 +4733,10 @@ button.dropdown-toggle span {
     font-size: 20px;
   }
 
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
   .dropdown-menu > * {
     padding: 16px;
     font-weight: 400;
@@ -4785,6 +4795,10 @@ button.dropdown-toggle span {
 
   .news-header h5 {
     font-size: 22px;
+  }
+
+  .section.section-news .card {
+    margin-bottom: 0;
   }
 
   .article h4 {
