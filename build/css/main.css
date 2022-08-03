@@ -1,7 +1,3 @@
-/* stylelint-disable */
-
-/* stylelint-enable */
-
 @font-face {
   font-family: Lato;
   src: url("../fonts/lato-light.woff2") format("woff2"), url("../fonts/lato-light.woff") format("woff");
@@ -4296,7 +4292,7 @@ button.dropdown-toggle span {
   }
 
   .info-box:last-child .info-box__image {
-    margin-right: -65px;
+    margin-right: 0;
   }
 
   .info-box p {
