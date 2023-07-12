@@ -1,0 +1,60 @@
+.menu-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+  text-align: left;
+  background: none;
+  border: 0;
+
+  span {
+    display: block;
+    background: #000;
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    border-radius: 4px;
+  }
+
+  span:first-child {
+    top: 0;
+    transition: top $transition-duration $transition-duration,
+      transform $transition-duration;
+  }
+
+  span:nth-child(2),
+  span:nth-child(3) {
+    transition: top $transition-duration $transition-duration,
+      transform $transition-duration;
+  }
+
+  span:nth-child(2) {
+    top: 14px;
+    width: 24px;
+  }
+
+  span:nth-child(3) {
+    top: 28px;
+    width: 35px;
+  }
+
+  &.is-open {
+    span:first-child {
+      top: 10px;
+      transform: rotate(45deg);
+      transition: top $transition-duration,
+        transform $transition-duration $transition-duration;
+    }
+
+    span:nth-child(2),
+    span:nth-child(3) {
+      top: 10px;
+      transform: rotate(-45deg);
+      transition: top $transition-duration,
+        transform $transition-duration $transition-duration;
+      width: 40px;
+    }
+  }
+}

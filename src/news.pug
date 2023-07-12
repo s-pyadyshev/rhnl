@@ -1,0 +1,76 @@
+extends pug/base
+
+prepend vars
+  - title = 'News'
+
+append vars
+  //-
+
+block content
+  section.section
+    .container
+      h2 News
+      .row.card-list.flex-wrap
+        .col-sm-6.col-md-4
+          +card(
+            "images/news.jpg",
+            "12 July 2022",
+            "Most people think in differences, Amran thinks in similarities",
+            "Amran (19) fled from Yemen eight years ago. He travelled through Malaysia and Spain, eventually coming to The Netherlands. He is currently studying…"
+          )
+        .col-sm-6.col-md-4
+          +card(
+            "images/news.jpg",
+            "22 June 2022",
+            "“You can learn a lot from each other.”",
+            "The Municipality of Eindhoven recently signed an agreement with Takecarebnb. The organisation links status holders to host families, who open their homes…"
+          )
+        .col-sm-6.col-md-4
+          +card(
+            "images/news.jpg",
+            "7 June 2022",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo…"
+          )
+        .col-sm-6.col-md-4
+          +card(
+            "images/news.jpg",
+            "12 July 2022",
+            "Most people think in differences, Amran thinks in similarities",
+            "Amran (19) fled from Yemen eight years ago. He travelled through Malaysia and Spain, eventually coming to The Netherlands. He is currently studying…"
+          )
+        .col-sm-6.col-md-4
+          +card(
+            "images/news.jpg",
+            "22 June 2022",
+            "“You can learn a lot from each other.”",
+            "The Municipality of Eindhoven recently signed an agreement with Takecarebnb. The organisation links status holders to host families, who open their homes…"
+          )
+        .col-sm-6.col-md-4
+          +card(
+            "images/news.jpg",
+            "7 June 2022",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo…"
+          )
+      button.news__load-more Load more new items
+
+  section.section.background-muted 
+    .container 
+      .logos-list
+        ul
+          li 
+            a(href="")
+              img(src="images/rodekruis.svg" alt="Rode Kruis logo.")
+          li 
+            a(href="")
+              img(src="images/vluchtelingenwerknl.svg" alt="VluchtelingenWerk Nederland logo.")
+          li 
+            a(href="")
+              img(src="images/legerdesheils.svg" alt="Leger des Heils logo.")
+          li 
+            a(href="")
+              img(src="images/takecarebnb.svg" alt="Takecarebnb logo.")
+          li 
+            a(href="")
+              img(src="images/mjv.svg" alt="Ministerie van Justitie en Veiligheid logo.")

@@ -1,0 +1,6 @@
+mixin navbar(links)
+  nav.navbar(role="navigation" aria-label="main navigation")
+    ul.navbar__list
+      each link in links
+        li(class=(link.active ? "current-menu-item" : "" ))
+          a.navbar__link(href=link.href)= link.text

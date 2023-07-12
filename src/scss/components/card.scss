@@ -1,0 +1,104 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  box-shadow: 0px 0px 10px #0000001a;
+
+  h3 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 18px;
+
+    @include laptop {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 32px;
+
+    @include laptop {
+      font-size: 18px;
+      line-height: 34px;
+    }
+  }
+
+  &__body {
+    padding: 30px;
+
+    @include laptop {
+      padding: 40px 40px;
+      min-height: 260px;
+    }
+  }
+
+  &__date {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 6px 20px;
+    text-align: center;
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
+  &__footer {
+    margin-top: auto;
+    position: relative;
+    padding: 24px 30px;
+
+    @include laptop {
+      padding: 14px 40px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: calc(100% - 60px);
+      margin-right: auto;
+      margin-left: auto;
+      height: 1px;
+      background-color: $color-border;
+
+      @include laptop {
+        width: calc(100% - 80px);
+      }
+    }
+
+    a {
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 34px;
+      color: $color-secondary;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-bottom: 1px solid $color-secondary;
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+  }
+
+  &__image {
+    width: 100%;
+    height: 194px;
+    object-fit: cover;
+
+    @include laptop {
+      height: 252px;
+    }
+  }
+}

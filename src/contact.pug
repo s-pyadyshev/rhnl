@@ -1,0 +1,41 @@
+extends pug/base
+
+prepend vars
+  - title = 'Contact'
+
+append vars
+  //-
+
+block content
+  section.background-muted.contact
+    .row
+      .col-md-6 
+        .contact__map#map
+      .col-md-6
+        .section.contact__form
+          .container
+            h2 Contact
+            form.contact-form(action="")
+              .row 
+                .col-lg-6 
+                  .input-wrap
+                    //- label(for="name") First name
+                    input.input#name(type="text" name="firstname" placeholder="First name")
+                .col-lg-6 
+                  .input-wrap
+                    //- label(for="name") Last name
+                    input.input#name(type="text" name="lastname" placeholder="Last name")
+                .col-lg-6 
+                  .input-wrap
+                    //- label(for="name") Mobile phone number
+                    input.input#name(type="tel" name="tel" placeholder="Mobile phone number")
+                .col-lg-6
+                  .input-wrap
+                    //- label(for="name") Email address
+                    input.input#name(type="email" name="email" placeholder="Email address")
+                .col-lg-12
+                  .textarea-wrap
+                    //- label(for="textarea") How can we help you? Write your message here.
+                    textarea.textarea#textarea(rows="5" placeholder="How can we help you? Write your message here." name="message")
+                .col-lg-6 
+                  button.button.button-secondary(type="submit" name="submit") Send message

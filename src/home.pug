@@ -1,0 +1,14 @@
+extends pug/base
+
+prepend vars
+  - title = 'Homepage'
+
+append vars
+  //-
+
+block content
+  include ./pug/components/hero.pug
+  include ./pug/components/info.pug
+  include ./pug/components/step-cards.pug
+  include ./pug/components/section-news.pug
+  

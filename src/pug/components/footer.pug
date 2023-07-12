@@ -1,0 +1,45 @@
+footer.footer
+  .container
+    .row 
+      .col-md-6.visible-desktop
+        h3.color-primary Go to
+        ul.footer__nav
+          li
+            a(href="#") Home
+          li
+            a(href="#") For refugees
+          li
+            a(href="#") For host families
+          li
+            a(href="#") For municipalities
+          li
+            a(href="#") About us
+          li
+            a(href="#") News
+          li
+            a(href="#") Contact
+      .col-md-6
+        .footer__contact
+          h3.color-primary Follow us on
+          .footer__social
+            +social-links([
+              {
+                href: "#",
+                icon: "vk"
+              },
+              {
+                href: "#",
+                icon: "fb"
+              },
+              {
+                href: "#",
+                icon: "in"
+              }
+            ])
+          ul.footer__links
+            li
+              a(href="") Privacy statement
+            li
+              a(href="") Cookies
+            li
+              a(href="") Disclaimer

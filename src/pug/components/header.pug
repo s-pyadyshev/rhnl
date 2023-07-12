@@ -1,0 +1,63 @@
+header.header
+  .container
+    .header__menu-toggle
+      button.menu-button.js-toggle-menu(type="button")
+        span 
+        span 
+        span
+
+    .header__inner
+      a.header__logo(href="/")
+        img(src="images/logo.svg" alt="RefugeeHomeNL logo." width="122" height="70")
+
+      .header__menu
+        +navbar(
+          [
+            {
+              text: "Home",
+              href: "/",
+              active: true,
+            },
+            {
+              text: "For guests",
+              href: "guests.html"
+            },
+            {
+              text: "For host families",
+              href: "families.html"
+            },
+            {
+              text: "For municipalities",
+              href: "municipalities.html"
+            },
+            {
+              text: "News",
+              href: "news.html"
+            },
+            {
+              text: "About us",
+              href: "about.html"
+            },
+            {
+              text: "Contact",
+              href: "contact.html"
+            }
+          ]
+        )
+        .header__menu-logo
+          img(src="images/logo-mini.svg" alt="RefugeeHomeNL logo." width="24" height="24")
+    .header__language
+      .dropdown
+        button.button.button-primary.dropdown-toggle(data-toggle='dropdown')
+          span.dropdown-toggle__lang-title Language:&nbsp;
+          <span class="dropdown-toggle__lang-desktop">English</span><span class="dropdown-toggle__lang-mobile">EN</span>
+        .dropdown-menu
+          a(href='')
+            span.dropdown-toggle__lang-desktop Украинский
+            span.dropdown-toggle__lang-mobile UKR
+          a(href='')
+            span.dropdown-toggle__lang-desktop Русский
+            span.dropdown-toggle__lang-mobile RUS
+          a(href='')
+            span.dropdown-toggle__lang-desktop Nederlands
+            span.dropdown-toggle__lang-mobile NL

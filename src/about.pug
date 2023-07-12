@@ -1,0 +1,62 @@
+extends pug/base
+
+prepend vars
+  - title = 'About'
+
+append vars
+  //-
+
+block content
+  section.section.section-about
+    .container 
+      h2 About RefugeeHomeNL
+      .row 
+        .col-md-6 
+          p RefugeeHomeNL offers displaced persons from Ukraine safe shelter in Dutch guest households. RefugeeHomeNL is a collaboration between Takecarebnb, the Red Cross, the Netherlands Council for Refugees and the Salvation Army at the request of the Dutch government.
+        .col-md-6 
+          p RefugeeHomeNL screens, matches and guides host families and refugees. RefugeeHomeNL offers:
+          ul.list-disc
+            li A qualitative and humane alternative to emergency shelter
+            li Personal and careful matching
+            li Sustainable reception in host families, with support and guidance
+            li Safe reception in host families.
+  section.section.section-orgs
+    .container.text-center
+      .section-orgs__logo
+        img(src="images/logo.svg" alt="About RefugeeHomeNL logo." width="224" height="127")
+      .logos-list
+        ul
+          li 
+            img(src="images/rodekruis.svg" alt="Rode Kruis logo.")
+          li 
+            img(src="images/vluchtelingenwerknl.svg" alt="VluchtelingenWerk Nederland logo.")
+          li 
+            img(src="images/legerdesheils.svg" alt="Leger des Heils logo.")
+          li 
+            img(src="images/takecarebnb.svg" alt="Takecarebnb logo.")
+          li 
+            img(src="images/mjv.svg" alt="Ministerie van Justitie en Veiligheid logo.")
+  section.section.section-info.background-muted
+    .container
+      .row.section-info__cards
+        .col-md-6.col-lg-4 
+          .card-info.background-primary
+            .card-info__image
+              img(src="images/refugee.svg" alt="refugees." width="174")
+            .card-info__body
+              h3 I have fled from Ukraine and I am seeking shelter in the Netherlands
+              a(href="#") More information
+        .col-md-6.col-lg-4 
+          .card-info.background-secondary
+            .card-info__image
+              img(src="images/home.svg" alt="house." width="227")
+            .card-info__body
+              h3 I like to help refugees from Ukraine by taking them home
+              a(href="#") More information
+        .col-md-6.col-lg-4 
+          .card-info.background-antique
+            .card-info__image
+              img(src="images/municipalities.svg" alt="municipality." width="233")
+            .card-info__body
+              h3 I work at a municipality and want to know more about private care via RefugeeHomeNL
+              a(href="#") More information

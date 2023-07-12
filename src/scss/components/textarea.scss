@@ -1,0 +1,20 @@
+.textarea {
+  padding: $input-padding;
+  font-size: 16px;
+  font-weight: 700;
+  border-color: $input-border-color;
+  resize: vertical;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $input-border-color-hover;
+    transition-property: border-color;
+    transition-duration: $transition-duration;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $input-border-color-hover;
+  }
+}

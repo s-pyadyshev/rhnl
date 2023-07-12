@@ -1,0 +1,16 @@
+mixin step(image, number, title, text1, text2, link)
+  .step
+    .step__header 
+      img(src=image alt="step process icon.")
+      .step__number
+        span= number
+        span= title
+    .step__body 
+      .step__col-left
+        each p in text1 
+          p= p
+      .step__col-right
+        each p in text2 
+          p= p
+        if (link)
+          a.button.button-secondary(href="https://www.nlvoorelkaar.nl", target="_blank", rel="noopener noreferrer") Visit NLvoorelkaar.nl

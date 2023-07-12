@@ -1,0 +1,82 @@
+extends pug/base
+
+prepend vars
+  - title = 'For guests'
+
+append vars
+  //-
+
+block content
+  section.section-intro
+    .container 
+      .row 
+        .col-md-6.background-primary
+          h1 Welcome to the Netherlands!
+          p When you first arrive in the Netherlands and you can’t stay with family or friends, a lot is uncertain. The Dutch Government offers shelter, but maybe you prefer to stay with private individuals, such as families who want to welcome you in the Netherlands by offering a private space within their home. Through RefugeeHomeNL you and your family can stay with a Dutch host for a predetermined period of time. During this period you will live in a safe and homely environment in a private individual’s home.
+        .col-md-6.background-antique
+          img(src="images/refugee.svg" alt="refugees." width="366" height="362")
+  section.section.section-intro-text 
+    .container
+      h2 How RefugeeHomeNL works
+      .row 
+        .col-md-6
+          p Due to the overwhelming offer from society to take in refugees from Ukraine, the Ministry of Justice and Security has asked Takecarebnb, the Red Cross, the Salvation Army and VluchtelingenWerk Nederland to join forces and initiate private initiatives. coordinate and facilitate.
+          p RefugeeHomeNL coordinates and facilitates safe private reception for displaced persons from Ukraine by recruiting, informing, screening and guiding host households.
+        .col-md-6
+          p RefugeeHomeNL guides the process from matching to departure. Refugees and guest households can count on the support and knowledge of the Red Cross, the Netherlands Council for Refugees, the Salvation Army and Takecarebnb. We first gain experience on a small scale in Rotterdam, Zaanstad, Eindhoven and Amsterdam, and then use it in the national rollout.
+    .container 
+      p.section-intro-text__note RefugeeHomeNL is available for Ukrainian nationals and their immediate family members who were residents in Ukraine prior to 1 January 2022.
+  
+  section.section.background-muted 
+    .container.text-center
+      h2 I would like to apply for a guest stay
+      a.button.button-primary(href="#") Start your application
+
+  section.section.section-process
+    .container
+      h2 The process in 4 steps
+      ul.steps
+        li.steps__item
+          +step("images/computer.svg", "1", "Sign up", ["Donec luctus lectus eu est eleifend, at porttitor ipsum elementum. Phasellus ut arcu vehicula, placerat justo ut, convallis felis. Maecenas porta laoreet urna, et finibus justo."], ["Donec luctus lectus eu est eleifend, at porttitor ipsum elementum. Phasellus ut arcu vehicula, placerat justo ut, convallis felis. Maecenas porta laoreet urna, et finibus justo."])
+        li.steps__item
+          +step("images/meeting.svg", "2", "Meet & match", ["You will meet your local host during an introduction. Depending on your preferences and the sign-up method, a meeting can be arranged, either in person or online."], ["Do you both agree it’s a match? Your homestay in the Netherlands can begin."])
+        li.steps__item
+          +step("images/support.svg", "3", "Support during homestay", ["During the first week of your homestay you and your host will be visited by a volunteer of the Salvation Army, who will support your host family.", "The Netherlands Red cross and the Dutch Council For Refugees will provide you with information during your stay. You can contact the Redcross WhatsApp Helpline (+31 6 48 15 80 53)."], ["Salvation Army organises sports and play activities (Rock club) for schoolchildren and coffee tables for their parents. If additional and professional help is needed, you can contact the Salvation Army through your host family.", "If you would like to meet with a volunteer for a cup of coffee, a walk along the city or someone to teach you the basics of the Dutch Language, you can post a request on NLvoorelkaar.nl."], true)
+        li.steps__item
+          +step("images/departure.svg", "4", "Departure", ["Two weeks prior to the end of the cohabitation period the volunteer of the Salvation Army will visit you and your hosting family to see if you would like to extend or end the homestay."], ["If you decide to end the homestay period you can choose to reapply for homestay at a different host family or you can opt for another form of shelter."])
+
+  section.section.background-muted
+    .container.divided
+      .row 
+        .col-md-6 
+          h2 I would like to apply for a guest stay
+          a.button.button-primary(href="#") Start your application
+        .col-md-5.offset-md-1 
+          h2 I have some more questions
+          a.button.button-secondary(href="#") Contact us
+
+  section.section.section-links
+    .container
+      h2 Additional resources and useful links
+      .row 
+        .col-md-6 
+          p Pellentesque orci ligula, fringilla porta lacus vel, pharetra ultricies augue. Cras vel est rhoncus, consectetur turpis in, rutrum neque. Maecenas eget laoreet libero. Praesent ullamcorper, turpis non feugiat aliquam, ligula nibh mollis dui, id fringilla metus neque et eros. Nam feugiat diam et mauris tempor rhoncus. Sed a mollis orci. Mauris viverra nibh et sapien tincidunt cursus.
+        .col-md-6 
+          p Donec quis arcu ac justo lobortis porttitor quis ac elit. Donec at diam diam. Morbi eu vulputate purus. Phasellus at justo interdum ex tincidunt pellentesque in at est. Vivamus iaculis egestas laoreet. In rutrum vestibulum massa, ac vulputate dolor posuere ut. Sed a risus id nisi dictum consequat commodo et purus. Duis pulvinar a tellus vitae accumsan.
+        .logos-list
+          ul
+            li 
+              a(href="")
+                img(src="images/rodekruis.svg" alt="Rode Kruis logo.")
+            li 
+              a(href="")
+                img(src="images/vluchtelingenwerknl.svg" alt="VluchtelingenWerk Nederland logo.")
+            li 
+              a(href="")
+                img(src="images/legerdesheils.svg" alt="Leger des Heils logo.")
+            li 
+              a(href="")
+                img(src="images/takecarebnb.svg" alt="Takecarebnb logo.")
+            li 
+              a(href="")
+                img(src="images/mjv.svg" alt="Ministerie van Justitie en Veiligheid logo.")

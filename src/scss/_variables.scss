@@ -1,0 +1,42 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// COLORS
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #838383;
+$color-beige: #f7efd8;
+$color-light-pink: #ea5c4d27;
+$color-antique: #f7efd9;
+
+// PRIMARY AND SECONDARY
+$color-primary: #ea5c4d;
+$color-secondary: #33a6a7;
+$color-muted: #f4f4f4;
+$color-border: #838383;
+
+// FORMS
+$input-border-width: 1px;
+$input-border-color: #d6d6d6;
+$input-border-color-hover: $color-secondary;
+$input-icon-width: 32px;
+$input-padding-x: 30px;
+$input-padding-y: 13px;
+$input-padding: $input-padding-y $input-padding-x;
+$input-placeholder-color: $color-black;
+
+// FONTS
+// stylelint-disable-next-line
+$font-primary: "Lato", "Helvetica Neue", sans-serif;
+$font-weight: 400;
+$line-height: 1.4;
+$font-size: 16px;
+
+// EASING TRANSITIONS
+$transition-duration: 0.2s;
+
+// Settings
+$desktop: 1440;
+$desktop-xl: 1920;
+$laptop: 1024;
+$tablet: 768;
+$mobile: 320;

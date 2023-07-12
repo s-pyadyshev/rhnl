@@ -1,0 +1,10 @@
+mixin card(img, date, title, text)
+  .card
+    .card__header
+      img.card__image(src=img alt="alt." width="398" height="292")
+      .card__date= date 
+    .card__body 
+      h3= title
+      p= text
+    .card__footer 
+      a(href="#") Read more

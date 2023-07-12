@@ -1,0 +1,36 @@
+.slider {
+  .swiper-button-prev:after,
+  .swiper-container-rtl .swiper-button-next:after,
+  .swiper-button-next:after,
+  .swiper-container-rtl .swiper-button-prev:after {
+    display: none;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 50px;
+    width: 31px;
+    height: 31px;
+    background: none;
+    border: 0;
+    padding: 0;
+
+    @media (min-width: 1200px) {
+      display: none;
+    }
+
+    svg {
+      width: 35px;
+      height: 35px;
+      color: $color-secondary;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+}

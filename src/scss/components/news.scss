@@ -1,0 +1,164 @@
+.news {
+  &__load-more {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid $color-primary;
+    font-weight: 900;
+    font-size: 20px;
+    margin-left: auto;
+    color: $color-primary;
+
+    @include laptop {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-secondary;
+      border-color: $color-secondary;
+    }
+  }
+}
+
+.news-header {
+  display: flex;
+  align-items: flex-end;
+  min-height: 483px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+
+  @include laptop {
+    min-height: 434px;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    letter-spacing: -0.6px;
+    line-height: 1.2;
+    color: $color-white;
+
+    @include laptop {
+      margin-bottom: 0;
+    }
+  }
+
+  h5 {
+    font-size: 18px;
+
+    @include desktop {
+      font-size: 22px;
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+}
+
+.news-header__image {
+  width: 100%;
+  min-height: 434px;
+  object-fit: cover;
+}
+
+.news-header__info {
+  display: flex;
+  margin-top: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.4;
+
+  @include laptop {
+    position: absolute;
+    right: 70px;
+    bottom: 30px;
+    margin-top: 0;
+    text-align: right;
+    font-size: 20px;
+    color: $color-white;
+  }
+}
+
+.news-header__photo-author {
+  span {
+    font-weight: 600;
+    font-style: italic;
+  }
+}
+
+.news-header__text-author {
+  margin-right: 50px;
+  span {
+    font-style: italic;
+  }
+  @include laptop {
+    margin-right: 90px;
+  }
+}
+
+.recent-news {
+  .card {
+    margin-bottom: 50px;
+  }
+}
+
+.recent-news h3 {
+  color: $color-secondary;
+  text-align: right;
+}
+.news-title-wrap h2 {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 46px;
+  @include laptop {
+    font-size: 38px;
+    line-height: 55px;
+  }
+}
+
+.news-title-wrap a {
+  color: $color-secondary;
+  font-size: 16px;
+  border-bottom: 1px solid $color-secondary;
+  font-weight: 800;
+  text-decoration: none;
+
+  @include laptop {
+    font-size: 20px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-primary;
+    border-bottom: 1px solid $color-primary;
+  }
+}
+
+.news-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.section.section-news {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  @include laptop {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .card {
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+}

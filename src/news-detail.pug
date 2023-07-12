@@ -1,0 +1,50 @@
+extends pug/base
+
+prepend vars
+  - title = 'News detail'
+
+append vars
+  //-
+
+block content
+  section.news-header
+    .container
+      img.news-header__image(src="images/news-detail.jpg" alt="alt.")
+      .news-header__info
+        .news-header__text-author Written by <span>Jane Doe</span>
+        .news-header__photo-author Photo: <span>John Doe</span>
+  section.section.section-article
+    .container
+      .row
+        .col-md-7
+          article.article
+            h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+            b Als Nexios zijn we participant van de Stichting Donateursbelangen, waarmee we een eerlijke, open cultuur tussen goede doelen en donateurs ondersteunen. Rekening houden met de wensen en voorkeuren van donateurs en hun privacy staat hierin centraal. Dat klinkt natuurlijk ontzettend logisch, maar wat betekent dit in de praktijk?
+
+            h5 Hoe haal je je donateurs over?
+            p Ga er maar aan staan als fondsenwervende organisatie. Zorgvuldig geworven donateurs hou je het liefst zo goed mogelijk vast. En dat niet alleen. Als iemand één keer sympathie voor jouw goede doel heeft getoond, dan is die persoon misschien welwillend om een volgende campagne of actie ook te ondersteunen. Tegelijkertijd wil je de belangen van de donateur niet uit het oog verliezen. Zo wil je dat donateurs kunnen aangeven hoe ze benaderd willen worden, hoe ze bij voorkeur willen betalen, en wil je dat ze makkelijk verantwoording vanuit het goede doel kunnen vinden. En last but not least, ze moeten eenvoudig hun donateurschap kunnen opzeggen.
+            ul 
+              li Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, sed!
+              li Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, deleniti.
+              li Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, officiis? Animi exercitationem laboriosam impedit incidunt repellat cum nihil! Ratione, mollitia.
+            q Als je het voorstel per e-mail verstuurt, dan worden de nieuwe overeenkomsten automatisch aan de juiste propositie gekoppeld.
+
+            p Dit zijn geen tegenstrijdige belangen. Als je als fondsenwervende organisatie je processen en informatievoorziening goed op orde hebt, kun je de belangen van de donateur prima behartigen en tegelijkertijd je fondsenwervende doelstelling nastreven. Nexios CRM kan je helpen met het vastleggen van de wensen en voorkeuren van een donateur, zodat je hier rekening mee kunt houden tijdens het uitvoeren van alle fondsenwervende activiteiten.
+        .col-md-5.col-lg-4.offset-lg-1
+          .visible-mobile.text-center 
+            a.link-secondary(href="") Load more news items
+          aside.recent-news.visible-desktop
+            h3 Recent news
+            +card(
+              "images/news.jpg",
+              "12 July 2022",
+              "Most people think in differences, Amran thinks in similarities",
+              "Amran (19) fled from Yemen eight years ago. He travelled through Malaysia and Spain, eventually coming to The Netherlands. He is currently studying…"
+            )
+            +card(
+              "images/news.jpg",
+              "22 June 2022",
+              "“You can learn a lot from each other.”",
+              "The Municipality of Eindhoven recently signed an agreement with Takecarebnb. The organisation links status holders to host families, who open their homes…"
+            )

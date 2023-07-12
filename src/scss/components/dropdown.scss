@@ -1,0 +1,97 @@
+.dropdown {
+  position: relative;
+
+  &:hover {
+    .dropdown-menu {
+      @include desktop {
+        display: block;
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  z-index: 100;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  display: none;
+
+  > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    font-weight: 600;
+    border-radius: 40px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: $color-primary;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    background: transparent linear-gradient(101deg, #f5f5f5 0%, #dedede 100%) 0%
+      0% no-repeat padding-box;
+
+    @include desktop {
+      padding: 16px;
+      font-weight: 400;
+      width: 100%;
+      height: auto;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-secondary;
+    }
+  }
+}
+
+.dropdown-on > .dropdown-menu {
+  display: block;
+}
+
+button.dropdown-toggle {
+  width: 45px;
+  height: 45px;
+  padding: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 0;
+
+  @include desktop {
+    width: auto;
+    height: auto;
+    padding: 16px 37px;
+  }
+
+  span {
+    font-weight: 600;
+    border-bottom: none;
+  }
+}
+
+.dropdown-toggle__lang-title {
+  display: none;
+
+  @include desktop {
+    display: inline;
+  }
+}
+
+.dropdown-toggle__lang-desktop {
+  display: none;
+
+  @include desktop {
+    display: inline;
+  }
+}
+
+.dropdown-toggle__lang-mobile {
+  @include desktop {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+.card-list {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  @include laptop {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin-bottom: 50px;
+  }
+}
+
+.card-list--scroll {
+  @media (max-width: 1023px) {
+    margin-right: -12px;
+    margin-left: -12px;
+  }
+
+  [class^="col-"] {
+    @media (max-width: 1023px) {
+      width: 80%;
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+  }
+}

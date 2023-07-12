@@ -1,0 +1,80 @@
+$button-background-color-hover: $color-black;
+$button-border-color: $color-black;
+$button-color: $color-white;
+$button-color-hover: $color-white;
+$button-color-active: $color-white;
+$button-border-radius: 40px;
+
+.button {
+  display: inline-block;
+  border-radius: $button-border-radius;
+  padding: 15px 40px;
+  color: $color-white;
+  font-size: 15px;
+  text-decoration: none;
+  border: 0;
+
+  @include laptop {
+    font-size: 20px;
+  }
+
+  &:focus {
+    background-color: $button-background-color-hover;
+    color: $button-color-hover;
+  }
+
+  &:hover {
+    background-color: $button-background-color-hover;
+    color: $button-color-hover;
+  }
+
+  &:active {
+    color: $button-color-active;
+  }
+
+  &[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  span {
+    font-weight: 900;
+    border-bottom: solid 1px $color-white;
+  }
+}
+
+.button-primary {
+  background: transparent
+    linear-gradient(101deg, $color-primary 0%, #d03d2d 100%) 0% 0% no-repeat;
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0 0 15px #ea5c4d80;
+  }
+}
+
+.button-secondary {
+  background: transparent
+    linear-gradient(100deg, $color-secondary 0%, #1d8a8b 100%) 0% 0% no-repeat;
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0 0 15px #33a6a780;
+  }
+}
+
+.button-ghost {
+  background-color: $color-white;
+  border: solid $color-primary 2px;
+  color: $color-primary;
+  padding: 12px 47px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $color-light-pink 0% 0%;
+    color: $color-primary;
+  }
+}

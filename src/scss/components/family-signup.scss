@@ -1,0 +1,36 @@
+.section-header-image {
+  width: 118px;
+  position: absolute;
+  right: -4px;
+  top: 28px;
+
+  @include tablet {
+    width: 170px;
+    right: 15px;
+    top: 0;
+  }
+  @include desktop {
+    width: 190px;
+    right: 11px;
+  }
+  @include desktop-xl {
+    right: -150px;
+    width: 290px;
+  }
+}
+
+.section-header-image img {
+  height: inherit;
+  width: inherit;
+}
+
+.section-header-title {
+  color: $color-white;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+
+  @include laptop {
+    font-size: 30px;
+  }
+}

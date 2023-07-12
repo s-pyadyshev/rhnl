@@ -1,0 +1,27 @@
+.contact {
+  &__form {
+    max-width: 830px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include laptop {
+      margin: 0;
+      padding-left: 30px;
+    }
+
+    .input-wrap,
+    .input-wrap input,
+    .textarea-wrap textarea {
+      width: 100%;
+    }
+
+    .button {
+      display: block;
+      margin: 30px auto 0;
+
+      @include laptop {
+        margin: 30px 0 0;
+      }
+    }
+  }
+}

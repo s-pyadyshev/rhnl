@@ -1,0 +1,19 @@
+.card-org {
+  max-width: 260px;
+  margin: 0 auto;
+  text-align: center;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90px;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 2;
+  }
+}

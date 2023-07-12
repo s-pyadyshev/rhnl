@@ -1,0 +1,68 @@
+.navbar {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    @include laptop {
+      align-items: center;
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      margin-right: 55px;
+    }
+
+    li {
+      margin-bottom: 44px;
+
+      @include laptop {
+        margin-bottom: 0;
+
+        &:not(:last-child) {
+          margin-right: 20px;
+
+          @include desktop {
+            margin-right: 40px;
+          }
+
+          @include desktop-xl {
+            margin-right: 54px;
+          }
+        }
+      }
+
+      &.current-menu-item {
+        a {
+          font-weight: 900;
+          color: $color-primary;
+          border-bottom: solid 1px $color-primary;
+        }
+      }
+    }
+  }
+}
+
+.navbar__link {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  border-bottom: solid 1px transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-primary;
+    border-bottom: solid 1px $color-primary;
+  }
+
+  @include laptop {
+    font-size: 18px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+  }
+}

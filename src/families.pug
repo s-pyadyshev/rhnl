@@ -1,0 +1,80 @@
+extends pug/base
+
+prepend vars
+  - title = 'For host families'
+
+append vars
+  //-
+
+block content
+  section.section-intro.section-intro--secondary
+    .container 
+      .row 
+        .col-md-6.background-secondary
+          h1 Become a host family
+          p After the outbreak of the war in Ukraine, a large influx of refugees has started. Millions of Ukrainian men, women and children are fleeing the violence of war. Some of them have come to the Netherlands. Even now that the conflict is dragging on, many Dutch people are happy and willing to do something to help these people. Offering shelter and shelter at home is an example of this. As a host family or guest household you can mean a lot to someone else. RefugeeHomeNL was established to provide the best possible support for host families and refugees. On this page you can read howRefugeeHomeNL works and how you can register as a host family.
+        .col-md-6.background-antique
+          img(src="images/home.svg" alt="municipality." width="453" height="286")
+  section.section.section-intro-text 
+    .container
+      .row 
+        .col-md-6
+          h2 What is RefugeeHomeNL?
+          p RefugeeHomeNL is a partnership between the Red Cross, the Netherlands Council for Refugees, the Salvation Army and Takecarebnb. We want to organize private reception with host families for refugees from Ukraine properly and safely. RefugeeHomeNL is supported by the central government.
+        .col-md-6
+          h2 From trial to national rollout
+          p The working method of RefugeeHomeNL is being researched and tested in practice in a limited number of regions. This pilot phase will provide many valuable insights for a national roll-out of the project. The roll-out will take place in phases in the summer of 2022.
+
+  section.section.background-muted 
+    .container.text-center
+      h2 I would like to become a host
+      a.button.button-primary(href="#") Start your application
+
+  section.section.section-process
+    .container
+      h2 The process in 4 steps
+      ul.steps
+        li.steps__item
+          +step("images/computer.svg", "1", "Sign up", ["Participation in RefugeeHomeNL starts by registering as a host family at Takecarebnb . We will then call you for an extensive screening interview."], ["In this we discuss the expectations and (im)possibilities back and forth. We also ask you to request a Certificate of Good Conduct (VOG)."])
+        li.steps__item
+          +step("images/meeting.svg", "2", "Meet & match", ["As soon as your application is in order, we will look for a match between your offer and the needs of the refugee. If we find a suitable match, we will contact you for an introductory meeting."], ["If that feels good on both sides , you decide to live together. Together you go to the municipality to register the guest at your address."])
+        li.steps__item
+          +step("images/support.svg", "3", "Living together", ["The cohabitation is entered into for a period of 3 months. A trained Salvation Army volunteer visits you and is your first point of contact for questions and concerns. The volunteer is in close contact with social organizations in the area for additional help."], ["We will match you with other host families in your area so that you can share your experiences. The Red Cross and the Dutch Council for Refugees are there for all guest requests for help."])
+        li.steps__item
+          +step("images/departure.svg", "4", "Departure", ["In principle, cohabitation ends after three months. RefugeeHomeNL guides you with all practical matters surrounding the moment of departure and provides a new place for your guests."], ["In consultation, you and your guests can also decide to extend. And of course there are situations in which you have to or want to stop the cohabitation period earlier. Even then you can count on us."])
+
+  section.section.background-muted
+    .container.divided
+      .row 
+        .col-md-6 
+          h2 I would like to become a host
+          a.button.button-primary(href="#") Start your application
+        .col-md-5.offset-md-1 
+          h2 I have some more questions
+          a.button.button-secondary(href="#") Contact us
+
+  section.section.section-links
+    .container
+      h2 Additional resources and useful links
+      .row 
+        .col-md-6 
+          p Pellentesque orci ligula, fringilla porta lacus vel, pharetra ultricies augue. Cras vel est rhoncus, consectetur turpis in, rutrum neque. Maecenas eget laoreet libero. Praesent ullamcorper, turpis non feugiat aliquam, ligula nibh mollis dui, id fringilla metus neque et eros. Nam feugiat diam et mauris tempor rhoncus. Sed a mollis orci. Mauris viverra nibh et sapien tincidunt cursus.
+        .col-md-6 
+          p Donec quis arcu ac justo lobortis porttitor quis ac elit. Donec at diam diam. Morbi eu vulputate purus. Phasellus at justo interdum ex tincidunt pellentesque in at est. Vivamus iaculis egestas laoreet. In rutrum vestibulum massa, ac vulputate dolor posuere ut. Sed a risus id nisi dictum consequat commodo et purus. Duis pulvinar a tellus vitae accumsan.
+        .logos-list
+          ul
+            li 
+              a(href="")
+                img(src="images/rodekruis.svg" alt="Rode Kruis logo.")
+            li 
+              a(href="")
+                img(src="images/vluchtelingenwerknl.svg" alt="VluchtelingenWerk Nederland logo.")
+            li 
+              a(href="")
+                img(src="images/legerdesheils.svg" alt="Leger des Heils logo.")
+            li 
+              a(href="")
+                img(src="images/takecarebnb.svg" alt="Takecarebnb logo.")
+            li 
+              a(href="")
+                img(src="images/mjv.svg" alt="Ministerie van Justitie en Veiligheid logo.")

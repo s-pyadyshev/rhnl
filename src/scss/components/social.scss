@@ -1,0 +1,50 @@
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: -15px;
+  margin-left: -15px;
+
+  @include laptop {
+    justify-content: flex-start;
+    margin-right: -12px;
+    margin-left: -12px;
+  }
+
+  li {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @include laptop {
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $color-white;
+    color: $color-black;
+
+    @include laptop {
+      width: 40px;
+      height: 40px;
+    }
+
+    svg {
+      width: 50px;
+      border-radius: 50%;
+      background-color: inherit;
+
+      @include laptop {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

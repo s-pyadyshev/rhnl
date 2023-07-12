@@ -1,0 +1,51 @@
+.section-header {
+  min-height: 100px;
+  width: 100%;
+  padding: 35px 0;
+
+  @include tablet {
+    min-height: 140px;
+    padding: 52px 0;
+  }
+  @include desktop {
+    min-height: 185px;
+    padding: 72px 0;
+  }
+}
+
+.section-header .container {
+  position: relative;
+}
+.section-header--primary .section-header-image {
+  width: 94px;
+  position: absolute;
+  right: 28px;
+  top: 11px;
+
+  @include tablet {
+    width: 170px;
+    right: 28px;
+    top: -23px;
+  }
+  @include desktop {
+    right: 13px;
+    top: -18px;
+    width: 180px;
+  }
+  @include desktop-xl {
+    right: -122px;
+    top: -18px;
+    width: 215px;
+  }
+}
+
+.section-header-title {
+  color: $color-white;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+
+  @include laptop {
+    font-size: 30px;
+  }
+}

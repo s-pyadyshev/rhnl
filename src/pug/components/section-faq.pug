@@ -1,0 +1,22 @@
+mixin accordion(title)
+  .accordion
+    button.accordion__toggle(data-accordion)
+      .accordion__icon
+      span= title
+    .accordion__content
+      p No, the number of places in a municipality for refugees from Ukraine in guest households, whether or not via RefugeeHomeNL, does not count towards the target.
+
+section.section.background-muted
+  .container
+    h2 5 most frequently asked questions
+    ul.accordion-list
+      li
+        +accordion("Does reception in a guest household count towards our target?")
+      li
+        +accordion("How many guest households have registered for RefugeeHomeNL in my region?")
+      li
+        +accordion("Can RefugeeHomeNL do something for private shelter that already exists in my region?")
+      li
+        +accordion("What happens if things don’t go well in a RefugeeHomeNL guest household?")
+      li
+        +accordion("When will private care via RefugeeHomeNL take place throughout the country, including my municipality?")

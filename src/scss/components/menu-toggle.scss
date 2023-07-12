@@ -1,0 +1,20 @@
+.menu-toggle-close {
+  display: none;
+
+  .header__menu.is-open & {
+    display: block;
+  }
+}
+
+.menu-button {
+  background: none;
+  border: 0;
+
+  @include laptop {
+    display: none;
+  }
+
+  .header__menu.is-open & {
+    display: none;
+  }
+}

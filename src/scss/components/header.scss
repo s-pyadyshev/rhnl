@@ -1,0 +1,123 @@
+$mobile-menu-background-color: #ccc;
+
+.header {
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+  position: fixed;
+  min-height: 145px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 0px 15px #0000000f;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include laptop {
+      padding-left: 7px;
+    }
+  }
+
+  &__language {
+    @include desktop-xl {
+      margin-right: -150px;
+    }
+  }
+
+  &__logo {
+    width: 110px;
+
+    @include laptop {
+      width: 144px;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    right: 0;
+    top: 145px;
+    z-index: 98;
+    overflow: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 70px 30px 70px;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    // stylelint-disable-next-line
+    height: calc(var(--vh));
+    text-align: center;
+    color: $color-black;
+    background-color: $color-muted;
+    transform: translateX(100%);
+    -webkit-overflow-scrolling: touch;
+    transition-duration: $transition-duration * 2;
+    transition-property: transform;
+
+    @include laptop {
+      position: static;
+      display: block;
+      opacity: 1;
+      padding: 0;
+      margin-left: 54px;
+      width: auto;
+      height: auto;
+      text-align: left;
+      background-color: transparent;
+      transform: translateX(0);
+    }
+
+    @include laptop {
+      margin-left: 30px;
+    }
+
+    @include desktop-xl {
+      margin-left: 100px;
+    }
+
+    &.is-open {
+      transform: translateX(0);
+      transition-duration: $transition-duration * 2;
+      transition-property: transform;
+    }
+
+    .navbar__list {
+      flex-direction: column;
+
+      @include laptop {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__menu-logo {
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &__menu-toggle {
+    flex-shrink: 0;
+
+    @include laptop {
+      display: none;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    @include laptop {
+      flex-direction: row;
+    }
+  }
+}
