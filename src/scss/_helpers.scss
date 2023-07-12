@@ -1,3 +1,80 @@
+.background-default {
+  background-color: $color-black;
+}
+
+.background-muted {
+  background-color: $color-muted;
+}
+
+.background-primary {
+  background-color: $color-primary;
+}
+
+.background-secondary {
+  background-color: $color-secondary;
+}
+
+.text-default {
+  color: $color-white;
+}
+
+.text-muted {
+  color: $color-gray;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.text-secondary {
+  color: $color-secondary;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.ma {
+  width: fit-content;
+  margin: 0 auto !important;
+}
+
+.mt-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.full-width {
+  width: 100%;
+}
+
 .clearfix {
   overflow: auto;
 
@@ -15,96 +92,4 @@
   width: 1px;
   height: 1px;
   clip: rect(0 0 0 0);
-}
-
-.background-muted {
-  background-color: $color-muted;
-}
-
-.background-primary {
-  background-color: $color-primary;
-  color: $color-white;
-}
-
-.background-secondary {
-  background-color: $color-secondary;
-  color: $color-white;
-}
-
-.background-antique {
-  background-color: $color-antique;
-}
-
-.background-antique {
-  background-color: $color-antique;
-}
-
-.flex-wrap {
-  flex-wrap: wrap !important;
-}
-
-.list-disc {
-  list-style-type: none;
-
-  li {
-    display: flex;
-    margin-bottom: 9px;
-
-    &:before {
-      content: "";
-      display: inline-block;
-      flex-shrink: 0;
-      width: 8px;
-      height: 8px;
-      margin-top: 10px;
-      margin-right: 12px;
-      border-radius: 50%;
-      background-color: $color-secondary;
-    }
-  }
-}
-
-.visible-desktop {
-  display: none;
-
-  @include laptop {
-    display: block;
-  }
-}
-
-.visible-mobile {
-  @include laptop {
-    display: none;
-  }
-}
-
-.text-center {
-  text-align: center;
-}
-
-.color-primary {
-  color: $color-primary;
-}
-
-.color-secondary {
-  color: $color-secondary;
-}
-
-.font-bold {
-  font-weight: 600;
-}
-
-.link-secondary {
-  border-bottom: 1px solid $color-secondary;
-  font-weight: 900;
-  font-size: 20px;
-  color: $color-secondary;
-  text-decoration: none;
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: $color-primary;
-    border-color: $color-primary;
-  }
 }

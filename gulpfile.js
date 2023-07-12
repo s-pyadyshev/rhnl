@@ -85,7 +85,7 @@ function svgoConfig(minify = argv.minifySvg) {
     return {
       js2svg: {
         pretty: !minify,
-        indent: "\t",
+        indent: 2,
       },
       plugins: [
         {
@@ -95,11 +95,10 @@ function svgoConfig(minify = argv.minifySvg) {
             prefix: `${filename}-`,
           },
         },
-        "removeTitle",
         {
-          name: "removeViewBox",
-          active: false,
+          removeViewBox: false,
         },
+        "removeTitle",
         "sortAttrs",
       ],
     };
@@ -345,22 +344,20 @@ gulp.task("scss", () => {
     );
   }
 
-  return (
-    gulp
-      .src(["src/scss/*.scss", "!src/scss/_*.scss"])
-      .pipe(
-        $.plumber({
-          errorHandler,
-        })
-      )
-      .pipe($.if(argv.debug, $.debug()))
-      // .pipe($.sourcemaps.init())
-      .pipe(sass().on("error", sass.logError))
-      .pipe($.postcss(postcssPlugins))
-      // .pipe($.sourcemaps.write("."))
-      .pipe(gcmq())
-      .pipe(gulp.dest("build/css"))
-  );
+  return gulp
+    .src(["src/scss/*.scss", "!src/scss/_*.scss"])
+    .pipe(
+      $.plumber({
+        errorHandler,
+      })
+    )
+    .pipe($.if(argv.debug, $.debug()))
+    .pipe($.sourcemaps.init())
+    .pipe(sass().on("error", sass.logError))
+    .pipe($.postcss(postcssPlugins))
+    .pipe(gcmq())
+    .pipe($.sourcemaps.write("."))
+    .pipe(gulp.dest("build/css"));
 });
 
 gulp.task("js", () => {

@@ -1,16 +1,25 @@
-export const accordion = (function () {
-  const init = function () {
-    const $accordionButtons = $("[data-accordion]");
+export const accordion = (() => {
+  const init = () => {
+    const accordionList = document.querySelectorAll(".accordion-list");
 
-    if (!$accordionButtons.length) {
+    if (!accordionList.length) {
       return;
     }
 
-    $accordionButtons.each(function () {
-      $(this).on("click", function () {
-        $(this).parent().toggleClass("is-open");
+    accordionList.forEach((list) => {
+      list.addEventListener("click", (event) => {
+        toggleAccordion(event);
       });
     });
+
+    function toggleAccordion(event) {
+      const accordionButton = event.target.closest(".accordion__toggle");
+      const isExpanded =
+        accordionButton.getAttribute("aria-expanded") === "true";
+      const target = accordionButton.parentElement.nextElementSibling;
+      accordionButton.setAttribute("aria-expanded", !isExpanded);
+      target.classList.toggle("is-open");
+    }
   };
 
   return {
