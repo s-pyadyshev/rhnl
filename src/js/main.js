@@ -1,27 +1,22 @@
 import { mobileMenu } from "./components/mobile-menu";
 import { dropdown } from "./components/dropdown";
 import { accordion } from "./components/accordion";
-import { slider } from "./components/slider";
+// import { slider } from "./components/slider";
 
-window.addEventListener(
-  "load",
-  () => {
-    mobileMenu.init();
-    dropdown.init();
-    accordion.init();
-    slider.init();
+$(() => {
+  mobileMenu.init();
+  dropdown.init();
+  accordion.init();
+  // slider.init();
 
-    const header = document.querySelector(".header");
-    const pageWrapper = document.querySelector(".page-wrapper");
+  const header = document.querySelector(".header");
+  const pageWrapper = document.querySelector(".page-wrapper");
+  const headerHeight = header.offsetHeight;
+
+  pageWrapper.style.paddingTop = `${headerHeight}px`;
+
+  window.addEventListener("resize", () => {
     const headerHeight = header.offsetHeight;
-
     pageWrapper.style.paddingTop = `${headerHeight}px`;
-
-    window.addEventListener("resize", () => {
-      const headerHeight = header.offsetHeight;
-      pageWrapper.style.paddingTop = `${headerHeight}px`;
-    });
-  },
-  false
-);
-console.log("test");
+  });
+});

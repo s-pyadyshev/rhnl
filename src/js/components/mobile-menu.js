@@ -1,16 +1,18 @@
 export const mobileMenu = (function () {
   const init = function () {
-    const $mobileMenuToggle = $(".js-toggle-menu");
-    const $mobileMenuClose = $(".menu-toggle-close ");
+    var $mobileMenuToggle = $(".js-toggle-menu");
+
     if (!$mobileMenuToggle.length) {
       return;
     }
 
-    const $body = $("body");
+    var $headerMenu = $(".header__menu");
+    var $html = $("html");
 
     $mobileMenuToggle.on("click", function () {
-      $body.toggleClass("mobile-menu-active");
-      $mobileMenuClose.focus();
+      $headerMenu.toggleClass("is-open");
+      $(this).toggleClass("is-open");
+      $html.toggleClass("is-lock-scroll");
     });
   };
 

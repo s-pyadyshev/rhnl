@@ -96,12 +96,6 @@ $mobile-menu-background-color: #ccc;
     }
   }
 
-  &__menu-logo {
-    @include laptop {
-      display: none;
-    }
-  }
-
   &__menu-toggle {
     flex-shrink: 0;
 

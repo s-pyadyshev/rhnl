@@ -1,66 +1,6 @@
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// install a JSONP callback for chunk loading
-/******/ 	function webpackJsonpCallback(data) {
-/******/ 		var chunkIds = data[0];
-/******/ 		var moreModules = data[1];
-/******/ 		var executeModules = data[2];
-/******/
-/******/ 		// add "moreModules" to the modules object,
-/******/ 		// then flag all "chunkIds" as loaded and fire callback
-/******/ 		var moduleId, chunkId, i = 0, resolves = [];
-/******/ 		for(;i < chunkIds.length; i++) {
-/******/ 			chunkId = chunkIds[i];
-/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 				resolves.push(installedChunks[chunkId][0]);
-/******/ 			}
-/******/ 			installedChunks[chunkId] = 0;
-/******/ 		}
-/******/ 		for(moduleId in moreModules) {
-/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
-/******/ 				modules[moduleId] = moreModules[moduleId];
-/******/ 			}
-/******/ 		}
-/******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
-/******/
-/******/ 		while(resolves.length) {
-/******/ 			resolves.shift()();
-/******/ 		}
-/******/
-/******/ 		// add entry modules from loaded chunk to deferred list
-/******/ 		deferredModules.push.apply(deferredModules, executeModules || []);
-/******/
-/******/ 		// run deferred modules when all chunks ready
-/******/ 		return checkDeferredModules();
-/******/ 	};
-/******/ 	function checkDeferredModules() {
-/******/ 		var result;
-/******/ 		for(var i = 0; i < deferredModules.length; i++) {
-/******/ 			var deferredModule = deferredModules[i];
-/******/ 			var fulfilled = true;
-/******/ 			for(var j = 1; j < deferredModule.length; j++) {
-/******/ 				var depId = deferredModule[j];
-/******/ 				if(installedChunks[depId] !== 0) fulfilled = false;
-/******/ 			}
-/******/ 			if(fulfilled) {
-/******/ 				deferredModules.splice(i--, 1);
-/******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
-/******/ 			}
-/******/ 		}
-/******/
-/******/ 		return result;
-/******/ 	}
-/******/
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/
-/******/ 	// object to store loaded and loading chunks
-/******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 	// Promise = chunk loading, 0 = chunk loaded
-/******/ 	var installedChunks = {
-/******/ 		"main": 0
-/******/ 	};
-/******/
-/******/ 	var deferredModules = [];
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -139,18 +79,9 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
-/******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
-/******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
-/******/ 	jsonpArray.push = webpackJsonpCallback;
-/******/ 	jsonpArray = jsonpArray.slice();
-/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
-/******/ 	var parentJsonpFunction = oldJsonpFunction;
 /******/
-/******/
-/******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/js/main.js","vendor"]);
-/******/ 	// run deferred modules when ready
-/******/ 	return checkDeferredModules();
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/main.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -247,49 +178,15 @@ __webpack_require__.r(__webpack_exports__);
 var mobileMenu = function () {
   var init = function init() {
     var $mobileMenuToggle = $(".js-toggle-menu");
-    var $mobileMenuClose = $(".menu-toggle-close ");
     if (!$mobileMenuToggle.length) {
       return;
     }
-    var $body = $("body");
+    var $headerMenu = $(".header__menu");
+    var $html = $("html");
     $mobileMenuToggle.on("click", function () {
-      $body.toggleClass("mobile-menu-active");
-      $mobileMenuClose.focus();
-    });
-  };
-  return {
-    init: init
-  };
-}();
-
-/***/ }),
-
-/***/ "./src/js/components/slider.js":
-/*!*************************************!*\
-  !*** ./src/js/components/slider.js ***!
-  \*************************************/
-/*! exports provided: slider */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "slider", function() { return slider; });
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
-
-var slider = function () {
-  var init = function init() {
-    var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".slider", {
-      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"]],
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: "true",
-        type: "bullets",
-        bulletElement: "button"
-      }
+      $headerMenu.toggleClass("is-open");
+      $(this).toggleClass("is-open");
+      $html.toggleClass("is-lock-scroll");
     });
   };
   return {
@@ -311,16 +208,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_mobile_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/mobile-menu */ "./src/js/components/mobile-menu.js");
 /* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/dropdown */ "./src/js/components/dropdown.js");
 /* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
-/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
 
 
 
+// import { slider } from "./components/slider";
 
-window.addEventListener("load", function () {
+$(function () {
   _components_mobile_menu__WEBPACK_IMPORTED_MODULE_0__["mobileMenu"].init();
   _components_dropdown__WEBPACK_IMPORTED_MODULE_1__["dropdown"].init();
   _components_accordion__WEBPACK_IMPORTED_MODULE_2__["accordion"].init();
-  _components_slider__WEBPACK_IMPORTED_MODULE_3__["slider"].init();
+  // slider.init();
+
   var header = document.querySelector(".header");
   var pageWrapper = document.querySelector(".page-wrapper");
   var headerHeight = header.offsetHeight;
@@ -329,8 +227,7 @@ window.addEventListener("load", function () {
     var headerHeight = header.offsetHeight;
     pageWrapper.style.paddingTop = "".concat(headerHeight, "px");
   });
-}, false);
-console.log("test");
+});
 
 /***/ })
 
