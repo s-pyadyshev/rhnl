@@ -1,4 +1,3 @@
-import { vhFix } from "./vendor/vh-fix";
 import { mobileMenu } from "./components/mobile-menu";
 import { dropdown } from "./components/dropdown";
 import { accordion } from "./components/accordion";
@@ -7,7 +6,6 @@ import { slider } from "./components/slider";
 window.addEventListener(
   "load",
   () => {
-    vhFix();
     mobileMenu.init();
     dropdown.init();
     accordion.init();
@@ -26,3 +24,4 @@ window.addEventListener(
   },
   false
 );
+console.log("test");

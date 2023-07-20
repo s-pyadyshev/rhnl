@@ -4,6 +4,7 @@
   justify-content: center;
   margin-right: -15px;
   margin-left: -15px;
+  list-style-type: none;
 
   @include laptop {
     justify-content: flex-start;

@@ -67,8 +67,8 @@
     transition-duration: $transition-duration;
     transition-property: opacity;
 
-    &:hover,
     &:focus,
+    &:hover,
     &:active {
       text-decoration: none;
     }

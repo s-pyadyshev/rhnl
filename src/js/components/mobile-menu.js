@@ -2,7 +2,6 @@ export const mobileMenu = (function () {
   const init = function () {
     const $mobileMenuToggle = $(".js-toggle-menu");
     const $mobileMenuClose = $(".menu-toggle-close ");
-
     if (!$mobileMenuToggle.length) {
       return;
     }

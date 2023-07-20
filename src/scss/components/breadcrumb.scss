@@ -6,8 +6,8 @@ $breadcrumb-gap: 8px;
   color: $breadcrumb-color;
 
   a {
-    &:hover,
     &:focus,
+    &:hover,
     &:active {
       text-decoration: underline;
     }

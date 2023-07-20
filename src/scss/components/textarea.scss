@@ -5,8 +5,8 @@
   border-color: $input-border-color;
   resize: vertical;
 
-  &:hover,
   &:focus,
+  &:hover,
   &:active {
     border-color: $input-border-color-hover;
     transition-property: border-color;

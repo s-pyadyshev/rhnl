@@ -308,22 +308,19 @@ var slider = function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _vendor_vh_fix__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/vh-fix */ "./src/js/vendor/vh-fix.js");
-/* harmony import */ var _components_mobile_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/mobile-menu */ "./src/js/components/mobile-menu.js");
-/* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/dropdown */ "./src/js/components/dropdown.js");
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
-/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
-
+/* harmony import */ var _components_mobile_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/mobile-menu */ "./src/js/components/mobile-menu.js");
+/* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/dropdown */ "./src/js/components/dropdown.js");
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
+/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
 
 
 
 
 window.addEventListener("load", function () {
-  Object(_vendor_vh_fix__WEBPACK_IMPORTED_MODULE_0__["vhFix"])();
-  _components_mobile_menu__WEBPACK_IMPORTED_MODULE_1__["mobileMenu"].init();
-  _components_dropdown__WEBPACK_IMPORTED_MODULE_2__["dropdown"].init();
-  _components_accordion__WEBPACK_IMPORTED_MODULE_3__["accordion"].init();
-  _components_slider__WEBPACK_IMPORTED_MODULE_4__["slider"].init();
+  _components_mobile_menu__WEBPACK_IMPORTED_MODULE_0__["mobileMenu"].init();
+  _components_dropdown__WEBPACK_IMPORTED_MODULE_1__["dropdown"].init();
+  _components_accordion__WEBPACK_IMPORTED_MODULE_2__["accordion"].init();
+  _components_slider__WEBPACK_IMPORTED_MODULE_3__["slider"].init();
   var header = document.querySelector(".header");
   var pageWrapper = document.querySelector(".page-wrapper");
   var headerHeight = header.offsetHeight;
@@ -333,35 +330,7 @@ window.addEventListener("load", function () {
     pageWrapper.style.paddingTop = "".concat(headerHeight, "px");
   });
 }, false);
-
-/***/ }),
-
-/***/ "./src/js/vendor/vh-fix.js":
-/*!*********************************!*\
-  !*** ./src/js/vendor/vh-fix.js ***!
-  \*********************************/
-/*! exports provided: vhFix */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "vhFix", function() { return vhFix; });
-var vhFix = function vhFix() {
-  if (!(!!window.MSInputMethodContext && !!document.documentMode)) {
-    var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", "".concat(vh, "px"));
-    window.addEventListener("resize", function () {
-      vh = window.innerHeight;
-      document.documentElement.style.setProperty("--vh", "".concat(vh, "px"));
-    });
-  }
-};
-
-
-// .module {
-// 	height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
-// 	height: calc(var(--vh, 1vh) * 100);
-// }
+console.log("test");
 
 /***/ })
 

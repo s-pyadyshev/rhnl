@@ -1,6 +1,6 @@
 // stylelint-disable scss/dollar-variable-empty-line-before
 
-// COLORS
+// Colors
 $color-black: #000;
 $color-white: #fff;
 $color-gray: #838383;
@@ -8,13 +8,13 @@ $color-beige: #f7efd8;
 $color-light-pink: #ea5c4d27;
 $color-antique: #f7efd9;
 
-// PRIMARY AND SECONDARY
+// Primary - Secondary
 $color-primary: #ea5c4d;
 $color-secondary: #33a6a7;
 $color-muted: #f4f4f4;
 $color-border: #838383;
 
-// FORMS
+// Forms
 $input-border-width: 1px;
 $input-border-color: #d6d6d6;
 $input-border-color-hover: $color-secondary;
@@ -24,7 +24,7 @@ $input-padding-y: 13px;
 $input-padding: $input-padding-y $input-padding-x;
 $input-placeholder-color: $color-black;
 
-// FONTS
+// Fonts
 // stylelint-disable-next-line
 $font-primary: "Lato", "Helvetica Neue", sans-serif;
 $font-weight: 400;
@@ -32,12 +32,42 @@ $line-height: 1.4;
 $font-size: 16px;
 $font-size-desktop: 16px;
 
-// EASING TRANSITIONS
+// Global cosmetic styles
+$overlay: rgba(0, 0, 0, 0.2);
+
+// Sections
+$section-padding-vertical: 40px;
+$section-padding-vertical-desktop: 80px;
+
+// Transitions
 $transition-duration: 0.2s;
 
 // Settings
-$desktop: 1440;
+$desktop: 1440; // Desktops = 1440px to higher resolution desktops
 $desktop-xl: 1920;
-$laptop: 1024;
-$tablet: 768;
+$laptop: 1024; // Laptops, Desktops - from 1025px to higher
+$tablet: 768; // Tablets, Ipads (portrait) - from 768px to higher
 $mobile: 320;
+
+// Bootstrap overrides
+// scss-docs-end grid-breakpoints
+$grid-gutter-width: 16px;
+
+$container-padding-x: 70px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1025px,
+  xl: 1366px,
+  xxl: 1920px,
+) !default;
+
+@each $breakpoint, $value in $grid-breakpoints {
+  .hidden-#{$breakpoint} {
+    @media (min-width: $value) {
+      display: none;
+    }
+  }
+}

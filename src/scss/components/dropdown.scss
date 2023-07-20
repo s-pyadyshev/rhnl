@@ -42,8 +42,8 @@
       height: auto;
     }
 
-    &:hover,
-    &:focus {
+    &:focus,
+    &:hover {
       color: $color-secondary;
     }
   }

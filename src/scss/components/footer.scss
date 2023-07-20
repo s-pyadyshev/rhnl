@@ -7,19 +7,20 @@
   @include laptop {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
 
-    &__nav {
-      column-count: 3;
-      font-size: 18px;
+  &__nav {
+    column-count: 3;
+    font-size: 18px;
+    list-style-type: none;
 
-      @include desktop {
-        column-count: 4;
-      }
+    @include desktop {
+      column-count: 4;
+    }
 
-      li {
-        margin-bottom: 16px;
-        padding-right: 8px;
-      }
+    li {
+      margin-bottom: 16px;
+      padding-right: 8px;
     }
   }
 
@@ -40,6 +41,7 @@
     justify-content: center;
     width: 100%;
     text-align: center;
+    list-style-type: none;
 
     @include laptop {
       flex-direction: row;
@@ -72,8 +74,8 @@
   a {
     text-decoration: none;
 
-    &:hover,
     &:focus,
+    &:hover,
     &:active {
       color: $color-primary;
     }

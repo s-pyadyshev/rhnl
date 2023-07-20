@@ -9,8 +9,8 @@
   transition-property: border-color;
   transition-duration: $transition-duration;
 
-  &:hover,
   &:focus,
+  &:hover,
   &:active {
     border-color: $input-border-color-hover;
     transition-property: border-color;
