@@ -1,25 +1,19 @@
-$pagination-color-current: $color-black;
-$pagination-color-hover: $color-black;
-$pagination-gap: 16px;
+$pagination-color-current: $color-secondary;
+$pagination-color-hover: $color-secondary;
+$pagination-gap: 10px;
 
 .pagination {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 
-  &--current {
-    color: $pagination-color-current;
+  @include laptop {
+    justify-content: flex-end;
   }
 
-  &__link {
-    display: block;
-    text-align: center;
-
-    &:focus,
-    &:hover,
-    &:active {
-      color: $pagination-color-hover;
-    }
+  > p {
+    margin-right: 20px;
   }
 
   &__list {
@@ -27,14 +21,77 @@ $pagination-gap: 16px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 15px;
+
+    @media (min-width: 448px) {
+      margin-top: 0;
+    }
 
     a {
       text-decoration: none;
     }
 
     li {
-      margin-right: $pagination-gap;
-      margin-left: $pagination-gap;
+      width: 53px;
+      height: 53px;
+      list-style: none;
+      margin-right: 7px;
+      margin-left: 7px;
+
+      @media (min-width: 375px) {
+        margin-right: $pagination-gap;
+        margin-left: $pagination-gap;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    height: 100%;
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 900;
+    background-color: $color-muted;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-white;
+      background-color: $pagination-color-hover;
+    }
+
+    &--current {
+      background-color: $pagination-color-current;
+      color: $color-white;
+    }
+  }
+}
+
+li.pagination-next,
+li.pagination-prev {
+  width: 19px;
+  height: 22px;
+  margin-right: 0;
+
+  &:hover,
+  &:active {
+    color: $color-secondary;
+  }
+}
+
+li.pagination-prev {
+  transform: rotate(180deg);
+  margin-right: 10px;
 }

@@ -1,0 +1,13 @@
+mixin download-list(obj)
+  .download-list
+    .row
+      each card in obj.cards
+        .col-sm-6.col-xl-4
+          .download-card
+            h5.text-primary= card.title
+            ul.download-card__list
+              each link in card.links ? card.links : []
+                li
+                  a.download-card__link(href="/" title=link.title)
+                    +svg("pdf")
+                    span= link.title

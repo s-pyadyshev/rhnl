@@ -1,0 +1,55 @@
+.themes {
+  padding-bottom: 50px;
+
+  @include desktop {
+    padding-bottom: 90px;
+  }
+
+  &__wrapper {
+  
+    @include laptop {
+      display: flex;
+      gap: 30px;
+    }
+
+    @include desktop {
+      gap: 46px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 50px;
+
+    @include laptop {
+    }
+  }
+
+  &__aside {
+    
+    @include desktop {
+      width: 368px;
+      flex-shrink: 0;
+    }
+  }
+
+  .nav-cards {
+
+    @include desktop {
+      gap: 30px;
+    }
+  }
+
+  .nav-card {
+
+    @include laptop {
+      height: calc(100vw * 208 / 1200);
+      max-height: 208px;
+    }
+
+    @include desktop {
+      max-height: 250px;
+      width: calc(50% - 15px);
+      height: 250px;
+    }
+  }
+}

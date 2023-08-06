@@ -1,20 +1,40 @@
 .textarea {
-  padding: $input-padding;
-  font-size: 16px;
-  font-weight: 700;
-  border-color: $input-border-color;
-  resize: vertical;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+  padding: 30px 20px;
+  width: 100%;
+  background-color: $color-muted;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: $color-text;
+  height: 233px;
+  resize: none;
 
-  &:hover,
-  &:focus,
-  &:active {
-    border-color: $input-border-color-hover;
-    transition-property: border-color;
-    transition-duration: $transition-duration;
+  &::placeholder {
+    opacity: 1;
+    color: $color-text;
+    transition: .2s;
   }
 
-  &:focus-visible {
-    outline: none;
-    border-color: $input-border-color-hover;
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    &::placeholder {
+      color: $color-secondary;
+    }
+  }
+
+  @include tablet {
+    height: 129px;
+  }
+
+  @include desktop {
+    padding: 30px;
   }
 }

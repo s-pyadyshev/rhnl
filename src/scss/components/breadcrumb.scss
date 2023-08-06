@@ -1,36 +1,46 @@
 $breadcrumb-color: $color-black;
-$breadcrumb-current-color: $color-gray;
-$breadcrumb-gap: 8px;
+$breadcrumb-current-color: $color-text;
+$breadcrumb-gap: 6px;
 
 .breadcrumb {
   color: $breadcrumb-color;
+  margin-top: 30px;
 
-  a {
-    &:hover,
-    &:focus,
-    &:active {
-      text-decoration: underline;
-    }
-  }
-
-  li {
+  &__item {
+    font-size: 14px;
+    line-height: 17px;
     display: flex;
-
-    &:not(:last-child) {
-      &:after {
-        content: "-";
-        margin-right: $breadcrumb-gap;
-        margin-left: $breadcrumb-gap;
-      }
-    }
+    align-items: baseline;
+    font-weight: 300;
 
     &:last-child {
       color: $breadcrumb-current-color;
     }
+
+    &:not(:last-child)::after {
+      content: "";
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='162.7' height='184.6' viewBox='0 0 162.7 184.6'%3E%3Cpath fill='%2333A6A7' d='m15.7 1.4 141.8 81.8c5 2.9 6.7 9.3 3.8 14.3-.9 1.6-2.2 2.9-3.8 3.8L15.7 183.2c-5 2.9-11.4 1.2-14.3-3.8-.9-1.6-1.4-3.4-1.4-5.3V10.4C0 4.7 4.7 0 10.4 0c1.9 0 3.7.5 5.3 1.4z'/%3E%3C/svg%3E");
+      background-size: 9px 9px;
+      margin-right: $breadcrumb-gap;
+      margin-left: $breadcrumb-gap;
+      width: 9px;
+      height: 9px;
+    }
   }
 
-  ul {
+  &__list {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  &__link {
+    text-decoration-color: transparent;
+
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration-color: $breadcrumb-color;
+    }
   }
 }

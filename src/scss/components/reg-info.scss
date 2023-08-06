@@ -1,0 +1,127 @@
+.reg-info {
+  padding: 40px 30px;
+  border-radius: 10px;
+  background-color: $color-beige;
+
+  @include laptop {
+    padding: 30px;
+  }
+
+  h3 {
+    margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__country {
+    display: flex;
+    align-items: center;
+    padding: 22px 0;
+    border-bottom: 2px solid $color-text;
+    width: 100%;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--ua {
+      .reg-info__link {
+        font-weight: 700;
+      }
+    }
+
+    &--rus {
+      .reg-info__link {
+        font-weight: 700;
+      }
+    }
+
+    @include laptop {
+      padding: 20px 0;
+
+      .hero__reg-info & {
+        &--nl {
+          padding-top: 0;
+          width: 259px;
+          margin-right: 70px;
+        }
+
+        &--ua {
+          order: 2;
+          width: 313px;
+          padding-top: 0;
+        }
+
+        &--uk {
+          order: 3;
+          width: 259px;
+          padding-bottom: 0;
+          border-bottom: none;
+          margin-right: 70px;
+        }
+
+        &--ru {
+          order: 4;
+          width: 313px;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__flag {
+    flex-shrink: 0;
+    width: 33px;
+    height: 33px;
+    margin-right: 20px;
+
+    svg {
+      border-radius: 50%;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    width: 100%;
+    text-decoration-color: transparent;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+
+    &:active,
+    &:hover {
+      text-decoration-color: $color-secondary;
+      color: $color-secondary;
+
+      .arrow-round-icon {
+        background-color: $color-primary;
+      }
+    }
+
+    span {
+      padding-right: 13px;
+    }
+
+    .arrow-round-icon {
+      margin-left: auto;
+    }
+  }
+
+  &--host-family {
+    padding: 24px 20px;
+
+    @include laptop {
+      padding: 40px 30px;
+    }
+  }
+}

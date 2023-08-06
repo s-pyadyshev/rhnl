@@ -1,201 +1,269 @@
 .hero {
   padding-bottom: 0;
-  @include laptop {
-    padding-bottom: 123px;
-  }
-}
-.hero__buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include laptop {
-    align-items: flex-start;
-  }
-}
-
-.hero__buttons .button-primary {
-  margin-bottom: 30px;
-  max-width: 325px;
-  padding: 16px 28px;
-
-  @include laptop {
-    margin-bottom: 60px;
-    max-width: 398px;
-    padding: 14px 40px;
-  }
-}
-
-.hero__buttons .button-secondary {
-  max-width: 300px;
-  padding: 16px 31px;
-
-  @include laptop {
-    margin-bottom: 65px;
-    max-width: 308px;
-    padding: 14px 40px;
-  }
-}
-
-.hero__buttons p {
-  display: none;
-
-  @include laptop {
-    display: block;
-    max-width: 468px;
-    color: $color-gray;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.4;
-    line-height: 24px;
-    margin-left: 8px;
-  }
-}
-
-.hero__image p {
-  display: block;
-
-  color: $color-gray;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.4;
-  line-height: 24px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 34px;
-
-  @include tablet {
-    font-size: 18px;
-    margin-right: 0;
-    margin-left: 8px;
-  }
-  @include laptop {
-    font-size: 13px;
-    display: none;
-  }
-}
-.hero__greeting {
-  color: $color-primary;
-  letter-spacing: 4.2px;
-  font-size: 14px;
-  font-weight: 900;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 11px;
-
-  @include laptop {
-    text-align: left;
-    margin-bottom: 30px;
-  }
-}
-
-.hero__image {
-  width: 100%;
-
-  @include laptop {
-    max-width: 57%;
-  }
-}
-
-.hero__inner {
-  display: flex;
-  flex-direction: column;
-  @include laptop {
-    margin-bottom: 15px;
-    flex-direction: row;
-  }
-}
-
-.hero__image img {
-  display: block;
-  margin-top: -35px;
-  margin-right: auto;
-  margin-bottom: 44px;
-  margin-left: auto;
-  max-height: 400px;
-
-  @include laptop {
-    max-height: 100%;
-  }
-
-  @include desktop {
-    margin-top: -110px;
-    margin-bottom: 0;
-  }
-}
-
-.hero__logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-right: -20px;
-  margin-left: -20px;
-
-  @include laptop {
-    justify-content: space-between;
-    flex-direction: row;
-    max-width: 1000px;
-  }
-
-  img {
-    height: 55px;
-
-    @include laptop {
-      height: 70px;
-    }
-  }
-
-  li {
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-bottom: 40px;
-
-    @include tablet {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.hero__text {
-  position: relative;
-  width: 100%;
-  text-align: center;
   padding-top: 50px;
 
-  @include laptop {
-    max-width: 43%;
-    padding-top: 100px;
-    text-align: left;
+  @include desktop {
+    padding-top: 70px;
   }
-}
 
-.hero__title {
-  font-size: 32px;
-  line-height: 46px;
-  letter-spacing: -1.3px;
-  margin-bottom: 40px;
-  padding: 0 20px;
-  font-weight: 600;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 35px;
-  max-width: 320px;
-  letter-spacing: 0;
-
-  @include laptop {
-    max-width: 100%;
-    font-size: 38px;
-    line-height: 55px;
-    max-width: 340px;
-    margin-left: 0;
-    margin-bottom: 50px;
-    padding: 0;
+  &__greeting {
+    p {
+      color: $color-primary;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 900;
+      letter-spacing: 4.2px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
   }
-}
 
-.hero__title span {
-  border-bottom: 2px solid $color-secondary;
-  font-weight: 900;
-  color: $color-secondary;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    @include laptop {
+      flex-direction: row;
+    }
+  }
+
+  h1 {
+    @include desktop {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    h4 {
+      margin-bottom: 30px;
+    }
+
+    & > p {
+      margin-bottom: 40px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    & > p + h4 {
+      margin-top: 43px;
+
+      @include desktop {
+        margin-top: 61px;
+      }
+    }
+
+    @include laptop {
+      max-width: 340px;
+    }
+
+    @include desktop {
+      max-width: 430px;
+    }
+  }
+
+  &__reg-info {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 50px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -30px;
+    z-index: 1;
+
+    @media (min-width: 414px) {
+      margin-left: -24px;
+      margin-right: -24px;
+    }
+
+    @include laptop {
+      width: 702px;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__image {
+    max-inline-size: none;
+    width: 100vw;
+    margin-left: -30px;
+
+    @media (min-width: 414px) {
+      margin-left: -47px;
+    }
+
+    @include laptop {
+      height: calc(967px + (100vw - 1920px) / 2);
+      width: calc(1055px + (100vw - 1920px) / 2);
+      max-height: 967px;
+      max-width: 1055px;
+      flex-shrink: 0;
+      margin-left: auto;
+      margin-right: -47px;
+      margin-top: -102px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-right: calc(-166px + (100vw - 1439px) / -2);
+    }
+
+    @include desktop {
+      margin-right: -47px;
+      margin-top: -247px;
+    }
+
+    @media (min-width: 1458px) {
+      margin-right: calc(-278px + (100vw - 1920px) / -2);
+    }
+
+    @include desktop-xl {
+      margin-right: -278px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &--host-family {
+    padding-bottom: 50px;
+
+    @include desktop {
+      padding-top: 45px;
+      padding-bottom: 80px;
+    }
+
+    @include desktop-xl {
+      padding-bottom: 0;
+    }
+
+    .hero {
+      &__text {
+        & > p {
+          @include desktop {
+            margin-bottom: 90px;
+          }
+        }
+      }
+
+      &__image {
+        @include desktop {
+          margin-top: -237px;
+        }
+      }
+    }
+  }
+
+  &--faq {
+    padding-bottom: 50px;
+
+    @include desktop {
+      padding-top: 44px;
+      padding-bottom: 40px;
+    }
+
+    .container {
+      padding: 0;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    .hero__greeting {
+      width: 100%;
+    }
+
+    .hero__text {
+      max-width: none;
+
+      @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      h4 {
+        @include desktop {
+          margin-bottom: 0;
+        }
+      }
+
+      & > p {
+        max-width: 810px;
+        margin-bottom: 40px;
+
+        + h4 {
+          margin-top: 0;
+        }
+      }
+
+      .search {
+        margin-bottom: 0;
+        @include desktop {
+          width: 482px;
+        }
+      }
+    }
+  }
+
+  &--download {
+    padding-bottom: 30px;
+
+    @include desktop {
+      padding-top: 44px;
+    }
+
+    .hero {
+      &__text {
+        @include laptop {
+          max-width: 672px;
+          margin-right: 50px;
+        }
+      }
+
+      &__image {
+        @include laptop {
+          height: calc(570px + (100vw - 1440px) / 2);
+          width: calc(673px + (100vw - 1440px) / 2);
+          max-height: none;
+          max-width: none;
+        }
+
+        @include desktop {
+          height: 570px;
+          width: 673px;
+          max-height: 570px;
+          max-width: 673px;
+          margin-top: -236px;
+        }
+      }
+    }
+  }
+
+  &--about {
+    @include desktop {
+      padding-top: 44px;
+
+      .hero {
+        &__image {
+          @include desktop {
+            margin-top: -238px;
+          }
+        }
+      }
+
+      .hero__text {
+        max-width: 500px;
+      }
+    }
+  }
 }

@@ -7,44 +7,70 @@ append vars
   //-
 
 block content
-  section.news-header
+  .container
+    +breadcrumb(['Home', 'Nieuws'], 'Donec pretium hendrerit magna')
+  .section.news-detail
     .container
-      img.news-header__image(src="images/news-detail.jpg" alt="alt.")
-      .news-header__info
-        .news-header__text-author Written by <span>Jane Doe</span>
-        .news-header__photo-author Photo: <span>John Doe</span>
-  section.section.section-article
-    .container
-      .row
-        .col-md-7
-          article.article
-            h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit
-
-            b Als Nexios zijn we participant van de Stichting Donateursbelangen, waarmee we een eerlijke, open cultuur tussen goede doelen en donateurs ondersteunen. Rekening houden met de wensen en voorkeuren van donateurs en hun privacy staat hierin centraal. Dat klinkt natuurlijk ontzettend logisch, maar wat betekent dit in de praktijk?
-
-            h5 Hoe haal je je donateurs over?
-            p Ga er maar aan staan als fondsenwervende organisatie. Zorgvuldig geworven donateurs hou je het liefst zo goed mogelijk vast. En dat niet alleen. Als iemand één keer sympathie voor jouw goede doel heeft getoond, dan is die persoon misschien welwillend om een volgende campagne of actie ook te ondersteunen. Tegelijkertijd wil je de belangen van de donateur niet uit het oog verliezen. Zo wil je dat donateurs kunnen aangeven hoe ze benaderd willen worden, hoe ze bij voorkeur willen betalen, en wil je dat ze makkelijk verantwoording vanuit het goede doel kunnen vinden. En last but not least, ze moeten eenvoudig hun donateurschap kunnen opzeggen.
-            ul 
-              li Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, sed!
-              li Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, deleniti.
-              li Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, officiis? Animi exercitationem laboriosam impedit incidunt repellat cum nihil! Ratione, mollitia.
-            q Als je het voorstel per e-mail verstuurt, dan worden de nieuwe overeenkomsten automatisch aan de juiste propositie gekoppeld.
-
-            p Dit zijn geen tegenstrijdige belangen. Als je als fondsenwervende organisatie je processen en informatievoorziening goed op orde hebt, kun je de belangen van de donateur prima behartigen en tegelijkertijd je fondsenwervende doelstelling nastreven. Nexios CRM kan je helpen met het vastleggen van de wensen en voorkeuren van een donateur, zodat je hier rekening mee kunt houden tijdens het uitvoeren van alle fondsenwervende activiteiten.
-        .col-md-5.col-lg-4.offset-lg-1
-          .visible-mobile.text-center 
-            a.link-secondary(href="") Load more news items
-          aside.recent-news.visible-desktop
-            h3 Recent news
-            +card(
-              "images/news.jpg",
-              "12 July 2022",
-              "Most people think in differences, Amran thinks in similarities",
-              "Amran (19) fled from Yemen eight years ago. He travelled through Malaysia and Spain, eventually coming to The Netherlands. He is currently studying…"
-            )
-            +card(
-              "images/news.jpg",
-              "22 June 2022",
-              "“You can learn a lot from each other.”",
-              "The Municipality of Eindhoven recently signed an agreement with Takecarebnb. The organisation links status holders to host families, who open their homes…"
-            )
+      article.news-detail__head
+        .news-detail__image
+          img(src="images/news-detail.jpg" alt="alt.")
+        .news-detail__info
+          h1 
+            span Donec pretium hendrerit magna
+          .news-detail__date
+            span Published on:&nbsp;
+            span 2 May 2023
+      article.section.news-detail__row
+        .news-detail__text
+          p 
+            strong Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra augue urna, id cursus lectus auctor in. Maecenas nisl libero, scelerisque quis aliquam sed, bibendum sit amet mi. Curabitur vehicula, est sit amet hendrerit facilisis, justo nulla laoreet sapien, sit amet iaculis justo nisi at purus.
+          p liquam fermentum vestibulum mauris, vel tempus tortor luctus gravida. Sed eu volutpat erat. Suspendisse scelerisque diam et scelerisque vehicula. Suspendisse sit amet vehicula ligula. Nam bibendum sapien vel placerat tristique. Integer rutrum efficitur ultrices. Praesent sit amet lacus tortor. Sed scelerisque ex augue. Vivamus fermentum dui quis nisi feugiat rutrum. 
+          p Integer ac varius dolor. Sed posuere vulputate condimentum. Fusce mollis massa ut enim fermentum, at interdum erat eleifend. Nunc condimentum vitae neque sed pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed blandit tincidunt libero nec faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus tempor libero orci, in pharetra erat pharetra sollicitudin. Pellentesque dictum nulla eros, quis lacinia purus tincidunt ac. Nam at magna ligula. Maecenas in sem a sem elementum iaculis vel ac quam. Proin tristique arcu ante, sed consequat tortor interdum et. Mauris feugiat risus at interdum tincidunt. Morbi vitae turpis maximus, elementum felis id, consequat sapien.
+          p Proin euismod lacus elit, sed ultrices neque maximus in. Donec pretium hendrerit magna, non hendrerit orci tempor sed. Suspendisse justo lacus, ullamcorper sit amet semper nec, interdum et nulla. Nullam nec sapien neque. Fusce sit amet nulla vitae lacus rutrum suscipit. Nam tempor metus sit amet nisl condimentum, quis accumsan erat consequat. Duis eget lacinia libero. Praesent turpis ante, eleifend nec libero a, venenatis sollicitudin lorem. Nam auctor, erat eu facilisis accumsan, velit turpis facilisis sapien, eu vulputate justo nisi vel massa. Ut et mauris quam. Suspendisse sed tortor ac augue efficitur euismod.
+          p Nulla facilisi. Morbi scelerisque velit sit amet felis sodales rutrum. Praesent mollis rutrum lorem non sagittis. Nullam libero tortor, aliquam at dictum et, fringilla auctor arcu. Cras auctor libero ac tellus rhoncus, sit amet condimentum nibh porta. Etiam euismod leo quis placerat tempor. Mauris porta consequat scelerisque. Vestibulum lorem mauris, accumsan eu nisl eget, viverra posuere velit. Integer quis placerat neque. Phasellus gravida ex erat, sit amet tincidunt quam placerat sed. Suspendisse potenti. Cras nisl tellus, mollis nec turpis eu, vehicula volutpat mauris.
+          .news-detail__share
+            h4 Share this article:
+            +social-links([
+              {
+                href: "#",
+                icon: "fb"
+              },
+              {
+                href: "#",
+                icon: "tw"
+              },
+              {
+                href: "#",
+                icon: "mail"
+              },
+            ]).social-links--share
+            button.news-detail__copy(type="button") Copy article link
+        aside.recent-news.background-muted
+          .swiper.recent-news-slider
+            h2 Recente nieuwsberichten
+            .swiper-wrapper
+              .swiper-slide
+                +card-news({
+                  src: './images/news.jpg',
+                  label: '02-05-2023',
+                  title: 'Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+                  button: 'Lees verder'
+                }, 436, 251)
+              .swiper-slide
+                +card-news({
+                  src: './images/news.jpg',
+                  label: '02-05-2023',
+                  title: 'Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+                  button: 'Lees verder'
+                }, 436, 251)
+              .swiper-slide
+                +card-news({
+                  src: './images/news.jpg',
+                  label: '02-05-2023',
+                  title: 'Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+                  button: 'Lees verder'
+                }, 436, 251)
+            .swiper-pagination

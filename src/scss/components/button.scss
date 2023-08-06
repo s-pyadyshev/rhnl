@@ -13,23 +13,16 @@ $button-border-radius: 40px;
   font-size: 15px;
   text-decoration: none;
   border: 0;
+  transition: 0.2s;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $button-color-hover;
+  }
 
   @include laptop {
     font-size: 20px;
-  }
-
-  &:focus {
-    background-color: $button-background-color-hover;
-    color: $button-color-hover;
-  }
-
-  &:hover {
-    background-color: $button-background-color-hover;
-    color: $button-color-hover;
-  }
-
-  &:active {
-    color: $button-color-active;
   }
 
   &[disabled] {
@@ -41,16 +34,170 @@ $button-border-radius: 40px;
     font-weight: 900;
     border-bottom: solid 1px $color-white;
   }
+
+  &--search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 61px;
+    height: 61px;
+    padding: 0;
+
+    svg {
+      width: 23px;
+    }
+  }
+
+  &--with-arrow {
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 20px 16px 28px;
+    border: 2px solid $color-secondary;
+    color: $color-secondary;
+    border-radius: 10px;
+    background-color: transparent;
+
+    svg {
+      margin-left: 36px;
+      width: 21px;
+      height: 18px;
+      color: $color-secondary;
+      transition: 0.2s;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: $color-primary;
+      background-color: $color-primary;
+
+      svg {
+        color: $color-white;
+      }
+    }
+  }
+
+  &--more-news {
+    padding: 16px 37px 15px 37px;
+    font-size: 20px;
+    line-height: 24px;
+    background: transparent linear-gradient(99deg, #33a6a7 0%, #1d8a8b 100%) 0%
+      0% no-repeat padding-box;
+    border-radius: 30px;
+    text-align: center;
+
+    &:focus,
+    &:hover,
+    &:active {
+      box-shadow: 0px 0px 10px #33a6a780;
+    }
+  }
+
+  &--filter {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    color: $color-secondary;
+    background-color: transparent;
+    border: 2px solid $color-secondary;
+    border-radius: 5px;
+    padding: 11px 14px 10px 13px;
+    text-decoration: none;
+
+    @media (min-width: 375px) {
+      font-size: 18px;
+    }
+
+    @include laptop {
+      font-size: 18px;
+    }
+
+    span {
+      border: none;
+    }
+
+    svg {
+      width: 25px;
+      height: 25px;
+      margin-right: 15px;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: $color-primary;
+      color: $color-primary;
+      background-color: transparent;
+    }
+  }
+
+  &--round-arrow {
+    display: block;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    position: relative;
+    border: 2px solid $color-text;
+    color: $color-text;
+    border-radius: 10px;
+    padding: 18px 20px 16px 16px;
+
+    @media (min-width: 375px) {
+      font-size: 18px;
+      padding: 18px 28px 16px 16px;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-primary;
+      background-color: tra;
+
+      span {
+        background-color: $color-primary;
+      }
+    }
+
+    span {
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+      background-color: $color-secondary;
+      color: $color-white;
+      border: 2px solid $color-beige;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translate(50%, -50%);
+      right: 0;
+      transition: 0.2s;
+
+      svg {
+        width: 15px;
+        height: 13px;
+      }
+    }
+  }
 }
 
 .button-primary {
-  background: transparent
-    linear-gradient(101deg, $color-primary 0%, #d03d2d 100%) 0% 0% no-repeat;
+  background-color: $color-primary;
 
-  &:hover,
   &:focus,
+  &:hover,
   &:active {
-    box-shadow: 0 0 15px #ea5c4d80;
+    background-color: $color-secondary;
   }
 }
 
@@ -58,8 +205,8 @@ $button-border-radius: 40px;
   background: transparent
     linear-gradient(100deg, $color-secondary 0%, #1d8a8b 100%) 0% 0% no-repeat;
 
-  &:hover,
   &:focus,
+  &:hover,
   &:active {
     box-shadow: 0 0 15px #33a6a780;
   }
@@ -71,8 +218,8 @@ $button-border-radius: 40px;
   color: $color-primary;
   padding: 12px 47px;
 
-  &:hover,
   &:focus,
+  &:hover,
   &:active {
     background: $color-light-pink 0% 0%;
     color: $color-primary;

@@ -1,0 +1,57 @@
+extends pug/base
+
+prepend vars
+  - title = 'Zoeken'
+
+append vars
+  //-
+
+block content
+  .container
+    +breadcrumb(['Home'], 'Zoekresultaten')
+    section.section.section-search.pt-0.pb-0
+      .hero
+        .hero__greeting
+          p ZOEKEN
+        h1 Zoekresultaten voor: 
+          i werk vinden
+      .section-search__cards
+        .row
+          .col-sm-6.col-lg-12.col-xl-11
+            +card-news-link({
+              src: './images/news.jpg',
+              title: 'Hoe kan ik helpen een baan te vinden?',
+              text: 'Phasellus et magna neque. Etiam eu auctor est. Etiam aliquam pulvinar augue quis bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+              button: 'Lees verder'
+            }, 460, 280)
+          .col-sm-6.col-lg-12.col-xl-11
+            +card-news-link({
+              src: './images/news.jpg',
+              title: 'Kan mijn gast werken in Nederland?',
+              text: 'Etiam aliquam pulvinar augue quis bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam et tortor ut nisi gravida convallis.',
+              button: 'Lees verder'
+            }, 460, 280)
+    section.section.section--feedback.with-aside
+      .section__wrapper
+        .section__content
+          form.form
+            h4.text-primary Niet gevonden wat je zocht?
+            p Phasellus et magna neque. Etiam eu auctor est. Etiam aliquam pulvinar augue quis bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            .form__fields
+              input.input(type="text" placeholder="Naam" name="name")
+              input.input(type="email" placeholder="E-mailadres" name="email")
+              textarea.textarea(name="ask" placeholder="Type hier je vraag…")
+            button.button.button--with-arrow(type="submit") Verstuur
+              +svg("arrow-right")
+        .section__aside
+          .registration-links
+            h3 Hier kun je je aanmelden
+            a.button.button--round-arrow(href="/" title="Aanmelden als gastgezin") Aanmelden als gastgezin
+              span 
+                +svg('arrow-right')
+            a.button.button--round-arrow(href="/" title="Aanmelden als gast") Aanmelden als gast
+              span 
+                +svg('arrow-right')
+            .registration-links__icon
+              +svg('sheet')
+

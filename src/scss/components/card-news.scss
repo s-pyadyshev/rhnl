@@ -1,0 +1,138 @@
+.card-news {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background-color: $color-white;
+  border-radius: 10px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  margin-bottom: 30px;
+  width: 100%;
+  border-bottom-right-radius: 12px;
+  height: 100%;
+
+  @include laptop {
+    box-shadow: none;
+  }
+
+  &__image {
+    position: relative;
+    padding-bottom: calc(100% * 186 / 320);
+    height: 0;
+
+    @include laptop {
+      margin-bottom: 30px;
+      padding-bottom: calc(100% * 377 / 667);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 7px 12px 6px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: $color-white;
+    background-color: $color-primary;
+    z-index: 1;
+
+    @include desktop {
+      font-size: 20px;
+      line-height: 24px;
+      padding: 10px 22px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 30px 20px;
+
+    @include tablet {
+      align-items: flex-start;
+    }
+
+    @include laptop {
+      padding: 0;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      p {
+        margin-top: auto;
+      }
+    }
+
+    @include laptop {
+      margin-bottom: 30px;
+    }
+
+    p {
+      -webkit-box-orient: vertical;
+      display: block;
+      display: -webkit-box;
+      text-overflow: ellipsis;
+      line-clamp: 4;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
+    }
+
+    h3 {
+      font-size: 22px;
+      line-height: 32px;
+
+      @include desktop {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    h3 + p {
+      margin-top: 10px;
+    }
+  }
+
+  .button {
+    margin-top: auto;
+
+    &:focus,
+    &:hover,
+    &:active {
+      .button {
+        border-color: $color-primary;
+        background-color: $color-primary;
+        color: $color-white;
+
+        svg {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+.card-news-list {
+  row-gap: 50px;
+}

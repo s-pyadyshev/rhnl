@@ -1,10 +1,169 @@
 .section {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   @include desktop {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+
+  &.section-sm {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &.with-aside {
+    .section__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 46px;
+
+      @include laptop {
+        flex-wrap: nowrap;
+      }
+    }
+
+    .section__content {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+
+    .section__aside {
+      margin-right: auto;
+      margin-left: auto;
+
+      @include laptop {
+        width: 368px;
+        flex-shrink: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  &--faq {
+    @include laptop {
+      .row {
+        row-gap: 30px;
+      }
+    }
+
+    .row {
+      @include desktop {
+        row-gap: 50px;
+        margin-left: -25px;
+        margin-right: -25px;
+      }
+
+      .col-md-6 {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+          padding-right: 25px;
+          padding-left: 25px;
+        }
+      }
+    }
+
+    .card-news {
+      height: 100%;
+
+      @include desktop {
+        &:hover {
+          color: $color-border;
+        }
+      }
+
+      &__image {
+        @include laptop {
+          border-radius: 10px;
+          overflow: hidden;
+        }
+
+        @include desktop {
+          padding-bottom: 280px;
+        }
+      }
+
+      &__text {
+        @include desktop {
+          margin-bottom: 0;
+        }
+      }
+
+      .button {
+        @include desktop {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &--form {
+    &.with-aside {
+      .section__content {
+        width: 100%;
+      }
+
+      .section__aside {
+        width: 100%;
+        order: -1;
+
+        @include laptop {
+          order: 2;
+        }
+      }
+    }
+  }
+}
+
+.section-not-found {
+  h1 {
+    margin-bottom: 50px;
+
+    @include desktop {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.section-search {
+  &__cards {
+    .row {
+      @media (min-width: 1025px) {
+        gap: 50px;
+      }
+    }
+  }
+
+  h1 {
+    margin-bottom: 43px;
+  }
+
+  .card-news {
+    @media (min-width: 1025px) {
+      flex-direction: row;
+      align-items: center;
+
+      &:focus,
+      &:hover,
+      &:active {
+        color: $color-gray;
+      }
+    }
+
+    &__image {
+      @media (min-width: 1025px) {
+        padding-bottom: 200px;
+        width: 398px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-right: 56px;
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -43,10 +202,6 @@
 }
 
 .section.section-orgs {
-  @include laptop {
-    padding-top: 60px;
-  }
-
   .logos-list {
     &:before {
       content: "";
@@ -61,6 +216,10 @@
 }
 
 .section-orgs__logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
   &:after {
     content: "";
     display: block;
@@ -79,27 +238,43 @@
     flex-wrap: wrap;
     margin-right: -20px;
     margin-left: -20px;
+    margin-top: 15px;
 
     @include laptop {
       justify-content: space-between;
     }
 
     li {
+      list-style: none;
       padding-right: 20px;
       padding-left: 20px;
       margin-bottom: 40px;
+      flex-grow: 1;
+
+      @include tablet {
+        height: 50px;
+      }
 
       @include laptop {
         margin-bottom: 0;
+        flex-grow: 0;
+        height: 70px;
+      }
+
+      @include desktop {
+        height: 115px;
       }
 
       img {
-        height: 60px;
-
-        @include desktop {
-          height: 90px;
-        }
+        height: 100%;
+        width: 100%;
       }
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      height: 100%;
     }
   }
 }

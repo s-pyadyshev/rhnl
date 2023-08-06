@@ -1,79 +1,152 @@
 .footer {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background: $color-black;
   color: $color-white;
 
-  @include laptop {
-    padding-top: 100px;
-    padding-bottom: 100px;
+  .container {
+    @media (min-width: 414px) {
+      padding-left: 57px;
+    }
 
-    &__nav {
-      column-count: 3;
-      font-size: 18px;
-
-      @include desktop {
-        column-count: 4;
-      }
-
-      li {
-        margin-bottom: 16px;
-        padding-right: 8px;
-      }
+    @include laptop {
+      padding-left: 47px;
     }
   }
 
-  &__contact {
-    font-size: 14px;
+  @include laptop {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  &__row {
+    @include laptop {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 47px;
+    }
+  }
+
+  &__col-left {
+    @include laptop {
+      width: 500px;
+    }
+
+    @media (min-width: 1280px) {
+      width: 640px;
+    }
+
+    @include desktop {
+      width: 886px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 45px;
+    }
+  }
+
+  &__col-right {
+    @include laptop {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+  }
+
+  &__partners {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 66px;
+    list-style-type: none;
 
     @include laptop {
-      align-items: flex-end;
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      gap: 37px;
+    }
+  }
+
+  &__partners-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 122px;
+    background-color: $color-white;
+    border-radius: 3px;
+    padding: 6px;
+
+    @media (min-width: 375px) {
+      width: 147px;
+      height: 74px;
+    }
+  }
+
+  &__partners-image {
+    border-radius: 3px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    margin-bottom: 23px;
+
+    h3 {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      margin-right: 25px;
     }
   }
 
   &__links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
+    list-style-type: none;
+    margin-bottom: 30px;
 
     @include laptop {
-      flex-direction: row;
-      justify-content: flex-end;
-      margin-right: -36px;
-      margin-left: -36px;
-      text-align: right;
+      margin-top: auto;
+      margin-bottom: 90px;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
     }
 
     li {
-      padding-right: 36px;
-      padding-left: 36px;
-      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 15px;
 
-      @include laptop {
+      &:last-child {
         margin-bottom: 0;
       }
     }
   }
 
-  &__social {
-    margin-bottom: 40px;
+  &__copy {
+    p {
+      font-size: 14px;
+      line-height: 22px;
+    }
 
-    @include laptop {
-      margin-top: -12px;
-      margin-bottom: 20px;
+    span {
+      display: block;
+
+      @include tablet {
+        display: inline;
+      }
     }
   }
 
   a {
     text-decoration: none;
 
-    &:hover,
     &:focus,
+    &:hover,
     &:active {
       color: $color-primary;
     }

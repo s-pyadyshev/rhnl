@@ -1,0 +1,7 @@
+mixin search
+  form.search(action="/" name="search")
+    .search__icon
+      +svg('search')
+    input.input.search__field(type="search" placeholder="Type hier je vraag…")
+    button(type="submit").button.button--search.button-primary
+      +svg('arrow-right')

@@ -1,24 +1,38 @@
 .input {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
   padding: $input-padding;
-  font-size: 16px;
-  font-weight: 700;
-  border-width: $input-border-width;
-  border-style: solid;
-  border-color: $input-border-color;
-  color: $color-black;
-  transition-property: border-color;
-  transition-duration: $transition-duration;
+  width: 100%;
+  background-color: $color-muted;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: $color-text;
+  transition: .2s;
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
 
-  &:hover,
-  &:focus,
-  &:active {
-    border-color: $input-border-color-hover;
-    transition-property: border-color;
-    transition-duration: $transition-duration;
+  @include desktop {
+    padding: $input-padding-desktop;
   }
 
-  &:focus-visible {
-    outline: none;
-    border-color: $input-border-color-hover;
+  &::placeholder {
+    opacity: 1;
+    color: $color-text;
+    transition: .2s;
+  }
+
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    &::placeholder {
+      color: $color-secondary;
+    }
   }
 }

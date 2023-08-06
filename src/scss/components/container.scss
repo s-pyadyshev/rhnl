@@ -1,0 +1,42 @@
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @media (min-width: 414px) {
+    padding-right: 47px;
+    padding-left: 47px;
+  }
+
+  @media (min-width: 576px) {
+    max-width: 1024px;
+  }
+
+  @include tablet {
+    max-width: 1200px;
+  }
+
+  @media (min-width: 1025px) {
+    max-width: 1200px;
+  }
+
+  @media (min-width: 1366px) {
+    max-width: 1200px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1458px;
+  }
+
+  @include desktop-xl {
+    max-width: 1458px;
+  }
+}

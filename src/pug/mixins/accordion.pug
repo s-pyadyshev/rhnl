@@ -1,9 +1,9 @@
-mixin accordion
-  .accordion
-    .accordion-header
-      span.accordion-title Accordion title
-      button.accordion-toggle(data-accordion="")
-        span.accordion-toggle-closed +
-        span.accordion-toggle-opened -
-    .accordion-content
-      p Accordion content
+mixin accordion(title, content)
+  li.accordion-list__item
+    .accordion
+      .accordion__header
+        button.accordion__toggle(data-accordion aria-expanded="false")
+          span.accordion__icon
+          span.accordion__title= title
+      .accordion__content
+        p= content

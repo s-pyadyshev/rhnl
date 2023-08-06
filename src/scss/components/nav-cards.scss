@@ -1,0 +1,111 @@
+.nav-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @include laptop {
+    .dropdown-menu & {
+      flex-wrap: nowrap;
+    }
+  }
+
+  @include desktop {
+    gap: 30px;
+    .dropdown-menu & {
+      gap: 36px;
+    }
+  }
+
+  &--in-section {
+    .nav-card {
+      p {
+        bottom: 15px;
+        left: 15px;
+
+        @include laptop {
+          font-size: 28px;
+          line-height: 34px;
+          bottom: 30px;
+          left: 30px;
+        }
+      }
+    }
+  }
+
+  &--in-aside {
+    .nav-card {
+      p {
+        bottom: 15px;
+        left: 15px;
+
+        @include laptop {
+          bottom: 20px;
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+
+.nav-card {
+  width: calc(50% - 8px);
+  height: calc(100vw * 165 / 414);
+  max-height: 306px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @include laptop {
+    .dropdown-menu & {
+      width: auto;
+      height: 130px;
+    }
+  }
+
+  @include desktop {
+    height: 260px;
+    width: calc(50% - 15px);
+
+    .dropdown-menu & {
+      height: 172px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(18, 18, 18, 0.69) 0%,
+        rgba(96, 96, 96, 0) 100%
+      );
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: $color-white;
+    font-size: 22px;
+    line-height: 24px;
+    text-transform: none;
+    width: calc(100% - 20px);
+    text-align: left;
+  }
+}

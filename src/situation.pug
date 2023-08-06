@@ -1,0 +1,30 @@
+extends pug/base
+
+prepend vars
+  - title = 'Wat is jouw situatie'
+
+append vars
+  //-
+
+block content
+  .container
+    +breadcrumb(['Home'], 'Wat is jouw situatie')
+  +hero({
+    greeting: 'GETTING STARTED',
+    title: 'Welcome to ',
+    titleStrong: 'RefugeeHomeNL',
+    descriptions: [
+      {
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at.',
+      },
+    ],    titleH4: 'Wat is jouw situatie?',
+    img: 'images/family-mobile.png',
+    srcset: 'images/family.png',
+    imgAlt: 'Family'
+  })
+    +arrow-links([
+        {title:'Ik wil me aanmelden als gastgezin'},
+        {title:'Ik ben op dit moment gastgezin'},
+        {title:'Ik ben gevlucht uit Oekraine'},
+        {title:'Ik verblijf op dit moment bij een gastgezin'}
+    ])

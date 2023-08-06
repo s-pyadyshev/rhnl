@@ -1,0 +1,7 @@
+mixin arrow-links(links)
+  .arrow-links(class!=attributes.class)
+    each link in links
+      .arrow-links__link
+        .arrow-round-icon
+          +svg('arrow-right')
+        a(href="/" title=link.title)= link.title

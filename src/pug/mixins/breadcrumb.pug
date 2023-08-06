@@ -2,14 +2,14 @@
 //- last - last active page in span, e.g. (['Main page', 'News'], 'News detail')
 mixin breadcrumb(items, last)
   nav.breadcrumb(aria-label="breadcrumbs")
-    ul
+    ul.breadcrumb__list
       each item in items
-        li
+        li.breadcrumb__item
           if (index === items.length - 1)
             span= item
           else
-            a(href="#" title=item)= item
+            a(href="#" title=item).breadcrumb__link= item
 
       if last
-        li
+        li.breadcrumb__item
           span= last

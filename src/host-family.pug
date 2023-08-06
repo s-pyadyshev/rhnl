@@ -1,0 +1,106 @@
+extends pug/base
+
+prepend vars
+  - title = 'Gastgezin'
+
+append vars
+  //-
+
+block content
+  .container
+    +breadcrumb(['Home', 'Gastgezin'], 'Jij als gastgezin')
+  +hero({
+    greeting: 'GASTGEZIN',
+    title: 'Dank voor je ',
+    titleStrong: 'gastvrijheid',
+    descriptions: [
+      {
+        description:'Duizenden gezinnen in Nederland bieden een veilig en warm thuis aan mensen die zijn gevlucht uit Oekraïne. RefugeeHomeNL coördineert deze vorm van particuliere opvang. Voor, tijdens en na afloop van het samenwonen staan we graag voor jullie klaar. Op deze website bieden we gastgezinnen antwoord en advies om het verblijf zo prettig mogelijk te laten verlopen.',
+      },
+    ],
+    titleH4: 'Waarmee kunnen we je helpen?',
+    img: 'images/home-mobile.png',
+    srcset: 'images/home.png',
+    imgAlt: 'Family'
+  }).hero--host-family
+    +search()
+  section.section.with-aside
+    .container
+      h2 Topics
+      .section__wrapper
+        .section__content
+          +nav-cards(
+            [
+              {
+                src: "./images/news.jpg",
+                title: "Jij als gastgezin",
+                link: "host-family.html"
+              },
+              {
+                src: "./images/news.jpg",
+                title: "Je gast"
+              },
+              {
+                src: "./images/news.jpg",
+                title: "Taal & cultuur"
+              },
+              {
+                src: "./images/news.jpg",
+                title: "Zorg & Welzijn"
+              },
+              {
+                src: "./images/news.jpg",
+                title: "Werk/onderwijs"
+              },
+              {
+                src: "./images/news.jpg",
+                title: "Financiële zaken"
+              },
+              {
+                src: "./images/news.jpg",
+                title: "Vertrek"
+              },
+              {
+                src: "./images/news.jpg",
+                title: "Over RHNL"
+              },
+            ]
+          ).nav-cards--in-section
+        .section__aside
+          +reg-info().reg-info--host-family
+  section.news-section
+    .container
+      .news-section__head
+        h2 Nieuws
+        a.button.button--more-news(href="news.html" title="Alle nieuwsberichten") Alle nieuwsberichten
+      .swiper.slider-news
+        .swiper-wrapper
+          .swiper-slide
+            +card-news({
+              src: './images/news.jpg',
+              label: '02-05-2023',
+              title: 'Titel van artikel',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante.',
+              button: 'Lees verder'
+            }, 667, 377)
+          .swiper-slide
+            +card-news({
+              src: './images/news.jpg',
+              label: '02-05-2023',
+              title: 'Titel van artikel',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante.',
+              button: 'Lees verder'
+            }, 667, 377)
+          .swiper-slide
+            +card-news({
+              src: './images/news.jpg',
+              label: '02-05-2023',
+              title: 'Titel van artikel',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante.',
+              button: 'Lees verder'
+            }, 667, 377)
+        .swiper-button-prev
+          +svg("arrow-right")
+        .swiper-button-next
+          +svg("arrow-right")
+      a.button.button--more-news.full-width(href="news.html" title="Alle nieuwsberichten") Alle nieuwsberichten

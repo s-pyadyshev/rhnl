@@ -7,35 +7,32 @@ header.header
         span
 
     .header__inner
-      a.header__logo(href="/")
+      a.logo(href="home.html")
         img(src="images/logo.svg" alt="RefugeeHomeNL logo." width="122" height="70")
-
       .header__menu
         +navbar(
           [
             {
               text: "Home",
-              href: "/",
+              href: "home.html",
               active: true,
             },
             {
-              text: "For guests",
-              href: "guests.html"
-            },
-            {
-              text: "For host families",
-              href: "families.html"
-            },
-            {
-              text: "For municipalities",
-              href: "municipalities.html"
-            },
-            {
-              text: "News",
+              text: "Nieuws",
               href: "news.html"
             },
             {
-              text: "About us",
+              text: "Vraag & antwoord",
+              href: "faq.html",
+              dropdown: true,
+              class: "dropdown-link"
+            },
+            {
+              text: "Downloads",
+              href: "downloads.html"
+            },
+            {
+              text: "Over ons",
               href: "about.html"
             },
             {
@@ -44,20 +41,32 @@ header.header
             }
           ]
         )
-        .header__menu-logo
-          img(src="images/logo-mini.svg" alt="RefugeeHomeNL logo." width="24" height="24")
     .header__language
       .dropdown
-        button.button.button-primary.dropdown-toggle(data-toggle='dropdown')
-          span.dropdown-toggle__lang-title Language:&nbsp;
-          <span class="dropdown-toggle__lang-desktop">English</span><span class="dropdown-toggle__lang-mobile">EN</span>
+        button.button.dropdown-toggle(data-toggle='dropdown')
+          span.dropdown-icon
+            +svg('chevron-down')
+          span.dropdown-toggle__icon
+            +svg('globe')
+          <span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--desktop">Nederlands</span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--mobile">NL</span>
         .dropdown-menu
           a(href='')
-            span.dropdown-toggle__lang-desktop Украинский
-            span.dropdown-toggle__lang-mobile UKR
+            .dropdown-toggle__icon-flag
+              +svg('nl')
+            span.dropdown-toggle__lang.dropdown-toggle__lang--desktop.current-lang Nederlands
+            span.dropdown-toggle__lang.dropdown-toggle__lang--mobile.current-lang NL
           a(href='')
-            span.dropdown-toggle__lang-desktop Русский
-            span.dropdown-toggle__lang-mobile RUS
+            .dropdown-toggle__icon-flag
+              +svg('uk')
+            span.dropdown-toggle__lang.dropdown-toggle__lang--desktop English
+            span.dropdown-toggle__lang.dropdown-toggle__lang--mobile EN
           a(href='')
-            span.dropdown-toggle__lang-desktop Nederlands
-            span.dropdown-toggle__lang-mobile NL
+            .dropdown-toggle__icon-flag
+              +svg('ua')
+            span.dropdown-toggle__lang.dropdown-toggle__lang--desktop Українська
+            span.dropdown-toggle__lang.dropdown-toggle__lang--mobile UKR
+          a(href='')
+            .dropdown-toggle__icon-flag
+              +svg('ru')
+            span.dropdown-toggle__lang.dropdown-toggle__lang--desktop Русский
+            span.dropdown-toggle__lang.dropdown-toggle__lang--mobile RUS

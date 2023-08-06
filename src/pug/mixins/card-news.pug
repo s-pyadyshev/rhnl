@@ -1,0 +1,25 @@
+mixin card-news(card, width, height)
+  .card-news
+    .card-news__image
+      img(src=card.src alt="" width=width height=height)
+      if card.label
+        .card-news__label
+          span= card.label
+    .card-news__content
+      .card-news__text
+        h3= card.title
+        p= card.text
+      a(href="/news-detail.html").button.button--with-arrow= card.button
+        +svg("arrow-right")
+
+mixin card-news-link(card, width, height)
+  a.card-news(href='/')
+    .card-news__image
+      img(src=card.src alt="" width=width height=height)
+      if card.label
+        .card-news__label
+          span= card.label
+    .card-news__content
+      .card-news__text
+        h3= card.title
+        p= card.text

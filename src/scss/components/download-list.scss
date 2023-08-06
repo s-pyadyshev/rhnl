@@ -1,0 +1,88 @@
+.download-list {
+  .row {
+    row-gap: 20px;
+
+    @include desktop {
+      margin: 0 -11px;
+    }
+  }
+
+  [class^="col-"] {
+    display: flex;
+
+    @include desktop {
+      padding: 0 11px;
+    }
+  }
+}
+
+.download-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 2px solid $color-muted;
+  padding: 20px;
+  width: 100%;
+
+  @include laptop {
+    padding: 25px 30px 30px;
+  }
+
+  h5 {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 22px;
+    margin: auto -10px 0;
+
+    @include tablet {
+      flex-direction: row;
+    }
+
+    @include desktop {
+      margin: auto 0 0;
+    }
+
+    li {
+      padding: 0 10px;
+      list-style: none;
+      flex-grow: 1;
+
+      @include desktop {
+        padding: 0;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 900;
+    text-underline-offset: 5px;
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &:active {
+      svg {
+        color: $color-primary;
+      }
+    }
+
+    @include desktop {
+      font-size: 18px;
+    }
+
+    svg {
+      color: $color-secondary;
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      transition: .2s;
+    }
+  }
+}

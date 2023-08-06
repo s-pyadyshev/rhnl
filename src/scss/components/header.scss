@@ -7,12 +7,16 @@ $mobile-menu-background-color: #ccc;
   z-index: 2;
   display: flex;
   align-items: center;
-  padding: 30px 0;
+  padding: 27px 0;
   position: fixed;
-  min-height: 145px;
+  min-height: 116px;
   backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0px 0px 15px #0000000f;
+
+  @include laptop {
+    min-height: 145px;
+  }
 
   &__inner {
     display: flex;
@@ -20,38 +24,33 @@ $mobile-menu-background-color: #ccc;
     justify-content: space-between;
 
     @include laptop {
-      padding-left: 7px;
-    }
-  }
-
-  &__language {
-    @include desktop-xl {
-      margin-right: -150px;
+      width: 100%;
     }
   }
 
   &__logo {
+    flex-shrink: 0;
     width: 110px;
 
     @include laptop {
-      width: 144px;
+      width: 122px;
     }
   }
 
   &__menu {
     position: fixed;
     right: 0;
-    top: 145px;
-    z-index: 98;
+    top: 115px;
+    z-index: 1;
     overflow: hidden;
     overflow-y: auto;
     margin: 0;
-    padding: 70px 30px 70px;
-    height: 100vh;
+    padding: 80px 0 80px;
+    height: calc(100vh - 115px);
     width: 100vw;
     max-width: 100%;
     // stylelint-disable-next-line
-    height: calc(var(--vh));
+    // height: calc(var(--vh));
     text-align: center;
     color: $color-black;
     background-color: $color-muted;
@@ -65,20 +64,19 @@ $mobile-menu-background-color: #ccc;
       display: block;
       opacity: 1;
       padding: 0;
-      margin-left: 54px;
-      width: auto;
+      margin-left: 70px;
+      margin-right: 70px;
+      width: 100%;
       height: auto;
+      overflow: visible;
       text-align: left;
       background-color: transparent;
       transform: translateX(0);
     }
 
-    @include laptop {
-      margin-left: 30px;
-    }
-
-    @include desktop-xl {
-      margin-left: 100px;
+    @media (min-width: 1280px) {
+      margin-left: 120px;
+      margin-right: 100px;
     }
 
     &.is-open {
@@ -96,13 +94,8 @@ $mobile-menu-background-color: #ccc;
     }
   }
 
-  &__menu-logo {
-    @include laptop {
-      display: none;
-    }
-  }
-
   &__menu-toggle {
+    display: flex;
     flex-shrink: 0;
 
     @include laptop {
@@ -114,10 +107,6 @@ $mobile-menu-background-color: #ccc;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row-reverse;
-
-    @include laptop {
-      flex-direction: row;
-    }
+    flex-direction: row;
   }
 }

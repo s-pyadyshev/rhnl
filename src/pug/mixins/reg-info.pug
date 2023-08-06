@@ -1,0 +1,32 @@
+mixin reg-info
+  .reg-info(class!=attributes.class)
+    h3 Registration no longer possible
+    .reg-info__wrapper
+      .reg-info__country.reg-info__country--nl
+        .reg-info__flag
+          +svg('nl')
+        a.reg-info__link(href="/" title="Lees meer over de aanmeldstop")
+          span Lees meer over de aanmeldstop
+          .arrow-round-icon
+            +svg('arrow-right')
+      .reg-info__country.reg-info__country--uk
+        .reg-info__flag
+          +svg('uk')
+        a.reg-info__link(href="/" title="Read more about the registration freeze")
+          span Read more about the registration freeze
+          .arrow-round-icon
+            +svg('arrow-right')
+      .reg-info__country.reg-info__country--ua
+        .reg-info__flag
+          +svg('ua')
+        a.reg-info__link(href="/" title="Докладніше про заморожування реєстрації")
+          span Докладніше про заморожування реєстрації
+          .arrow-round-icon
+            +svg('arrow-right')
+      .reg-info__country.reg-info__country--ru
+        .reg-info__flag
+          +svg('ru')
+        a.reg-info__link(href="/" title="Подробнее о приостановке регистрации")
+          span Подробнее о приостановке регистрации
+          .arrow-round-icon
+            +svg('arrow-right')

@@ -1,7 +1,7 @@
 .menu-button {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 21px;
   padding: 0;
   cursor: pointer;
   transition: all 0.5s;
@@ -13,8 +13,8 @@
     display: block;
     background: #000;
     position: absolute;
-    height: 4px;
-    width: 40px;
+    height: 3px;
+    width: 24px;
     border-radius: 4px;
   }
 
@@ -31,13 +31,13 @@
   }
 
   span:nth-child(2) {
-    top: 14px;
-    width: 24px;
+    top: 9px;
+    width: 14px;
   }
 
   span:nth-child(3) {
-    top: 28px;
-    width: 35px;
+    top: 18px;
+    width: 20px;
   }
 
   &.is-open {
@@ -46,6 +46,7 @@
       transform: rotate(45deg);
       transition: top $transition-duration,
         transform $transition-duration $transition-duration;
+        width: 28px;
     }
 
     span:nth-child(2),
@@ -54,7 +55,7 @@
       transform: rotate(-45deg);
       transition: top $transition-duration,
         transform $transition-duration $transition-duration;
-      width: 40px;
+      width: 28px;
     }
   }
 }

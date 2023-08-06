@@ -1,0 +1,32 @@
+.search {
+  position: relative;
+  max-width: 482px;
+  margin-bottom: 30px;
+
+  @include laptop {
+    margin-bottom: 0;
+  }
+
+  &__field {
+    padding: 18px 80px 18px 59px;
+    border-radius: 30px;
+    min-height: 61px;
+
+    @include desktop {
+      padding: 18px 80px 18px 95px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    color: $color-secondary;
+
+    @include desktop {
+      left: 40px;
+    }
+  }
+}

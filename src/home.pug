@@ -7,8 +7,22 @@ append vars
   //-
 
 block content
-  include ./pug/components/hero.pug
-  include ./pug/components/info.pug
-  include ./pug/components/step-cards.pug
-  include ./pug/components/section-news.pug
-  
+  .container
+    +breadcrumb(['Home'], 'Select your language')
+  +hero({
+    greeting: 'GETTING STARTED',
+    title: 'Welcome to ',
+    titleStrong: 'RefugeeHomeNL',
+    descriptions: [
+      {
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at.',
+      },
+    ],
+    titleH4: 'Select your language',
+    img: 'images/home-mobile.png',
+    srcset: 'images/home.png',
+    imgAlt: 'Family'
+  })
+    +arrow-links([{title:'English'}, {title:'Nederlands (Dutch)'}])
+    .hero__reg-info
+      +reg-info()

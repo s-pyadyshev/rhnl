@@ -1,0 +1,7 @@
+mixin nav-cards(cards)
+  .nav-cards(class!=attributes.class)
+    each card in cards
+      .nav-card
+        a.nav-card__link(href=card.link title=card.title)
+          img(src=card.src alt="" width="152" height="165")
+          p= card.title

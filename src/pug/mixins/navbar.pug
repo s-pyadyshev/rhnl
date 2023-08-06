@@ -1,6 +1,51 @@
 mixin navbar(links)
-  nav.navbar(role="navigation" aria-label="main navigation")
+  nav.navbar(aria-label="main navigation")
     ul.navbar__list
       each link in links
-        li(class=(link.active ? "current-menu-item" : "" ))
-          a.navbar__link(href=link.href)= link.text
+        if !link.dropdown
+          li(class=(link.active ? "current-menu-item" : "" ))
+            a.navbar__link(href=link.href class=link.class)= link.text
+        if link.dropdown
+          li(class=(link.active ? "current-menu-item" : "" ))
+            .dropdown.dropdown--nav-cards
+              button.navbar__link(class=link.class data-toggle='dropdown')= link.text
+                span.dropdown-icon
+                  +svg('chevron-down')
+              .dropdown-menu
+                +nav-cards(
+                  [
+                    {
+                      src: "./images/news.jpg",
+                      title: "Jij als gastgezin",
+                      link: "host-family.html"
+                    },
+                    {
+                      src: "./images/news.jpg",
+                      title: "Je gast"
+                    },
+                    {
+                      src: "./images/news.jpg",
+                      title: "Taal & cultuur"
+                    },
+                    {
+                      src: "./images/news.jpg",
+                      title: "Zorg & Welzijn"
+                    },
+                    {
+                      src: "./images/news.jpg",
+                      title: "Werk/ onderwijs"
+                    },
+                    {
+                      src: "./images/news.jpg",
+                      title: "Financiële zaken"
+                    },
+                    {
+                      src: "./images/news.jpg",
+                      title: "Vertrek"
+                    },
+                    {
+                      src: "./images/news.jpg",
+                      title: "Over RHNL"
+                    },
+                  ]
+                )

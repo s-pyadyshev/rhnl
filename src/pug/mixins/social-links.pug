@@ -1,6 +1,6 @@
 mixin social-links(data)
-  ul.social-links
+  ul.social-links(class!=attributes.class)
     each item in data
       li.social-links__item
-        a.social-links__link(href=item.href ? item.href : '#' target="_blank" rel="noopener noreferrer")
-          +svg(item.icon)
+        button.social-links__link(type="button")
+          +svg(item.icon)(class=item.icon)

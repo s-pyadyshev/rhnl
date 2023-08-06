@@ -7,70 +7,99 @@ append vars
   //-
 
 block content
-  section.section
-    .container
-      h2 News
-      .row.card-list.flex-wrap
-        .col-sm-6.col-md-4
-          +card(
-            "images/news.jpg",
-            "12 July 2022",
-            "Most people think in differences, Amran thinks in similarities",
-            "Amran (19) fled from Yemen eight years ago. He travelled through Malaysia and Spain, eventually coming to The Netherlands. He is currently studying…"
-          )
-        .col-sm-6.col-md-4
-          +card(
-            "images/news.jpg",
-            "22 June 2022",
-            "“You can learn a lot from each other.”",
-            "The Municipality of Eindhoven recently signed an agreement with Takecarebnb. The organisation links status holders to host families, who open their homes…"
-          )
-        .col-sm-6.col-md-4
-          +card(
-            "images/news.jpg",
-            "7 June 2022",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo…"
-          )
-        .col-sm-6.col-md-4
-          +card(
-            "images/news.jpg",
-            "12 July 2022",
-            "Most people think in differences, Amran thinks in similarities",
-            "Amran (19) fled from Yemen eight years ago. He travelled through Malaysia and Spain, eventually coming to The Netherlands. He is currently studying…"
-          )
-        .col-sm-6.col-md-4
-          +card(
-            "images/news.jpg",
-            "22 June 2022",
-            "“You can learn a lot from each other.”",
-            "The Municipality of Eindhoven recently signed an agreement with Takecarebnb. The organisation links status holders to host families, who open their homes…"
-          )
-        .col-sm-6.col-md-4
-          +card(
-            "images/news.jpg",
-            "7 June 2022",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo…"
-          )
-      button.news__load-more Load more new items
-
-  section.section.background-muted 
-    .container 
-      .logos-list
-        ul
-          li 
-            a(href="")
-              img(src="images/rodekruis.svg" alt="Rode Kruis logo.")
-          li 
-            a(href="")
-              img(src="images/vluchtelingenwerknl.svg" alt="VluchtelingenWerk Nederland logo.")
-          li 
-            a(href="")
-              img(src="images/legerdesheils.svg" alt="Leger des Heils logo.")
-          li 
-            a(href="")
-              img(src="images/takecarebnb.svg" alt="Takecarebnb logo.")
-          li 
-            a(href="")
-              img(src="images/mjv.svg" alt="Ministerie van Justitie en Veiligheid logo.")
+  .container
+    +breadcrumb(['Home'], 'Nieuws')
+    section.news-hero.background-muted
+      h1 
+        span Nieuws
+      .news-hero__content
+        +card-news({
+          src: './images/news.jpg',
+          label: '02-05-2023',
+          title: 'Tuition 2023-2024 possibly higher than last year',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+          button: 'Lees verder'
+        }, 667, 377)
+        +card-news({
+          src: './images/news.jpg',
+          label: '02-05-2023',
+          title: 'Donec pretium hendrerit magna',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+          button: 'Lees verder'
+        }, 667, 377)
+    section.section.news-list
+      .row
+        .col-lg-4.col-md-6
+          +card-news({
+            src: './images/news.jpg',
+            label: '02-05-2023',
+            title: 'Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+            button: 'Lees verder'
+          }, 437, 296)
+        .col-lg-4.col-md-6
+          +card-news({
+            src: './images/news.jpg',
+            label: '02-05-2023',
+            title: 'Duis eget lacinia libero praesent',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+            button: 'Lees verder'
+          }, 437, 296)
+        .col-lg-4.col-md-6
+          +card-news({
+            src: './images/news.jpg',
+            label: '02-05-2023',
+            title: 'Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+            button: 'Lees verder'
+          }, 437, 296)
+        .col-lg-4.col-md-6
+          +card-news({
+            src: './images/news.jpg',
+            label: '02-05-2023',
+            title: 'Curabitur vehicula, est sit amet hendrerit facilisis',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+            button: 'Lees verder'
+          }, 437, 296)
+        .col-lg-4.col-md-6
+          +card-news({
+            src: './images/news.jpg',
+            label: '02-05-2023',
+            title: 'Nunc condimentum vitae neque sed pretium',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+            button: 'Lees verder'
+          }, 437, 296)
+        .col-lg-4.col-md-6
+          +card-news({
+            src: './images/news.jpg',
+            label: '02-05-2023',
+            title: 'Etiam hendrerit commodo odio non tincidunt',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+            button: 'Lees verder'
+          }, 437, 296)
+        .col-lg-4.col-md-6
+          +card-news({
+            src: './images/news.jpg',
+            label: '02-05-2023',
+            title: 'Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+            button: 'Lees verder'
+          }, 437, 296)
+        .col-lg-4.col-md-6
+          +card-news({
+            src: './images/news.jpg',
+            label: '02-05-2023',
+            title: 'Duis eget lacinia libero praesent',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+            button: 'Lees verder'
+          }, 437, 296)
+        .col-lg-4.col-md-6
+          +card-news({
+            src: './images/news.jpg',
+            label: '02-05-2023',
+            title: 'Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum',
+            button: 'Lees verder'
+          }, 437, 296)
+      .news-list__pagination
+        +pagination()

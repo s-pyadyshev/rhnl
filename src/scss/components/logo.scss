@@ -1,0 +1,14 @@
+.logo {
+  display: flex;
+  flex-shrink: 0;
+  width: 110px;
+
+  &--footer {
+    width: 122px;
+    margin-bottom: 46px;
+  }
+
+  @include laptop {
+    width: 122px;
+  }
+}

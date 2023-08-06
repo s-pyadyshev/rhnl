@@ -1,0 +1,10 @@
+mixin filter(buttons)
+  .filter
+    .filter__title
+      span Filter op:
+    ul
+      each button in buttons
+        li
+          button.button.button--filter(type="button")
+            +svg(button.icon)
+            span= button.text
