@@ -85,7 +85,7 @@ function svgoConfig(minify = argv.minifySvg) {
     return {
       js2svg: {
         pretty: !minify,
-        indent: "\t",
+        indent: 2,
       },
       plugins: [
         {
@@ -95,11 +95,10 @@ function svgoConfig(minify = argv.minifySvg) {
             prefix: `${filename}-`,
           },
         },
-        "removeTitle",
         {
-          name: "removeViewBox",
-          active: false,
+          removeViewBox: false,
         },
+        "removeTitle",
         "sortAttrs",
       ],
     };
@@ -357,8 +356,8 @@ gulp.task("scss", () => {
       // .pipe($.sourcemaps.init())
       .pipe(sass().on("error", sass.logError))
       .pipe($.postcss(postcssPlugins))
-      // .pipe($.sourcemaps.write("."))
       .pipe(gcmq())
+      // .pipe($.sourcemaps.write("."))
       .pipe(gulp.dest("build/css"))
   );
 });
