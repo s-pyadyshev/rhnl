@@ -4975,10 +4975,6 @@ button.dropdown-toggle .dropdown-icon {
   pointer-events: none;
 }
 
-iframe .backgroundBg {
-  background: white;
-}
-
 @media (min-width: 0) {
   .hidden-xs {
     display: none;
