@@ -75,8 +75,8 @@ $button-border-radius: 40px;
     &:focus,
     &:hover,
     &:active {
-      border-color: $color-primary;
-      background-color: $color-primary;
+      border-color: $color-secondary;
+      background-color: $color-secondary;
 
       svg {
         color: $color-white;

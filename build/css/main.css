@@ -1855,8 +1855,8 @@ p {
 .button--with-arrow:focus,
 .button--with-arrow:hover,
 .button--with-arrow:active {
-  border-color: #ea5c4d;
-  background-color: #ea5c4d;
+  border-color: #33a6a7;
+  background-color: #33a6a7;
 }
 
 .button--with-arrow:focus svg,
@@ -4808,6 +4808,12 @@ button.dropdown-toggle .dropdown-icon {
   margin-left: 20px;
 }
 
+.news-detail__copy:focus,
+.news-detail__copy:hover,
+.news-detail__copy:active {
+  color: #33a6a7;
+}
+
 .recent-news {
   padding: 50px 0px;
   margin: 0 -30px;
@@ -4967,6 +4973,10 @@ button.dropdown-toggle .dropdown-icon {
 .disabled {
   opacity: 0.2;
   pointer-events: none;
+}
+
+iframe .backgroundBg {
+  background: white;
 }
 
 @media (min-width: 0) {

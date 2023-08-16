@@ -153,6 +153,12 @@
     text-decoration: underline;
     margin-bottom: 6px;
     margin-left: 20px;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-secondary;
+    }
   }
 }
 
