@@ -1,655 +1,831 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
-		<link rel="stylesheet" href="./css/main.css?v=1691390365785">
-	</head>
-	<body>
-		<div class="page-wrapper">
-			<header class="header">
-				<div class="container">
-					<div class="header__menu-toggle">
-						<button class="menu-button js-toggle-menu" type="button"><span> </span><span> </span><span></span></button>
-					</div>
-					<div class="header__inner"><a class="logo" href="home.html"><img src="images/logo.svg" alt="RefugeeHomeNL logo." width="122" height="70"></a>
-						<div class="header__menu">
-							<nav class="navbar" aria-label="main navigation">
-								<ul class="navbar__list">
-									<li class="current-menu-item"><a class="navbar__link" href="home.html">Home</a></li>
-									<li><a class="navbar__link" href="news.html">Nieuws</a></li>
-									<li>
-										<div class="dropdown dropdown--nav-cards">
-											<button class="navbar__link dropdown-link" data-toggle="dropdown">Vraag &amp; antwoord<span class="dropdown-icon">
-													<svg>
-														<use xlink:href="images/sprites.svg#chevron-down"></use>
-													</svg></span></button>
-											<div class="dropdown-menu">
-												<div class="nav-cards">
-													<div class="nav-card"><a class="nav-card__link" href="host-family.html" title="Jij als gastgezin"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Jij als gastgezin</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Je gast"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Je gast</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Taal &amp; cultuur"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Taal &amp; cultuur</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Zorg &amp; Welzijn"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Zorg &amp; Welzijn</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Werk/ onderwijs"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Werk/ onderwijs</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Financiële zaken"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Financiële zaken</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Vertrek"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Vertrek</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Over RHNL"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Over RHNL</p></a></div>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li><a class="navbar__link" href="downloads.html">Downloads</a></li>
-									<li><a class="navbar__link" href="about.html">Over ons</a></li>
-									<li><a class="navbar__link" href="contact.html">Contact</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-					<div class="header__language">
-						<div class="dropdown">
-							<button class="button dropdown-toggle" data-toggle="dropdown"><span class="dropdown-icon">
-									<svg>
-										<use xlink:href="images/sprites.svg#chevron-down"></use>
-									</svg></span><span class="dropdown-toggle__icon">
-									<svg>
-										<use xlink:href="images/sprites.svg#globe"></use>
-									</svg></span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--desktop">Nederlands</span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--mobile">NL</span></button>
-							<div class="dropdown-menu"><a href="">
-									<div class="dropdown-toggle__icon-flag">
-										<svg>
-											<use xlink:href="images/sprites.svg#nl"></use>
-										</svg>
-									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop current-lang">Nederlands</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile current-lang">NL</span></a><a href="">
-									<div class="dropdown-toggle__icon-flag">
-										<svg>
-											<use xlink:href="images/sprites.svg#uk"></use>
-										</svg>
-									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">English</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">EN</span></a><a href="">
-									<div class="dropdown-toggle__icon-flag">
-										<svg>
-											<use xlink:href="images/sprites.svg#ua"></use>
-										</svg>
-									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Українська</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">UKR</span></a><a href="">
-									<div class="dropdown-toggle__icon-flag">
-										<svg>
-											<use xlink:href="images/sprites.svg#ru"></use>
-										</svg>
-									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Русский</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">RUS</span></a></div>
-						</div>
-					</div>
-				</div>
-			</header>
-			<main class="main">
-				<div class="uikit-page">
-					<div class="container">
-						<div class="row">
-							<div class="col-2">
-								<aside>
-									<ul style="list-style-type: none;">
-										<li><a href="#typo">Typography</a></li>
-										<li><a href="#container">Container</a></li>
-										<li><a href="#grid">Grid</a></li>
-										<li><a href="#section">Section</a></li>
-										<li><a href="#accordion">Accordion</a></li>
-										<li><a href="#background">Background</a></li>
-										<li><a href="#navbar">Navbar</a></li>
-										<li><a href="#pagination">Pagination</a></li>
-										<li><a href="#tabs">Tabs</a></li>
-										<li><a class="href" #data-tab="sliders">Sliders</a></li>
-										<li><a href="#forms">Forms</a></li>
-										<li><a href="#toggle">Toggle</a></li>
-										<li><a href="#video">Video</a></li>
-										<li><a href="#cards">Cards</a></li>
-										<li><a href="#icons">Icons</a></li>
-										<li><a href="#scrollto">Scroll To anchors</a></li>
-										<li><a href="#scrollspy">ScrollSpy</a></li>
-									</ul>
-								</aside>
-							</div>
-							<div class="col-9">
-								<main class="main">
-									<div class="row">
-										<div class="col-12">
-											<div id="typo">
-												<h3 class="h3">Typography</h3>
-												<h3 class="h3">Text</h3>
-												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eligendi modi, reprehenderit fugiat natus commodi nihil earum reiciendis recusandae distinctio repudiandae accusamus cumque adipisci ratione ullam consequuntur quidem error maiores blanditiis sit neque cupiditate necessitatibus repellendus dolor. Esse quis quisquam maiores itaque fugiat! Officiis vero incidunt recusandae harum illum omnis magnam repudiandae beatae aliquid excepturi, alias ea dolorem dolor ipsam? Ea temporibus harum pariatur? Quo eum adipisci laborum distinctio placeat sapiente libero praesentium, dolores nostrum nemo laudantium delectus alias odit asperiores qui minima earum quos incidunt iste fuga cupiditate, eius error ipsa? Commodi in neque consequatur minus quasi? Odio, nobis.</p>
-												<h3 class="h3">Headings</h3>
-												<h1 class="h1">Heading1</h1>
-												<h1 class="h1 h1--small">Heading1--small</h1>
-												<h2 class="h2">Heading2</h2>
-												<h3 class="h3">Heading3</h3>
-												<h4 class="h4">Heading4</h4>
-												<h5 class="h5">Heading5</h5>
-												<h6 class="h6">Heading6</h6><br>
-												<h3 class="h3">Bullet List default</h3>
-												<article>
-													<ul>
-														<li>
-															<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.</p>
-														</li>
-														<li>
-															<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.</p>
-														</li>
-														<li>
-															<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.</p>
-														</li>
-														<li>
-															<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.</p>
-														</li>
-														<li>
-															<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.</p>
-														</li>
-													</ul>
-												</article><br>
-												<h3 class="h3">Bullet List custom</h3>
-												<ul class="bullet-list">
-													<li>
-														<div class="bullet-list__number">1</div>
-														<div class="bullet-list__text">
-															<p>Your application is received and shortlisting takes place</p>
-														</div>
-													</li>
-													<li>
-														<div class="bullet-list__number">2</div>
-														<div class="bullet-list__text">
-															<p>If you’re shortlisted, your CV is anonymised and sent to our hiring managers for review</p>
-														</div>
-													</li>
-													<li>
-														<div class="bullet-list__number">3</div>
-														<div class="bullet-list__text">
-															<p>We’ll invite you for interview at one of our sites where you’ll discover more about the role and meet some of our team</p>
-														</div>
-													</li>
-													<li>
-														<div class="bullet-list__number">4</div>
-														<div class="bullet-list__text">
-															<p>If you’re successful, you’ll receive a job offer and contract from the relevant parent company</p>
-														</div>
-													</li>
-													<li>
-														<div class="bullet-list__number">5</div>
-														<div class="bullet-list__text">
-															<p>Subject to vetting and references, your onboarding process begins</p>
-														</div>
-													</li>
-													<li>
-														<div class="bullet-list__number">6</div>
-														<div class="bullet-list__text">
-															<p>Onboarding is complete! Welcome to SCS JV</p>
-														</div>
-													</li>
-												</ul>
-											</div><br>
-											<div id="container">
-												<h3 class="h3">Container</h3>
-												<div class="container background-primary">.container</div><br>
-												<div class="container-md background-primary">.container-md</div>
-											</div><br>
-											<div id="grid">
-												<h3 class="h3">Grid</h3>
-												<div class="row">
-													<div class="col-2">
-														<div class="background-primary">.col-2</div>
-													</div>
-													<div class="col-2">
-														<div class="background-primary">.col-2</div>
-													</div>
-													<div class="col-2">
-														<div class="background-primary">.col-2</div>
-													</div>
-													<div class="col-2">
-														<div class="background-primary">.col-2</div>
-													</div>
-													<div class="col-2">
-														<div class="background-primary">.col-2</div>
-													</div>
-													<div class="col-2">
-														<div class="background-primary">.col-2</div>
-													</div>
-												</div><br>
-												<div class="row">
-													<div class="col-3">
-														<div class="background-primary">.col-3</div>
-													</div>
-													<div class="col-3">
-														<div class="background-primary">.col-3</div>
-													</div>
-													<div class="col-3">
-														<div class="background-primary">.col-3</div>
-													</div>
-													<div class="col-3">
-														<div class="background-primary">.col-3</div>
-													</div>
-												</div><br>
-												<div class="row">
-													<div class="col-4">
-														<div class="background-primary">.col-4</div>
-													</div>
-													<div class="col-4">
-														<div class="background-primary">.col-4</div>
-													</div>
-													<div class="col-4">
-														<div class="background-primary">.col-4</div>
-													</div>
-												</div><br>
-												<div class="row">
-													<div class="col-6">
-														<div class="background-primary">.col-6</div>
-													</div>
-													<div class="col-6">
-														<div class="background-primary">.col-6</div>
-													</div>
-												</div><br>
-												<div class="row">
-													<div class="col-6 offset-3">
-														<div class="background-primary">.col-6.offset-3</div>
-													</div>
-												</div>
-											</div><br>
-											<div id="section">
-												<h3 class="h3">Section</h3>
-												<div class="section background-primary">.section</div><br>
-												<div class="section-sm background-primary">.section-sm</div>
-											</div><br>
-											<div id="accordion">
-												<h3 class="h3">Accordion</h3>
-												<div class="section background-primary">
-													<li class="accordion-list__item">
-														<div class="accordion">
-															<div class="accordion__header">
-																<button class="accordion__toggle" data-accordion="data-accordion" aria-expanded="false"><span class="accordion__icon"></span><span class="accordion__title">Q: What made you choose a career in care?</span></button>
-															</div>
-															<div class="accordion__content">
-																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur fugiat repellendus suscipit saepe maiores, eligendi ipsum, quisquam asperiores, facilis facere vitae tempore. Sint, temporibus iure minima voluptatibus explicabo harum dignissimos illum corporis cupiditate eveniet sequi excepturi maiores quam maxime culpa quis illo ipsam ab! Sapiente sed fugiat veritatis suscipit!</p>
-															</div>
-														</div>
-													</li>
-												</div>
-											</div><br>
-											<div id="background">
-												<h3 class="h3">Background</h3>
-												<div class="background-default text-primary">.background-default</div>
-												<div class="background-primary">.background-primary</div>
-												<div class="background-secondary">.background-secondary</div>
-												<div class="background-muted text-primary">.background-muted</div>
-											</div><br>
-											<div id="navbar">
-												<h3 class="h3">Navbar</h3>
-												<nav class="navbar" aria-label="main navigation">
-													<ul class="navbar__list">
-														<li class="current-menu-item"><a class="navbar__link">Jobs</a></li>
-														<li><a class="navbar__link">Our Businesses</a></li>
-														<li><a class="navbar__link">Life as a Carer</a></li>
-													</ul>
-												</nav>
-											</div><br>
-											<div id="pagination">
-												<h3 class="h3">Pagination</h3>
-												<nav class="pagination" role="navigation" aria-label="pagination">
-													<p>Pagina:</p>
-													<ul class="pagination__list">
-														<li class="pagination-prev disabled"><a href="#">
-																<svg>
-																	<use xlink:href="images/sprites.svg#triangle-right"></use>
-																</svg></a></li>
-														<li><a class="pagination__link pagination__link--current" href="#">1</a></li>
-														<li><a class="pagination__link" href="#">2</a></li>
-														<li><a class="pagination__link" href="#">3</a></li>
-														<li class="pagination-next"> <a href="#">
-																<svg>
-																	<use xlink:href="images/sprites.svg#triangle-right"></use>
-																</svg></a></li>
-													</ul>
-												</nav>
-												<div class="background-primary">
-													<nav class="pagination" role="navigation" aria-label="pagination">
-														<p>Pagina:</p>
-														<ul class="pagination__list">
-															<li class="pagination-prev disabled"><a href="#">
-																	<svg>
-																		<use xlink:href="images/sprites.svg#triangle-right"></use>
-																	</svg></a></li>
-															<li><a class="pagination__link pagination__link--current" href="#">1</a></li>
-															<li><a class="pagination__link" href="#">2</a></li>
-															<li><a class="pagination__link" href="#">3</a></li>
-															<li class="pagination-next"> <a href="#">
-																	<svg>
-																		<use xlink:href="images/sprites.svg#triangle-right"></use>
-																	</svg></a></li>
-														</ul>
-													</nav>
-												</div>
-											</div><br>
-											<div id="tabs">
-												<h3 class="h3">Tabs</h3>
-												<div class="background-primary">
-													<ul class="tabs" data-tabs="tabs">
-														<li>
-															<button class="tab-button is-active" data-tab="tab1">Tab№1</button>
-														</li>
-														<li>
-															<button class="tab-button" data-tab="tab2">Tab№2</button>
-														</li>
-													</ul>
-													<div class="tab-content" data-tabs-content="tabs">
-														<div class="is-active" data-tab-content="tab1">
-															<div>Tab№1</div>
-														</div>
-														<div data-tab-content="tab2">
-															<div>Tab№2</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div id="sliders">
-												<div class="container">
-													<h3 class="h3">Slider</h3>
-												</div>
-											</div>
-											<div class="background-primary" id="forms">
-												<h3 class="h3">Forms</h3>
-												<h3>Input</h3>
-												<div class="form-group">
-													<label class="label" for="text">Label</label>
-													<div class="form-control">
-														<input class="input" id="text" type="text" name="text" placeholder="First Name">
-													</div>
-													<div class="input-hint">Input hint message</div>
-												</div>
-												<div class="form-group">
-													<label class="label" for="text">Label disabled</label>
-													<div class="form-control">
-														<input class="input" id="text" type="text" name="text" value="Disabled" disabled>
-													</div>
-												</div>
-												<h3>Select</h3>
-												<div class="form-group">
-													<label class="label" for="select">Select</label>
-													<div class="form-control">
-														<select id="select" name="">
-															<option>Category</option>
-															<option>Bbbbb</option>
-															<option>CCCCC</option>
-															<option>DDDDD</option>
-															<option>EEEEE</option>
-														</select>
-													</div>
-												</div>
-												<h3>Checkbox</h3>
-												<div class="section-sm background-secondary">
-													<div class="form-group">
-														<label class="checkbox">
-															<input class="checkbox-input" type="checkbox" name="checkbox"/><span class="checkbox-box">Checkbox text</span>
-														</label>
-													</div>
-												</div>
-												<h3>Radio</h3>
-												<div class="section-sm background-secondary">
-													<div class="form-group">
-														<label class="radio">
-															<input class="radio-input" type="radio" name="radio"/><span class="radio-box">Radio text</span>
-														</label>
-													</div>
-													<div class="form-group">
-														<label class="radio">
-															<input class="radio-input" type="radio" name="radio"/><span class="radio-box">Radio text</span>
-														</label>
-													</div>
-												</div>
-												<h3>Textarea</h3>
-												<div class="form-group">
-													<label class="label" for="textarea">Label</label>
-													<textarea class="textarea" id="textarea" name="textarea"></textarea>
-												</div>
-												<h3>Upload</h3>
-												<div class="form-group">
-													<label class="input input-file" for="upload1">
-														<svg>
-															<use xlink:href="images/sprites.svg#upload"></use>
-														</svg><span>Upload CV</span>
-														<input class="visually-hidden" id="upload1" type="file" name="upload">
-													</label>
-												</div>
-												<div class="background-secondary">
-													<div class="container"><br>
-														<div class="form-group">
-															<label class="input input-file" for="upload2">
-																<svg>
-																	<use xlink:href="images/sprites.svg#upload"></use>
-																</svg><span>Upload CV</span>
-																<input class="visually-hidden" id="upload2" type="file" name="upload">
-															</label>
-														</div><br>
-													</div>
-												</div>
-												<h3>Buttons
-													<div class="background-primary"><br>
-														<button class="button text-center" type="button">Default</button>
-													</div><br>
-													<div class="background-primary"><br>
-														<button class="button button--inverse text-center" type="button">Inverse</button>
-													</div><br>
-													<div class="background-default"><br>
-														<button class="button button--primary text-center" type="button">Primary</button><br>
-													</div>
-													<div class="background-default"><br>
-														<button class="button button--secondary text-center" type="button">Secondary</button><br>
-													</div><br>
-													<div class="background-primary">
-														<button class="button text-center" type="button" disabled>Disabled</button><br>
-													</div>
-												</h3><br>
-												<h3>Buttons with icons</h3><br>
-												<div class="form-group">
-													<button class="button" type="button"><span>Default</span>
-														<svg class="button__icon">
-															<use xlink:href="images/sprites.svg#arrow-right"></use>
-														</svg>
-													</button><br>
-													<div class="background-primary">
-														<p></p>
-														<button class="button button--inverse text-left" type="button"><span>Inverse</span>
-															<svg class="button__icon">
-																<use xlink:href="images/sprites.svg#arrow-right"></use>
-															</svg>
-														</button>
-														<p></p>
-													</div><br>
-													<div class="background-primary">
-														<p></p>
-														<button class="button button--inverse text-left" type="button"><span>Inverse</span>
-															<svg class="button__icon">
-																<use xlink:href="images/sprites.svg#arrow-down"></use>
-															</svg>
-														</button>
-														<p></p>
-													</div><br>
-													<div class="background-sky-blue" style="background: #B5D2F0;">
-														<p></p>
-														<button class="button button--inverse button--inverse-secondary text-left" type="button"><span>Inverse</span>
-															<svg class="button__icon">
-																<use xlink:href="images/sprites.svg#arrow-right"></use>
-															</svg>
-														</button>
-														<p></p>
-													</div><br>
-													<div class="background-sky-blue" style="background: #B5D2F0;">
-														<p></p>
-														<button class="button button--inverse button--inverse-secondary text-left" type="button"><span>Inverse</span>
-															<svg class="button__icon">
-																<use xlink:href="images/sprites.svg#arrow-down"></use>
-															</svg>
-														</button>
-														<p></p>
-													</div><br>
-													<button class="button button--primary text-left" type="button"><span>Primary</span>
-														<svg class="button__icon">
-															<use xlink:href="images/sprites.svg#arrow-right"></use>
-														</svg>
-													</button><br>
-													<button class="button button--secondary text-right icon-left" type="button"><span>Secondary
-															<svg class="button__icon">
-																<use xlink:href="images/sprites.svg#chevron-right"></use>
-															</svg></span></button><br>
-													<button class="button" type="button" disabled><span>Disabled
-															<svg class="button__icon">
-																<use xlink:href="images/sprites.svg#chevron-right"></use>
-															</svg></span></button>
-												</div>
-												<h3>Buttons with icons and direction</h3>
-												<div class="form-group">
-													<button class="button" type="button"><span>Default</span>
-														<svg class="button__icon">
-															<use xlink:href="images/sprites.svg#chevron-right"></use>
-														</svg>
-													</button><br>
-													<button class="button button--primary" type="button"><span>Primary</span>
-														<svg class="button__icon">
-															<use xlink:href="images/sprites.svg#chevron-right"></use>
-														</svg>
-													</button><br>
-													<button class="button button--secondary" type="button"><span>Secondary
-															<svg class="button__icon">
-																<use xlink:href="images/sprites.svg#chevron-right"></use>
-															</svg></span></button><br>
-													<button class="button" type="button" disabled><span>Disabled
-															<svg class="button__icon">
-																<use xlink:href="images/sprites.svg#chevron-right"></use>
-															</svg></span></button>
-												</div>
-											</div>
-											<div id="toggle">
-												<h3 class="h3">Toggle</h3>
-												<button class="button button--primary" data-collapse-target="content1"><span>Toggle</span>
-													<svg class="button__icon">
-														<use xlink:href="images/sprites.svg#chevron-down"></use>
-													</svg>
-												</button>
-												<div data-collapse-content="content1">Toggle</div>
-											</div>
-											<div id="video">
-												<h3 class="h3">Video</h3>
-												<div class="video">
-													<div class="video__overlay"><img src="./images/poster.jpg" alt="video poster."/></div>
-													<iframe src="https://player.vimeo.com/video/46926279" width="100" height="564" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
-													<button class="video__play js-play-video">
-														<svg>
-															<use xlink:href="images/sprites.svg#play"></use>
-														</svg>
-													</button>
-												</div>
-												<div class="video">
-													<div class="video__overlay"><img src="./images/poster.jpg" alt="video poster."/></div>
-													<iframe src="https://player.vimeo.com/video/46926279" width="100" height="564" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
-													<button class="video__play js-play-video">
-														<svg>
-															<use xlink:href="images/sprites.svg#play"></use>
-														</svg>
-													</button>
-												</div>
-											</div>
-											<div id="icons">
-												<h3 class="h3">Icons</h3><style>.svg-icons{display: flex; flex-wrap: wrap;}.svg-icons svg{ width: 50px; height: 50px;}</style>
-												<div class="svg-icons">
-													<svg>
-														<use xlink:href="images/sprites.svg#chevron-down"></use>
-													</svg>
-													<svg>
-														<use xlink:href="images/sprites.svg#chevron-left"></use>
-													</svg>
-													<svg>
-														<use xlink:href="images/sprites.svg#chevron-right"></use>
-													</svg>
-													<svg>
-														<use xlink:href="images/sprites.svg#mouse"></use>
-													</svg>
-													<svg>
-														<use xlink:href="images/sprites.svg#play"></use>
-													</svg>
-												</div>
-											</div>
-											<div id="scrollto">
-												<h3 class="h3">Scroll To anchors</h3>
-												<button class="button button--primary" data-scrollto="#section1">Anchor to section1</button>
-												<div style="height:100vh"></div>
-												<div class="background-primary" id="section1" style="height:100vh">#section1</div>
-											</div>
-											<div id="cards">
-												<h3 class="h3">Cards</h3>
-												<div class="container"></div>
-											</div>
-											<div class="overflow-hidden" id="scrollspy">
-												<h3 class="h3">ScrollSpy</h3>
-												<section class="section">
-													<div class="text-secondary" data-scrollspy="animate__fadeInRight">animate__fadeInRight</div>
-													<div class="text-secondary" data-scrollspy="animate__fadeInLeft">animate__fadeInRight</div>
-												</section>
-											</div>
-										</div>
-									</div>
-								</main>
-							</div>
-						</div>
-					</div>
-				</div>
-			</main>
-			<footer class="footer">
-				<div class="container"><a class="logo logo--footer" href="home.html"><img src="images/logo-white.svg" alt="RefugeeHomeNL logo." width="122" height="70"></a>
-					<div class="footer__row">
-						<div class="footer__col-left">
-							<p>RefugeeHomeNL is ontstaan als samenwerkingsverband tussen het Rode Kruis, het Leger des Heils, VluchtelingenWerk en Takecarebnb op voorspraak van het Ministerie van Justitie en Veiligheid. Met onze aanpak biedt RefugeeHomeNL een humaan alternatief voor noodopvang en een duurzaam verblijf bij een particulier.</p>
-							<ul class="footer__partners">
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/rodekruis-color.svg" alt="Rode Kruis." width="147" height="74"></a></li>
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/vluchtelingenwerk.svg" alt="VluchtelingenWerk Nederland." width="86" height="57"></a></li>
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/legerdesheils-color.svg" alt="Leger des Heils." width="60" height="63"></a></li>
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/takecarebnb-color.svg" alt="Takecarebnb." width="115" height="60"></a></li>
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/mjv-color.png" alt="Ministerie van Justitie en Veiligheid." width="135" height="65"></a></li>
-							</ul>
-						</div>
-						<div class="footer__col-right">
-							<div class="footer__social">
-								<h3>Volg ons op Facebook</h3>
-								<ul class="social-links">
-									<li class="social-links__item">
-										<button class="social-links__link" type="button">
-											<svg class="fb">
-												<use xlink:href="images/sprites.svg#fb"></use>
-											</svg>
-										</button>
-									</li>
-								</ul>
-							</div>
-							<ul class="footer__links">
-								<li><a href="/">Privacy statement</a></li>
-								<li><a href="/">Cookies</a></li>
-								<li><a href="/">Disclaimer</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="footer__copy">
-						<p><span>Copyright © 2022-2023&nbsp;</span><span>Het Nederlandse Rode Kruis.&nbsp;</span><span>All rights reserved.</span></p>
-					</div>
-				</div>
-			</footer>
-		</div><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-		<script src="./js/vendor.js?v=1691390365786"></script>
-		<script src="./js/main.js?v=1691390365786"></script>
-	</body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./css/main.css?v=1692203730363">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__menu-toggle">
+                    <button class="menu-button js-toggle-menu" type="button"><span> </span><span> </span><span></span></button>
+                </div>
+                <div class="header__inner">
+                    <a class="logo" href="home.html">
+                        <img src="images/logo.svg" alt="RefugeeHomeNL logo." width="122" height="70">
+                    </a>
+                    <div class="header__menu">
+                        <nav class="navbar" aria-label="main navigation">
+                            <ul class="navbar__list">
+                                <li class="current-menu-item">
+                                    <a class="navbar__link" href="home.html">Home</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="news.html">Nieuws</a>
+                                </li>
+                                <li>
+                                    <div class="dropdown dropdown--nav-cards">
+                                        <button class="navbar__link dropdown-link" data-toggle="dropdown">Vraag &amp; antwoord<span class="dropdown-icon">
+                                                <svg>
+                                                    <use xlink:href="./images/sprites.svg#chevron-down"></use>
+                                                </svg>
+                                            </span></button>
+                                        <div class="dropdown-menu">
+                                            <div class="nav-cards">
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" href="host-family.html" title="Jij als gastgezin">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Jij als gastgezin</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Je gast">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Je gast</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Taal &amp; cultuur">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Taal &amp; cultuur</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Zorg &amp; Welzijn">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Zorg &amp; Welzijn</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Werk/ onderwijs">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Werk/ onderwijs</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Financiële zaken">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Financiële zaken</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Vertrek">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Vertrek</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Over RHNL">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Over RHNL</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="downloads.html">Downloads</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="about.html">Over ons</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header__language">
+                    <div class="dropdown">
+                        <button class="button dropdown-toggle" data-toggle="dropdown"><span class="dropdown-icon">
+                                <svg>
+                                    <use xlink:href="./images/sprites.svg#chevron-down"></use>
+                                </svg>
+                            </span><span class="dropdown-toggle__icon">
+                                <svg>
+                                    <use xlink:href="./images/sprites.svg#globe"></use>
+                                </svg>
+                            </span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--desktop">Nederlands</span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--mobile">NL</span></button>
+                        <div class="dropdown-menu">
+                            <a href="">
+                                <div class="dropdown-toggle__icon-flag">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#nl"></use>
+                                    </svg>
+                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop current-lang">Nederlands</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile current-lang">NL</span>
+                            </a>
+                            <a href="">
+                                <div class="dropdown-toggle__icon-flag">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#uk"></use>
+                                    </svg>
+                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">English</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">EN</span>
+                            </a>
+                            <a href="">
+                                <div class="dropdown-toggle__icon-flag">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#ua"></use>
+                                    </svg>
+                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Українська</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">UKR</span>
+                            </a>
+                            <a href="">
+                                <div class="dropdown-toggle__icon-flag">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#ru"></use>
+                                    </svg>
+                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Русский</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">RUS</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="uikit-page">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-2">
+                            <aside>
+                                <ul style="list-style-type: none;">
+                                    <li>
+                                        <a href="#typo">Typography</a>
+                                    </li>
+                                    <li>
+                                        <a href="#container">Container</a>
+                                    </li>
+                                    <li>
+                                        <a href="#grid">Grid</a>
+                                    </li>
+                                    <li>
+                                        <a href="#section">Section</a>
+                                    </li>
+                                    <li>
+                                        <a href="#accordion">Accordion</a>
+                                    </li>
+                                    <li>
+                                        <a href="#background">Background</a>
+                                    </li>
+                                    <li>
+                                        <a href="#navbar">Navbar</a>
+                                    </li>
+                                    <li>
+                                        <a href="#pagination">Pagination</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tabs">Tabs</a>
+                                    </li>
+                                    <li>
+                                        <a class="href" #data-tab="sliders">Sliders</a>
+                                    </li>
+                                    <li>
+                                        <a href="#forms">Forms</a>
+                                    </li>
+                                    <li>
+                                        <a href="#toggle">Toggle</a>
+                                    </li>
+                                    <li>
+                                        <a href="#video">Video</a>
+                                    </li>
+                                    <li>
+                                        <a href="#cards">Cards</a>
+                                    </li>
+                                    <li>
+                                        <a href="#icons">Icons</a>
+                                    </li>
+                                    <li>
+                                        <a href="#scrollto">Scroll To anchors</a>
+                                    </li>
+                                    <li>
+                                        <a href="#scrollspy">ScrollSpy</a>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <div class="col-9">
+
+                            <main class="main">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div id="typo">
+                                            <h3 class="h3">Typography</h3>
+                                            <h3 class="h3">Text</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eligendi modi, reprehenderit fugiat natus commodi nihil earum reiciendis recusandae distinctio repudiandae accusamus cumque adipisci ratione ullam consequuntur quidem error maiores blanditiis sit neque cupiditate necessitatibus repellendus dolor. Esse quis quisquam maiores itaque fugiat! Officiis vero incidunt recusandae harum illum omnis magnam repudiandae beatae aliquid excepturi, alias ea dolorem dolor ipsam? Ea temporibus harum pariatur? Quo eum adipisci laborum distinctio placeat sapiente libero praesentium, dolores nostrum nemo laudantium delectus alias odit asperiores qui minima earum quos incidunt iste fuga cupiditate, eius error ipsa? Commodi in neque consequatur minus quasi? Odio, nobis.</p>
+                                            <h3 class="h3">Headings</h3>
+                                            <h1 class="h1">Heading1</h1>
+                                            <h1 class="h1 h1--small">Heading1--small</h1>
+                                            <h2 class="h2">Heading2</h2>
+                                            <h3 class="h3">Heading3</h3>
+                                            <h4 class="h4">Heading4</h4>
+                                            <h5 class="h5">Heading5</h5>
+                                            <h6 class="h6">Heading6</h6><br>
+                                            <h3 class="h3">Bullet List default</h3>
+                                            <article>
+                                                <ul>
+                                                    <li>
+                                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.</p>
+                                                    </li>
+                                                </ul>
+                                            </article><br>
+                                            <h3 class="h3">Bullet List custom</h3>
+                                            <ul class="bullet-list">
+                                                <li>
+                                                    <div class="bullet-list__number">1</div>
+                                                    <div class="bullet-list__text">
+                                                        <p>Your application is received and shortlisting takes place</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="bullet-list__number">2</div>
+                                                    <div class="bullet-list__text">
+                                                        <p>If you’re shortlisted, your CV is anonymised and sent to our hiring managers for review</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="bullet-list__number">3</div>
+                                                    <div class="bullet-list__text">
+                                                        <p>We’ll invite you for interview at one of our sites where you’ll discover more about the role and meet some of our team</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="bullet-list__number">4</div>
+                                                    <div class="bullet-list__text">
+                                                        <p>If you’re successful, you’ll receive a job offer and contract from the relevant parent company</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="bullet-list__number">5</div>
+                                                    <div class="bullet-list__text">
+                                                        <p>Subject to vetting and references, your onboarding process begins</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="bullet-list__number">6</div>
+                                                    <div class="bullet-list__text">
+                                                        <p>Onboarding is complete! Welcome to SCS JV</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div><br>
+                                        <div id="container">
+                                            <h3 class="h3">Container</h3>
+                                            <div class="container background-primary">.container</div><br>
+                                            <div class="container-md background-primary">.container-md</div>
+                                        </div><br>
+                                        <div id="grid">
+                                            <h3 class="h3">Grid</h3>
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <div class="background-primary">.col-2</div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="background-primary">.col-2</div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="background-primary">.col-2</div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="background-primary">.col-2</div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="background-primary">.col-2</div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="background-primary">.col-2</div>
+                                                </div>
+                                            </div><br>
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <div class="background-primary">.col-3</div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="background-primary">.col-3</div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="background-primary">.col-3</div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="background-primary">.col-3</div>
+                                                </div>
+                                            </div><br>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="background-primary">.col-4</div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="background-primary">.col-4</div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="background-primary">.col-4</div>
+                                                </div>
+                                            </div><br>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="background-primary">.col-6</div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="background-primary">.col-6</div>
+                                                </div>
+                                            </div><br>
+                                            <div class="row">
+                                                <div class="col-6 offset-3">
+                                                    <div class="background-primary">.col-6.offset-3</div>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div id="section">
+                                            <h3 class="h3">Section</h3>
+                                            <div class="section background-primary">.section</div><br>
+                                            <div class="section-sm background-primary">.section-sm</div>
+                                        </div><br>
+                                        <div id="accordion">
+                                            <h3 class="h3">Accordion</h3>
+                                            <div class="section background-primary">
+                                                <li class="accordion-list__item">
+                                                    <div class="accordion">
+                                                        <div class="accordion__header">
+                                                            <button class="accordion__toggle" data-accordion="data-accordion" aria-expanded="false"><span class="accordion__icon"></span><span class="accordion__title">Q: What made you choose a career in care?</span></button>
+                                                        </div>
+                                                        <div class="accordion__content">
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur fugiat repellendus suscipit saepe maiores, eligendi ipsum, quisquam asperiores, facilis facere vitae tempore. Sint, temporibus iure minima voluptatibus explicabo harum dignissimos illum corporis cupiditate eveniet sequi excepturi maiores quam maxime culpa quis illo ipsam ab! Sapiente sed fugiat veritatis suscipit!</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </div><br>
+                                        <div id="background">
+                                            <h3 class="h3">Background</h3>
+                                            <div class="background-default text-primary">.background-default</div>
+                                            <div class="background-primary">.background-primary</div>
+                                            <div class="background-secondary">.background-secondary</div>
+                                            <div class="background-muted text-primary">.background-muted</div>
+                                        </div><br>
+                                        <div id="navbar">
+                                            <h3 class="h3">Navbar</h3>
+                                            <nav class="navbar" aria-label="main navigation">
+                                                <ul class="navbar__list">
+                                                    <li class="current-menu-item">
+                                                        <a class="navbar__link">Jobs</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="navbar__link">Our Businesses</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="navbar__link">Life as a Carer</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div><br>
+                                        <div id="pagination">
+                                            <h3 class="h3">Pagination</h3>
+                                            <nav class="pagination" role="navigation" aria-label="pagination">
+                                                <p>Pagina:</p>
+                                                <ul class="pagination__list">
+                                                    <li class="pagination-prev disabled">
+                                                        <a href="#">
+                                                            <svg>
+                                                                <use xlink:href="./images/sprites.svg#triangle-right"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="pagination__link pagination__link--current" href="#">1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="pagination__link" href="#">2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="pagination__link" href="#">3</a>
+                                                    </li>
+                                                    <li class="pagination-next">
+                                                        <a href="#">
+                                                            <svg>
+                                                                <use xlink:href="./images/sprites.svg#triangle-right"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                            <div class="background-primary">
+                                                <nav class="pagination" role="navigation" aria-label="pagination">
+                                                    <p>Pagina:</p>
+                                                    <ul class="pagination__list">
+                                                        <li class="pagination-prev disabled">
+                                                            <a href="#">
+                                                                <svg>
+                                                                    <use xlink:href="./images/sprites.svg#triangle-right"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="pagination__link pagination__link--current" href="#">1</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="pagination__link" href="#">2</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="pagination__link" href="#">3</a>
+                                                        </li>
+                                                        <li class="pagination-next">
+                                                            <a href="#">
+                                                                <svg>
+                                                                    <use xlink:href="./images/sprites.svg#triangle-right"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div><br>
+                                        <div id="tabs">
+                                            <h3 class="h3">Tabs</h3>
+                                            <div class="background-primary">
+                                                <ul class="tabs" data-tabs="tabs">
+                                                    <li>
+                                                        <button class="tab-button is-active" data-tab="tab1">Tab№1</button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="tab-button" data-tab="tab2">Tab№2</button>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content" data-tabs-content="tabs">
+                                                    <div class="is-active" data-tab-content="tab1">
+                                                        <div>Tab№1</div>
+                                                    </div>
+                                                    <div data-tab-content="tab2">
+                                                        <div>Tab№2</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="sliders">
+                                            <div class="container">
+                                                <h3 class="h3">Slider</h3>
+                                            </div>
+                                        </div>
+                                        <div class="background-primary" id="forms">
+                                            <h3 class="h3">Forms</h3>
+                                            <h3>Input</h3>
+                                            <div class="form-group">
+                                                <label class="label" for="text">Label</label>
+                                                <div class="form-control">
+                                                    <input class="input" id="text" type="text" name="text" placeholder="First Name">
+                                                </div>
+                                                <div class="input-hint">Input hint message</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="label" for="text">Label disabled</label>
+                                                <div class="form-control">
+                                                    <input class="input" id="text" type="text" name="text" value="Disabled" disabled>
+                                                </div>
+                                            </div>
+                                            <h3>Select</h3>
+                                            <div class="form-group">
+                                                <label class="label" for="select">Select</label>
+                                                <div class="form-control">
+                                                    <select id="select" name="">
+                                                        <option>Category</option>
+                                                        <option>Bbbbb</option>
+                                                        <option>CCCCC</option>
+                                                        <option>DDDDD</option>
+                                                        <option>EEEEE</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <h3>Checkbox</h3>
+                                            <div class="section-sm background-secondary">
+                                                <div class="form-group">
+                                                    <label class="checkbox">
+                                                        <input class="checkbox-input" type="checkbox" name="checkbox" /><span class="checkbox-box">Checkbox text</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <h3>Radio</h3>
+                                            <div class="section-sm background-secondary">
+                                                <div class="form-group">
+                                                    <label class="radio">
+                                                        <input class="radio-input" type="radio" name="radio" /><span class="radio-box">Radio text</span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="radio">
+                                                        <input class="radio-input" type="radio" name="radio" /><span class="radio-box">Radio text</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <h3>Textarea</h3>
+                                            <div class="form-group">
+                                                <label class="label" for="textarea">Label</label>
+                                                <textarea class="textarea" id="textarea" name="textarea"></textarea>
+                                            </div>
+                                            <h3>Upload</h3>
+                                            <div class="form-group">
+                                                <label class="input input-file" for="upload1">
+                                                    <svg>
+                                                        <use xlink:href="./images/sprites.svg#upload"></use>
+                                                    </svg><span>Upload CV</span>
+                                                    <input class="visually-hidden" id="upload1" type="file" name="upload">
+                                                </label>
+                                            </div>
+                                            <div class="background-secondary">
+                                                <div class="container"><br>
+                                                    <div class="form-group">
+                                                        <label class="input input-file" for="upload2">
+                                                            <svg>
+                                                                <use xlink:href="./images/sprites.svg#upload"></use>
+                                                            </svg><span>Upload CV</span>
+                                                            <input class="visually-hidden" id="upload2" type="file" name="upload">
+                                                        </label>
+                                                    </div><br>
+                                                </div>
+                                            </div>
+                                            <h3>Buttons
+                                                <div class="background-primary"><br>
+                                                    <button class="button text-center" type="button">Default</button>
+                                                </div><br>
+                                                <div class="background-primary"><br>
+                                                    <button class="button button--inverse text-center" type="button">Inverse</button>
+                                                </div><br>
+                                                <div class="background-default"><br>
+                                                    <button class="button button--primary text-center" type="button">Primary</button><br>
+                                                </div>
+                                                <div class="background-default"><br>
+                                                    <button class="button button--secondary text-center" type="button">Secondary</button><br>
+                                                </div><br>
+                                                <div class="background-primary">
+                                                    <button class="button text-center" type="button" disabled>Disabled</button><br>
+                                                </div>
+                                            </h3><br>
+                                            <h3>Buttons with icons</h3><br>
+                                            <div class="form-group">
+                                                <button class="button" type="button"><span>Default</span>
+                                                    <svg class="button__icon">
+                                                        <use xlink:href="./images/sprites.svg#arrow-right"></use>
+                                                    </svg>
+                                                </button><br>
+                                                <div class="background-primary">
+                                                    <p></p>
+                                                    <button class="button button--inverse text-left" type="button"><span>Inverse</span>
+                                                        <svg class="button__icon">
+                                                            <use xlink:href="./images/sprites.svg#arrow-right"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <p></p>
+                                                </div><br>
+                                                <div class="background-primary">
+                                                    <p></p>
+                                                    <button class="button button--inverse text-left" type="button"><span>Inverse</span>
+                                                        <svg class="button__icon">
+                                                            <use xlink:href="./images/sprites.svg#arrow-down"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <p></p>
+                                                </div><br>
+                                                <div class="background-sky-blue" style="background: #B5D2F0;">
+                                                    <p></p>
+                                                    <button class="button button--inverse button--inverse-secondary text-left" type="button"><span>Inverse</span>
+                                                        <svg class="button__icon">
+                                                            <use xlink:href="./images/sprites.svg#arrow-right"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <p></p>
+                                                </div><br>
+                                                <div class="background-sky-blue" style="background: #B5D2F0;">
+                                                    <p></p>
+                                                    <button class="button button--inverse button--inverse-secondary text-left" type="button"><span>Inverse</span>
+                                                        <svg class="button__icon">
+                                                            <use xlink:href="./images/sprites.svg#arrow-down"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <p></p>
+                                                </div><br>
+                                                <button class="button button--primary text-left" type="button"><span>Primary</span>
+                                                    <svg class="button__icon">
+                                                        <use xlink:href="./images/sprites.svg#arrow-right"></use>
+                                                    </svg>
+                                                </button><br>
+                                                <button class="button button--secondary text-right icon-left" type="button"><span>Secondary
+                                                        <svg class="button__icon">
+                                                            <use xlink:href="./images/sprites.svg#chevron-right"></use>
+                                                        </svg>
+                                                    </span></button><br>
+                                                <button class="button" type="button" disabled><span>Disabled
+                                                        <svg class="button__icon">
+                                                            <use xlink:href="./images/sprites.svg#chevron-right"></use>
+                                                        </svg>
+                                                    </span></button>
+                                            </div>
+                                            <h3>Buttons with icons and direction</h3>
+                                            <div class="form-group">
+                                                <button class="button" type="button"><span>Default</span>
+                                                    <svg class="button__icon">
+                                                        <use xlink:href="./images/sprites.svg#chevron-right"></use>
+                                                    </svg>
+                                                </button><br>
+                                                <button class="button button--primary" type="button"><span>Primary</span>
+                                                    <svg class="button__icon">
+                                                        <use xlink:href="./images/sprites.svg#chevron-right"></use>
+                                                    </svg>
+                                                </button><br>
+                                                <button class="button button--secondary" type="button"><span>Secondary
+                                                        <svg class="button__icon">
+                                                            <use xlink:href="./images/sprites.svg#chevron-right"></use>
+                                                        </svg>
+                                                    </span></button><br>
+                                                <button class="button" type="button" disabled><span>Disabled
+                                                        <svg class="button__icon">
+                                                            <use xlink:href="./images/sprites.svg#chevron-right"></use>
+                                                        </svg>
+                                                    </span></button>
+                                            </div>
+                                        </div>
+                                        <div id="toggle">
+                                            <h3 class="h3">Toggle</h3>
+                                            <button class="button button--primary" data-collapse-target="content1"><span>Toggle</span>
+                                                <svg class="button__icon">
+                                                    <use xlink:href="./images/sprites.svg#chevron-down"></use>
+                                                </svg>
+                                            </button>
+                                            <div data-collapse-content="content1">Toggle</div>
+                                        </div>
+                                        <div id="video">
+                                            <h3 class="h3">Video</h3>
+                                            <div class="video">
+                                                <div class="video__overlay">
+                                                    <img src="./images/poster.jpg" alt="video poster." />
+                                                </div>
+                                                <iframe src="https://player.vimeo.com/video/46926279" width="100" height="564" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+                                                <button class="video__play js-play-video">
+                                                    <svg>
+                                                        <use xlink:href="./images/sprites.svg#play"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="video">
+                                                <div class="video__overlay">
+                                                    <img src="./images/poster.jpg" alt="video poster." />
+                                                </div>
+                                                <iframe src="https://player.vimeo.com/video/46926279" width="100" height="564" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+                                                <button class="video__play js-play-video">
+                                                    <svg>
+                                                        <use xlink:href="./images/sprites.svg#play"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="icons">
+                                            <h3 class="h3">Icons</h3>
+                                            <style>
+                                                .svg-icons {
+                                                    display: flex;
+                                                    flex-wrap: wrap;
+                                                }
+
+                                                .svg-icons svg {
+                                                    width: 50px;
+                                                    height: 50px;
+                                                }
+                                            </style>
+                                            <div class="svg-icons">
+                                                <svg>
+                                                    <use xlink:href="./images/sprites.svg#chevron-down"></use>
+                                                </svg>
+                                                <svg>
+                                                    <use xlink:href="./images/sprites.svg#chevron-left"></use>
+                                                </svg>
+                                                <svg>
+                                                    <use xlink:href="./images/sprites.svg#chevron-right"></use>
+                                                </svg>
+                                                <svg>
+                                                    <use xlink:href="./images/sprites.svg#mouse"></use>
+                                                </svg>
+                                                <svg>
+                                                    <use xlink:href="./images/sprites.svg#play"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div id="scrollto">
+                                            <h3 class="h3">Scroll To anchors</h3>
+                                            <button class="button button--primary" data-scrollto="#section1">Anchor to section1</button>
+                                            <div style="height:100vh"></div>
+                                            <div class="background-primary" id="section1" style="height:100vh">#section1</div>
+                                        </div>
+                                        <div id="cards">
+                                            <h3 class="h3">Cards</h3>
+                                            <div class="container"></div>
+                                        </div>
+                                        <div class="overflow-hidden" id="scrollspy">
+                                            <h3 class="h3">ScrollSpy</h3>
+
+                                            <section class="section">
+                                                <div class="text-secondary" data-scrollspy="animate__fadeInRight">animate__fadeInRight</div>
+                                                <div class="text-secondary" data-scrollspy="animate__fadeInLeft">animate__fadeInRight</div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <a class="logo logo--footer" href="home.html">
+                    <img src="images/logo-white.svg" alt="RefugeeHomeNL logo." width="122" height="70">
+                </a>
+                <div class="footer__row">
+                    <div class="footer__col-left">
+                        <p>RefugeeHomeNL is ontstaan als samenwerkingsverband tussen het Rode Kruis, het Leger des Heils, VluchtelingenWerk en Takecarebnb op voorspraak van het Ministerie van Justitie en Veiligheid. Met onze aanpak biedt RefugeeHomeNL een humaan alternatief voor noodopvang en een duurzaam verblijf bij een particulier.</p>
+                        <ul class="footer__partners">
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/rodekruis-color.svg" alt="Rode Kruis." width="147" height="74">
+                                </a>
+                            </li>
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/vluchtelingenwerk.svg" alt="VluchtelingenWerk Nederland." width="86" height="57">
+                                </a>
+                            </li>
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/legerdesheils-color.svg" alt="Leger des Heils." width="60" height="63">
+                                </a>
+                            </li>
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/takecarebnb-color.svg" alt="Takecarebnb." width="115" height="60">
+                                </a>
+                            </li>
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/mjv-color.png" alt="Ministerie van Justitie en Veiligheid." width="135" height="65">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col-right">
+                        <div class="footer__social">
+                            <h3>Volg ons op Facebook</h3>
+                            <ul class="social-links">
+                                <li class="social-links__item">
+                                    <button class="social-links__link" type="button">
+                                        <svg class="fb">
+                                            <use xlink:href="./images/sprites.svg#fb"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="footer__links">
+                            <li>
+                                <a href="/">Privacy statement</a>
+                            </li>
+                            <li>
+                                <a href="/">Cookies</a>
+                            </li>
+                            <li>
+                                <a href="/">Disclaimer</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__copy">
+                    <p><span>Copyright © 2022-2023&nbsp;</span><span>Het Nederlandse Rode Kruis.&nbsp;</span><span>All rights reserved.</span></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/vendor.js?v=1692203730365"></script>
+    <script src="./js/main.js?v=1692203730365"></script>
+</body>
 </html>

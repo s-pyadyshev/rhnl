@@ -1,278 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width">
-		<meta property="og:type" content="website">
-		<meta property="og:locale" content="en_GB">
-		<meta property="og:title" content="For host families">
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="For host families">
-		<title>For host families</title><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
-		<link rel="stylesheet" href="./css/main.css?v=1691390364107">
-	</head>
-	<body>
-		<div class="page-wrapper">
-			<header class="header">
-				<div class="container">
-					<div class="header__menu-toggle">
-						<button class="menu-button js-toggle-menu" type="button"><span> </span><span> </span><span></span></button>
-					</div>
-					<div class="header__inner"><a class="logo" href="home.html"><img src="images/logo.svg" alt="RefugeeHomeNL logo." width="122" height="70"></a>
-						<div class="header__menu">
-							<nav class="navbar" aria-label="main navigation">
-								<ul class="navbar__list">
-									<li class="current-menu-item"><a class="navbar__link" href="home.html">Home</a></li>
-									<li><a class="navbar__link" href="news.html">Nieuws</a></li>
-									<li>
-										<div class="dropdown dropdown--nav-cards">
-											<button class="navbar__link dropdown-link" data-toggle="dropdown">Vraag &amp; antwoord<span class="dropdown-icon">
-													<svg>
-														<use xlink:href="images/sprites.svg#chevron-down"></use>
-													</svg></span></button>
-											<div class="dropdown-menu">
-												<div class="nav-cards">
-													<div class="nav-card"><a class="nav-card__link" href="host-family.html" title="Jij als gastgezin"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Jij als gastgezin</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Je gast"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Je gast</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Taal &amp; cultuur"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Taal &amp; cultuur</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Zorg &amp; Welzijn"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Zorg &amp; Welzijn</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Werk/ onderwijs"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Werk/ onderwijs</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Financiële zaken"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Financiële zaken</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Vertrek"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Vertrek</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" title="Over RHNL"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Over RHNL</p></a></div>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li><a class="navbar__link" href="downloads.html">Downloads</a></li>
-									<li><a class="navbar__link" href="about.html">Over ons</a></li>
-									<li><a class="navbar__link" href="contact.html">Contact</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-					<div class="header__language">
-						<div class="dropdown">
-							<button class="button dropdown-toggle" data-toggle="dropdown"><span class="dropdown-icon">
-									<svg>
-										<use xlink:href="images/sprites.svg#chevron-down"></use>
-									</svg></span><span class="dropdown-toggle__icon">
-									<svg>
-										<use xlink:href="images/sprites.svg#globe"></use>
-									</svg></span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--desktop">Nederlands</span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--mobile">NL</span></button>
-							<div class="dropdown-menu"><a href="">
-									<div class="dropdown-toggle__icon-flag">
-										<svg>
-											<use xlink:href="images/sprites.svg#nl"></use>
-										</svg>
-									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop current-lang">Nederlands</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile current-lang">NL</span></a><a href="">
-									<div class="dropdown-toggle__icon-flag">
-										<svg>
-											<use xlink:href="images/sprites.svg#uk"></use>
-										</svg>
-									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">English</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">EN</span></a><a href="">
-									<div class="dropdown-toggle__icon-flag">
-										<svg>
-											<use xlink:href="images/sprites.svg#ua"></use>
-										</svg>
-									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Українська</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">UKR</span></a><a href="">
-									<div class="dropdown-toggle__icon-flag">
-										<svg>
-											<use xlink:href="images/sprites.svg#ru"></use>
-										</svg>
-									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Русский</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">RUS</span></a></div>
-						</div>
-					</div>
-				</div>
-			</header>
-			<main class="main">
-				<section class="section-intro section-intro--secondary">
-					<div class="container"> 
-						<div class="row"> 
-							<div class="col-md-6 background-secondary">
-								<h1>Become a host family</h1>
-								<p>After the outbreak of the war in Ukraine, a large influx of refugees has started. Millions of Ukrainian men, women and children are fleeing the violence of war. Some of them have come to the Netherlands. Even now that the conflict is dragging on, many Dutch people are happy and willing to do something to help these people. Offering shelter and shelter at home is an example of this. As a host family or guest household you can mean a lot to someone else. RefugeeHomeNL was established to provide the best possible support for host families and refugees. On this page you can read howRefugeeHomeNL works and how you can register as a host family.</p>
-							</div>
-							<div class="col-md-6 background-antique"><img src="images/home.svg" alt="municipality." width="453" height="286"></div>
-						</div>
-					</div>
-				</section>
-				<section class="section section-intro-text"> 
-					<div class="container">
-						<div class="row"> 
-							<div class="col-md-6">
-								<h2>What is RefugeeHomeNL?</h2>
-								<p>RefugeeHomeNL is a partnership between the Red Cross, the Netherlands Council for Refugees, the Salvation Army and Takecarebnb. We want to organize private reception with host families for refugees from Ukraine properly and safely. RefugeeHomeNL is supported by the central government.</p>
-							</div>
-							<div class="col-md-6">
-								<h2>From trial to national rollout</h2>
-								<p>The working method of RefugeeHomeNL is being researched and tested in practice in a limited number of regions. This pilot phase will provide many valuable insights for a national roll-out of the project. The roll-out will take place in phases in the summer of 2022.</p>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="section background-muted"> 
-					<div class="container text-center">
-						<h2>I would like to become a host</h2><a class="button button-primary" href="#">Start your application</a>
-					</div>
-				</section>
-				<section class="section section-process">
-					<div class="container">
-						<h2>The process in 4 steps</h2>
-						<ul class="steps">
-							<li class="steps__item">
-								<div class="step">
-									<div class="step__header"> <img src="images/computer.svg" alt="step process icon."/>
-										<div class="step__number"><span>1</span><span>Sign up</span></div>
-									</div>
-									<div class="step__body"> 
-										<div class="step__col-left">
-											<p>Participation in RefugeeHomeNL starts by registering as a host family at Takecarebnb . We will then call you for an extensive screening interview.</p>
-										</div>
-										<div class="step__col-right">
-											<p>In this we discuss the expectations and (im)possibilities back and forth. We also ask you to request a Certificate of Good Conduct (VOG).</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="steps__item">
-								<div class="step">
-									<div class="step__header"> <img src="images/meeting.svg" alt="step process icon."/>
-										<div class="step__number"><span>2</span><span>Meet &amp; match</span></div>
-									</div>
-									<div class="step__body"> 
-										<div class="step__col-left">
-											<p>As soon as your application is in order, we will look for a match between your offer and the needs of the refugee. If we find a suitable match, we will contact you for an introductory meeting.</p>
-										</div>
-										<div class="step__col-right">
-											<p>If that feels good on both sides , you decide to live together. Together you go to the municipality to register the guest at your address.</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="steps__item">
-								<div class="step">
-									<div class="step__header"> <img src="images/support.svg" alt="step process icon."/>
-										<div class="step__number"><span>3</span><span>Living together</span></div>
-									</div>
-									<div class="step__body"> 
-										<div class="step__col-left">
-											<p>The cohabitation is entered into for a period of 3 months. A trained Salvation Army volunteer visits you and is your first point of contact for questions and concerns. The volunteer is in close contact with social organizations in the area for additional help.</p>
-										</div>
-										<div class="step__col-right">
-											<p>We will match you with other host families in your area so that you can share your experiences. The Red Cross and the Dutch Council for Refugees are there for all guest requests for help.</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="steps__item">
-								<div class="step">
-									<div class="step__header"> <img src="images/departure.svg" alt="step process icon."/>
-										<div class="step__number"><span>4</span><span>Departure</span></div>
-									</div>
-									<div class="step__body"> 
-										<div class="step__col-left">
-											<p>In principle, cohabitation ends after three months. RefugeeHomeNL guides you with all practical matters surrounding the moment of departure and provides a new place for your guests.</p>
-										</div>
-										<div class="step__col-right">
-											<p>In consultation, you and your guests can also decide to extend. And of course there are situations in which you have to or want to stop the cohabitation period earlier. Even then you can count on us.</p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="section background-muted">
-					<div class="container divided">
-						<div class="row"> 
-							<div class="col-md-6"> 
-								<h2>I would like to become a host</h2><a class="button button-primary" href="#">Start your application</a>
-							</div>
-							<div class="col-md-5 offset-md-1"> 
-								<h2>I have some more questions</h2><a class="button button-secondary" href="#">Contact us</a>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="section section-links">
-					<div class="container">
-						<h2>Additional resources and useful links</h2>
-						<div class="row"> 
-							<div class="col-md-6"> 
-								<p>Pellentesque orci ligula, fringilla porta lacus vel, pharetra ultricies augue. Cras vel est rhoncus, consectetur turpis in, rutrum neque. Maecenas eget laoreet libero. Praesent ullamcorper, turpis non feugiat aliquam, ligula nibh mollis dui, id fringilla metus neque et eros. Nam feugiat diam et mauris tempor rhoncus. Sed a mollis orci. Mauris viverra nibh et sapien tincidunt cursus.</p>
-							</div>
-							<div class="col-md-6"> 
-								<p>Donec quis arcu ac justo lobortis porttitor quis ac elit. Donec at diam diam. Morbi eu vulputate purus. Phasellus at justo interdum ex tincidunt pellentesque in at est. Vivamus iaculis egestas laoreet. In rutrum vestibulum massa, ac vulputate dolor posuere ut. Sed a risus id nisi dictum consequat commodo et purus. Duis pulvinar a tellus vitae accumsan.</p>
-							</div>
-							<div class="logos-list">
-								<ul>
-									<li> <a href=""><img src="images/rodekruis.svg" alt="Rode Kruis logo."></a></li>
-									<li> <a href=""><img src="images/vluchtelingenwerknl.svg" alt="VluchtelingenWerk Nederland logo."></a></li>
-									<li> <a href=""><img src="images/legerdesheils.svg" alt="Leger des Heils logo."></a></li>
-									<li> <a href=""><img src="images/takecarebnb.svg" alt="Takecarebnb logo."></a></li>
-									<li> <a href=""><img src="images/mjv.svg" alt="Ministerie van Justitie en Veiligheid logo."></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-			<footer class="footer">
-				<div class="container"><a class="logo logo--footer" href="home.html"><img src="images/logo-white.svg" alt="RefugeeHomeNL logo." width="122" height="70"></a>
-					<div class="footer__row">
-						<div class="footer__col-left">
-							<p>RefugeeHomeNL is ontstaan als samenwerkingsverband tussen het Rode Kruis, het Leger des Heils, VluchtelingenWerk en Takecarebnb op voorspraak van het Ministerie van Justitie en Veiligheid. Met onze aanpak biedt RefugeeHomeNL een humaan alternatief voor noodopvang en een duurzaam verblijf bij een particulier.</p>
-							<ul class="footer__partners">
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/rodekruis-color.svg" alt="Rode Kruis." width="147" height="74"></a></li>
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/vluchtelingenwerk.svg" alt="VluchtelingenWerk Nederland." width="86" height="57"></a></li>
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/legerdesheils-color.svg" alt="Leger des Heils." width="60" height="63"></a></li>
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/takecarebnb-color.svg" alt="Takecarebnb." width="115" height="60"></a></li>
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/mjv-color.png" alt="Ministerie van Justitie en Veiligheid." width="135" height="65"></a></li>
-							</ul>
-						</div>
-						<div class="footer__col-right">
-							<div class="footer__social">
-								<h3>Volg ons op Facebook</h3>
-								<ul class="social-links">
-									<li class="social-links__item">
-										<button class="social-links__link" type="button">
-											<svg class="fb">
-												<use xlink:href="images/sprites.svg#fb"></use>
-											</svg>
-										</button>
-									</li>
-								</ul>
-							</div>
-							<ul class="footer__links">
-								<li><a href="/">Privacy statement</a></li>
-								<li><a href="/">Cookies</a></li>
-								<li><a href="/">Disclaimer</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="footer__copy">
-						<p><span>Copyright © 2022-2023&nbsp;</span><span>Het Nederlandse Rode Kruis.&nbsp;</span><span>All rights reserved.</span></p>
-					</div>
-				</div>
-			</footer>
-		</div><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-		<script src="./js/vendor.js?v=1691390364108"></script>
-		<script src="./js/main.js?v=1691390364108"></script>
-	</body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="For host families">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="For host families">
+    <title>For host families</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./css/main.css?v=1692203728675">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__menu-toggle">
+                    <button class="menu-button js-toggle-menu" type="button"><span> </span><span> </span><span></span></button>
+                </div>
+                <div class="header__inner">
+                    <a class="logo" href="home.html">
+                        <img src="images/logo.svg" alt="RefugeeHomeNL logo." width="122" height="70">
+                    </a>
+                    <div class="header__menu">
+                        <nav class="navbar" aria-label="main navigation">
+                            <ul class="navbar__list">
+                                <li class="current-menu-item">
+                                    <a class="navbar__link" href="home.html">Home</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="news.html">Nieuws</a>
+                                </li>
+                                <li>
+                                    <div class="dropdown dropdown--nav-cards">
+                                        <button class="navbar__link dropdown-link" data-toggle="dropdown">Vraag &amp; antwoord<span class="dropdown-icon">
+                                                <svg>
+                                                    <use xlink:href="./images/sprites.svg#chevron-down"></use>
+                                                </svg>
+                                            </span></button>
+                                        <div class="dropdown-menu">
+                                            <div class="nav-cards">
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" href="host-family.html" title="Jij als gastgezin">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Jij als gastgezin</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Je gast">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Je gast</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Taal &amp; cultuur">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Taal &amp; cultuur</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Zorg &amp; Welzijn">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Zorg &amp; Welzijn</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Werk/ onderwijs">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Werk/ onderwijs</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Financiële zaken">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Financiële zaken</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Vertrek">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Vertrek</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" title="Over RHNL">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Over RHNL</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="downloads.html">Downloads</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="about.html">Over ons</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header__language">
+                    <div class="dropdown">
+                        <button class="button dropdown-toggle" data-toggle="dropdown"><span class="dropdown-icon">
+                                <svg>
+                                    <use xlink:href="./images/sprites.svg#chevron-down"></use>
+                                </svg>
+                            </span><span class="dropdown-toggle__icon">
+                                <svg>
+                                    <use xlink:href="./images/sprites.svg#globe"></use>
+                                </svg>
+                            </span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--desktop">Nederlands</span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--mobile">NL</span></button>
+                        <div class="dropdown-menu">
+                            <a href="">
+                                <div class="dropdown-toggle__icon-flag">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#nl"></use>
+                                    </svg>
+                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop current-lang">Nederlands</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile current-lang">NL</span>
+                            </a>
+                            <a href="">
+                                <div class="dropdown-toggle__icon-flag">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#uk"></use>
+                                    </svg>
+                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">English</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">EN</span>
+                            </a>
+                            <a href="">
+                                <div class="dropdown-toggle__icon-flag">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#ua"></use>
+                                    </svg>
+                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Українська</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">UKR</span>
+                            </a>
+                            <a href="">
+                                <div class="dropdown-toggle__icon-flag">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#ru"></use>
+                                    </svg>
+                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Русский</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">RUS</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <section class="section-intro section-intro--secondary">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 background-secondary">
+                            <h1>Become a host family</h1>
+                            <p>After the outbreak of the war in Ukraine, a large influx of refugees has started. Millions of Ukrainian men, women and children are fleeing the violence of war. Some of them have come to the Netherlands. Even now that the conflict is dragging on, many Dutch people are happy and willing to do something to help these people. Offering shelter and shelter at home is an example of this. As a host family or guest household you can mean a lot to someone else. RefugeeHomeNL was established to provide the best possible support for host families and refugees. On this page you can read howRefugeeHomeNL works and how you can register as a host family.</p>
+                        </div>
+                        <div class="col-md-6 background-antique">
+                            <img src="images/home.svg" alt="municipality." width="453" height="286">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-intro-text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>What is RefugeeHomeNL?</h2>
+                            <p>RefugeeHomeNL is a partnership between the Red Cross, the Netherlands Council for Refugees, the Salvation Army and Takecarebnb. We want to organize private reception with host families for refugees from Ukraine properly and safely. RefugeeHomeNL is supported by the central government.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h2>From trial to national rollout</h2>
+                            <p>The working method of RefugeeHomeNL is being researched and tested in practice in a limited number of regions. This pilot phase will provide many valuable insights for a national roll-out of the project. The roll-out will take place in phases in the summer of 2022.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section background-muted">
+                <div class="container text-center">
+                    <h2>I would like to become a host</h2>
+                    <a class="button button-primary" href="#">Start your application</a>
+                </div>
+            </section>
+
+            <section class="section section-process">
+                <div class="container">
+                    <h2>The process in 4 steps</h2>
+                    <ul class="steps">
+                        <li class="steps__item">
+                            <div class="step">
+                                <div class="step__header">
+                                    <img src="images/computer.svg" alt="step process icon." />
+                                    <div class="step__number"><span>1</span><span>Sign up</span></div>
+                                </div>
+                                <div class="step__body">
+                                    <div class="step__col-left">
+                                        <p>Participation in RefugeeHomeNL starts by registering as a host family at Takecarebnb . We will then call you for an extensive screening interview.</p>
+                                    </div>
+                                    <div class="step__col-right">
+                                        <p>In this we discuss the expectations and (im)possibilities back and forth. We also ask you to request a Certificate of Good Conduct (VOG).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="steps__item">
+                            <div class="step">
+                                <div class="step__header">
+                                    <img src="images/meeting.svg" alt="step process icon." />
+                                    <div class="step__number"><span>2</span><span>Meet &amp; match</span></div>
+                                </div>
+                                <div class="step__body">
+                                    <div class="step__col-left">
+                                        <p>As soon as your application is in order, we will look for a match between your offer and the needs of the refugee. If we find a suitable match, we will contact you for an introductory meeting.</p>
+                                    </div>
+                                    <div class="step__col-right">
+                                        <p>If that feels good on both sides , you decide to live together. Together you go to the municipality to register the guest at your address.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="steps__item">
+                            <div class="step">
+                                <div class="step__header">
+                                    <img src="images/support.svg" alt="step process icon." />
+                                    <div class="step__number"><span>3</span><span>Living together</span></div>
+                                </div>
+                                <div class="step__body">
+                                    <div class="step__col-left">
+                                        <p>The cohabitation is entered into for a period of 3 months. A trained Salvation Army volunteer visits you and is your first point of contact for questions and concerns. The volunteer is in close contact with social organizations in the area for additional help.</p>
+                                    </div>
+                                    <div class="step__col-right">
+                                        <p>We will match you with other host families in your area so that you can share your experiences. The Red Cross and the Dutch Council for Refugees are there for all guest requests for help.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="steps__item">
+                            <div class="step">
+                                <div class="step__header">
+                                    <img src="images/departure.svg" alt="step process icon." />
+                                    <div class="step__number"><span>4</span><span>Departure</span></div>
+                                </div>
+                                <div class="step__body">
+                                    <div class="step__col-left">
+                                        <p>In principle, cohabitation ends after three months. RefugeeHomeNL guides you with all practical matters surrounding the moment of departure and provides a new place for your guests.</p>
+                                    </div>
+                                    <div class="step__col-right">
+                                        <p>In consultation, you and your guests can also decide to extend. And of course there are situations in which you have to or want to stop the cohabitation period earlier. Even then you can count on us.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section background-muted">
+                <div class="container divided">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>I would like to become a host</h2>
+                            <a class="button button-primary" href="#">Start your application</a>
+                        </div>
+                        <div class="col-md-5 offset-md-1">
+                            <h2>I have some more questions</h2>
+                            <a class="button button-secondary" href="#">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-links">
+                <div class="container">
+                    <h2>Additional resources and useful links</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Pellentesque orci ligula, fringilla porta lacus vel, pharetra ultricies augue. Cras vel est rhoncus, consectetur turpis in, rutrum neque. Maecenas eget laoreet libero. Praesent ullamcorper, turpis non feugiat aliquam, ligula nibh mollis dui, id fringilla metus neque et eros. Nam feugiat diam et mauris tempor rhoncus. Sed a mollis orci. Mauris viverra nibh et sapien tincidunt cursus.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Donec quis arcu ac justo lobortis porttitor quis ac elit. Donec at diam diam. Morbi eu vulputate purus. Phasellus at justo interdum ex tincidunt pellentesque in at est. Vivamus iaculis egestas laoreet. In rutrum vestibulum massa, ac vulputate dolor posuere ut. Sed a risus id nisi dictum consequat commodo et purus. Duis pulvinar a tellus vitae accumsan.</p>
+                        </div>
+                        <div class="logos-list">
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <img src="images/rodekruis.svg" alt="Rode Kruis logo.">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="images/vluchtelingenwerknl.svg" alt="VluchtelingenWerk Nederland logo.">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="images/legerdesheils.svg" alt="Leger des Heils logo.">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="images/takecarebnb.svg" alt="Takecarebnb logo.">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="images/mjv.svg" alt="Ministerie van Justitie en Veiligheid logo.">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <a class="logo logo--footer" href="home.html">
+                    <img src="images/logo-white.svg" alt="RefugeeHomeNL logo." width="122" height="70">
+                </a>
+                <div class="footer__row">
+                    <div class="footer__col-left">
+                        <p>RefugeeHomeNL is ontstaan als samenwerkingsverband tussen het Rode Kruis, het Leger des Heils, VluchtelingenWerk en Takecarebnb op voorspraak van het Ministerie van Justitie en Veiligheid. Met onze aanpak biedt RefugeeHomeNL een humaan alternatief voor noodopvang en een duurzaam verblijf bij een particulier.</p>
+                        <ul class="footer__partners">
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/rodekruis-color.svg" alt="Rode Kruis." width="147" height="74">
+                                </a>
+                            </li>
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/vluchtelingenwerk.svg" alt="VluchtelingenWerk Nederland." width="86" height="57">
+                                </a>
+                            </li>
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/legerdesheils-color.svg" alt="Leger des Heils." width="60" height="63">
+                                </a>
+                            </li>
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/takecarebnb-color.svg" alt="Takecarebnb." width="115" height="60">
+                                </a>
+                            </li>
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/mjv-color.png" alt="Ministerie van Justitie en Veiligheid." width="135" height="65">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col-right">
+                        <div class="footer__social">
+                            <h3>Volg ons op Facebook</h3>
+                            <ul class="social-links">
+                                <li class="social-links__item">
+                                    <button class="social-links__link" type="button">
+                                        <svg class="fb">
+                                            <use xlink:href="./images/sprites.svg#fb"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="footer__links">
+                            <li>
+                                <a href="/">Privacy statement</a>
+                            </li>
+                            <li>
+                                <a href="/">Cookies</a>
+                            </li>
+                            <li>
+                                <a href="/">Disclaimer</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__copy">
+                    <p><span>Copyright © 2022-2023&nbsp;</span><span>Het Nederlandse Rode Kruis.&nbsp;</span><span>All rights reserved.</span></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/vendor.js?v=1692203728676"></script>
+    <script src="./js/main.js?v=1692203728676"></script>
+</body>
 </html>
