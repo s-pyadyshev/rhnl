@@ -5,6 +5,6 @@ mixin filter(buttons)
     ul
       each button in buttons
         li
-          button.button.button--filter(type="button")
+          button.button.button--filter(type="button" class=(button.state === 'active' ? 'is-active' : '' ))
             +svg(button.icon)
             span= button.text

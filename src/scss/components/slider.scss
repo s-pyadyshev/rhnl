@@ -43,7 +43,7 @@
       width: 19px;
       height: 17px;
       color: $color-primary;
-      transition: .2s;
+      transition: 0.2s;
     }
   }
 
@@ -64,6 +64,8 @@
       height: 10px;
       margin-right: 5px;
       margin-left: 5px;
+      background-color: $color-gray;
+      opacity: 1;
     }
 
     .swiper-pagination-bullet-active {

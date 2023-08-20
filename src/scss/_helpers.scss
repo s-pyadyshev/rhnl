@@ -101,7 +101,7 @@
   transform: translateY(-50%);
   width: 14px;
   height: 8px;
-  transition: transform .2s linear, color .2s linear;
+  transition: transform 0.2s linear, color 0.2s linear;
   color: $color-text;
 
   .dropdown-on & {
@@ -117,7 +117,7 @@
   color: $color-white;
   background-color: $color-secondary;
   padding: 10px 8px;
-  transition: .2s;
+  transition: 0.2s;
 
   .arrow-links & {
     margin-right: 15px;

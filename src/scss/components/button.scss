@@ -133,10 +133,11 @@ $button-border-radius: 40px;
 
     &:focus,
     &:hover,
-    &:active {
-      border-color: $color-primary;
-      color: $color-primary;
-      background-color: transparent;
+    &:active,
+    &.is-active {
+      border-color: $color-secondary;
+      color: $color-white;
+      background-color: $color-secondary;
     }
   }
 

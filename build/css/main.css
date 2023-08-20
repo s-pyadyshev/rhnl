@@ -1911,10 +1911,11 @@ p {
 
 .button--filter:focus,
 .button--filter:hover,
-.button--filter:active {
-  border-color: #ea5c4d;
-  color: #ea5c4d;
-  background-color: transparent;
+.button--filter:active,
+.button--filter.is-active {
+  border-color: #33a6a7;
+  color: #fff;
+  background-color: #33a6a7;
 }
 
 .button--round-arrow {
@@ -2400,7 +2401,8 @@ p {
 .breadcrumb__link:focus,
 .breadcrumb__link:hover,
 .breadcrumb__link:active {
-  text-decoration-color: #000;
+  text-decoration-color: #ea5c4d;
+  color: #ea5c4d;
 }
 
 .pagination {
@@ -3170,6 +3172,13 @@ button.dropdown-toggle .dropdown-icon {
   padding-top: 20px;
 }
 
+.section-form .section__wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
 .accordion-list {
   counter-reset: accordion-list;
 }
@@ -3224,9 +3233,9 @@ button.dropdown-toggle .dropdown-icon {
 }
 
 .accordion__toggle[aria-expanded="true"] .accordion__icon {
-  -webkit-transform: translateY(-50%) rotate(180deg);
-  -ms-transform: translateY(-50%) rotate(180deg);
-  transform: translateY(-50%) rotate(180deg);
+  -webkit-transform: translateY(-50%) rotate(180deg) scale(1.2);
+  -ms-transform: translateY(-50%) rotate(180deg) scale(1.2);
+  transform: translateY(-50%) rotate(180deg) scale(1.2);
 }
 
 .accordion__icon {
@@ -3239,15 +3248,15 @@ button.dropdown-toggle .dropdown-icon {
   position: absolute;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  top: 50%;
+  top: 33px;
   left: 0;
   width: 16px;
   height: 14px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) scale(1.2);
+  -ms-transform: translateY(-50%) scale(1.2);
+  transform: translateY(-50%) scale(1.2);
 }
 
 .accordion__icon::before {
@@ -3780,8 +3789,8 @@ button.dropdown-toggle .dropdown-icon {
   width: 19px;
   height: 17px;
   color: #ea5c4d;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .swiper .swiper-button-prev {
@@ -3807,6 +3816,8 @@ button.dropdown-toggle .dropdown-icon {
   height: 10px;
   margin-right: 5px;
   margin-left: 5px;
+  background-color: #838383;
+  opacity: 1;
 }
 
 .swiper .swiper-pagination .swiper-pagination-bullet-active {
@@ -4205,6 +4216,7 @@ button.dropdown-toggle .dropdown-icon {
 
 .nav-card__link::before {
   content: "";
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -4214,14 +4226,30 @@ button.dropdown-toggle .dropdown-icon {
   background: linear-gradient(0deg, rgba(18, 18, 18, 0.69) 0%, rgba(96, 96, 96, 0) 100%);
 }
 
+.nav-card__link:focus img,
+.nav-card__link:hover img,
+.nav-card__link:active img {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
 .nav-card__link img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 .nav-card p {
+  z-index: 1;
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -4459,11 +4487,7 @@ button.dropdown-toggle .dropdown-icon {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  padding: 30px 20px;
-}
-
-.card-news__text {
-  margin-bottom: 20px;
+  padding: 20px;
 }
 
 .card-news__text p {
@@ -4706,8 +4730,8 @@ button.dropdown-toggle .dropdown-icon {
   width: 30px;
   height: 30px;
   margin-right: 10px;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .news-detail {
@@ -4763,10 +4787,16 @@ button.dropdown-toggle .dropdown-icon {
   font-size: 14px;
   line-height: 16px;
   font-weight: 600;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .news-detail__date span:first-child {
   margin-right: 44px;
+}
+
+.news-detail__row {
+  padding-bottom: 0;
 }
 
 .news-detail__text p {
@@ -4811,7 +4841,7 @@ button.dropdown-toggle .dropdown-icon {
 .news-detail__copy:focus,
 .news-detail__copy:hover,
 .news-detail__copy:active {
-  color: #33a6a7;
+  color: #ea5c4d;
 }
 
 .recent-news {
@@ -4940,10 +4970,10 @@ button.dropdown-toggle .dropdown-icon {
   transform: translateY(-50%);
   width: 14px;
   height: 8px;
-  -webkit-transition: color .2s linear, -webkit-transform .2s linear;
-  transition: color .2s linear, -webkit-transform .2s linear;
-  transition: transform .2s linear, color .2s linear;
-  transition: transform .2s linear, color .2s linear, -webkit-transform .2s linear;
+  -webkit-transition: color 0.2s linear, -webkit-transform 0.2s linear;
+  transition: color 0.2s linear, -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear, color 0.2s linear;
+  transition: transform 0.2s linear, color 0.2s linear, -webkit-transform 0.2s linear;
   color: #121212;
 }
 
@@ -4962,8 +4992,8 @@ button.dropdown-toggle .dropdown-icon {
   color: #fff;
   background-color: #33a6a7;
   padding: 10px 8px;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .arrow-links .arrow-round-icon {
@@ -6008,8 +6038,19 @@ button.dropdown-toggle .dropdown-icon {
     line-height: 34px;
   }
 
+  .section-form .section__wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
   .accordion__toggle {
     padding: 12px 0 11px 37px;
+  }
+
+  .accordion__icon {
+    top: 30px;
   }
 
   .hero__inner {
@@ -6355,6 +6396,7 @@ button.dropdown-toggle .dropdown-icon {
   .card-news {
     -webkit-box-shadow: none;
     box-shadow: none;
+    margin-bottom: 0;
   }
 
   .card-news__image {
@@ -6473,6 +6515,10 @@ button.dropdown-toggle .dropdown-icon {
 
   .download-card {
     padding: 25px 30px 30px;
+  }
+
+  .download-card__list li {
+    width: 50%;
   }
 
   .recent-news .card-news__image {
@@ -6819,6 +6865,7 @@ button.dropdown-toggle .dropdown-icon {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    padding-bottom: 0 !important;
   }
 
   .news-detail__text {
@@ -7740,9 +7787,9 @@ button.dropdown-toggle .dropdown-icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;

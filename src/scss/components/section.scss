@@ -423,3 +423,13 @@
     padding-top: 80px;
   }
 }
+
+.section-form {
+  .section__wrapper {
+    flex-direction: column-reverse;
+
+    @include laptop {
+      flex-direction: row;
+    }
+  }
+}

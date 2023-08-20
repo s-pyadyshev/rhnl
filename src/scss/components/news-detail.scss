@@ -66,7 +66,7 @@
   &__info {
     @include desktop {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: space-between;
       position: absolute;
       left: 0;
@@ -87,6 +87,7 @@
     font-size: 14px;
     line-height: 16px;
     font-weight: 600;
+    flex-shrink: 0;
 
     span {
       &:first-child {
@@ -100,9 +101,12 @@
   }
 
   &__row {
+    padding-bottom: 0;
+
     @media (min-width: 1201px) {
       display: flex;
       justify-content: space-between;
+      padding-bottom: 0 !important;
     }
   }
 
@@ -157,7 +161,7 @@
     &:focus,
     &:hover,
     &:active {
-      color: $color-secondary;
+      color: $color-primary;
     }
   }
 }

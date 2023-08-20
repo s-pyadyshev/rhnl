@@ -3,6 +3,7 @@ export const dropdown = (function () {
     if (!document.querySelectorAll("[data-toggle~=dropdown]").length) {
       return;
     }
+
     document.querySelectorAll("[data-toggle~=dropdown]").forEach(setupDropdown);
 
     function setupDropdown(dropdownToggle) {

@@ -40,7 +40,8 @@ $breadcrumb-gap: 6px;
     &:focus,
     &:hover,
     &:active {
-      text-decoration-color: $breadcrumb-color;
+      text-decoration-color: $color-primary;
+      color: $color-primary;
     }
   }
 }
