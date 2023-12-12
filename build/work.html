@@ -1,506 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_GB">
-    <meta property="og:title" content="Werk, onderwijs & vrije tijd">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Werk, onderwijs & vrije tijd">
-    <title>Werk, onderwijs & vrije tijd</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="./css/main.css?v=1702371591729">
-</head>
-
-<body>
-    <div class="page-wrapper">
-        <header class="header">
-            <div class="container">
-                <div class="header__menu-toggle">
-                    <button class="menu-button js-toggle-menu" type="button"><span> </span><span> </span><span></span></button>
-                </div>
-                <div class="header__inner">
-                    <a class="logo" href="home.html">
-                        <img src="images/logo.svg" alt="RefugeeHomeNL logo." width="122" height="70">
-                    </a>
-                    <div class="header__menu">
-                        <nav class="navbar" aria-label="main navigation">
-                            <ul class="navbar__list">
-                                <li class="current-menu-item">
-                                    <a class="navbar__link" href="home.html">Home</a>
-                                </li>
-                                <li>
-                                    <a class="navbar__link" href="news.html">Nieuws</a>
-                                </li>
-                                <li>
-                                    <div class="dropdown dropdown--nav-cards">
-                                        <button class="navbar__link dropdown-link" data-toggle="dropdown">Vraag &amp; antwoord<span class="dropdown-icon">
-                                                <svg>
-                                                    <use xlink:href="./images/sprites.svg#chevron-down"></use>
-                                                </svg>
-                                            </span></button>
-                                        <div class="dropdown-menu">
-                                            <div class="nav-cards">
-                                                <div class="nav-card">
-                                                    <a class="nav-card__link" href="/" title="Jij als gastgezin">
-                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                                        <p>Jij als gastgezin</p>
-                                                    </a>
-                                                </div>
-                                                <div class="nav-card">
-                                                    <a class="nav-card__link" href="/" title="Je gast">
-                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                                        <p>Je gast</p>
-                                                    </a>
-                                                </div>
-                                                <div class="nav-card">
-                                                    <a class="nav-card__link" href="/" title="Taal &amp; cultuur">
-                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                                        <p>Taal &amp; cultuur</p>
-                                                    </a>
-                                                </div>
-                                                <div class="nav-card">
-                                                    <a class="nav-card__link" href="/" title="Zorg &amp; Welzijn">
-                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                                        <p>Zorg &amp; Welzijn</p>
-                                                    </a>
-                                                </div>
-                                                <div class="nav-card">
-                                                    <a class="nav-card__link" href="/" title="Werk/ onderwijs">
-                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                                        <p>Werk/ onderwijs</p>
-                                                    </a>
-                                                </div>
-                                                <div class="nav-card">
-                                                    <a class="nav-card__link" href="/" title="Financiële zaken">
-                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                                        <p>Financiële zaken</p>
-                                                    </a>
-                                                </div>
-                                                <div class="nav-card">
-                                                    <a class="nav-card__link" href="/" title="Vertrek">
-                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                                        <p>Vertrek</p>
-                                                    </a>
-                                                </div>
-                                                <div class="nav-card">
-                                                    <a class="nav-card__link" href="/" title="Over RHNL">
-                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                                        <p>Over RHNL</p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a class="navbar__link" href="downloads.html">Downloads</a>
-                                </li>
-                                <li>
-                                    <a class="navbar__link" href="about.html">Over ons</a>
-                                </li>
-                                <li>
-                                    <a class="navbar__link" href="contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="header__language">
-                    <div class="dropdown">
-                        <button class="button dropdown-toggle" data-toggle="dropdown"><span class="dropdown-icon">
-                                <svg>
-                                    <use xlink:href="./images/sprites.svg#chevron-down"></use>
-                                </svg>
-                            </span><span class="dropdown-toggle__icon">
-                                <svg>
-                                    <use xlink:href="./images/sprites.svg#globe"></use>
-                                </svg>
-                            </span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--desktop">Nederlands</span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--mobile">NL</span></button>
-                        <div class="dropdown-menu">
-                            <a href="">
-                                <div class="dropdown-toggle__icon-flag">
-                                    <svg>
-                                        <use xlink:href="./images/sprites.svg#nl"></use>
-                                    </svg>
-                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop current-lang">Nederlands</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile current-lang">NL</span>
-                            </a>
-                            <a href="">
-                                <div class="dropdown-toggle__icon-flag">
-                                    <svg>
-                                        <use xlink:href="./images/sprites.svg#uk"></use>
-                                    </svg>
-                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">English</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">EN</span>
-                            </a>
-                            <a href="">
-                                <div class="dropdown-toggle__icon-flag">
-                                    <svg>
-                                        <use xlink:href="./images/sprites.svg#ua"></use>
-                                    </svg>
-                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Українська</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">UKR</span>
-                            </a>
-                            <a href="">
-                                <div class="dropdown-toggle__icon-flag">
-                                    <svg>
-                                        <use xlink:href="./images/sprites.svg#ru"></use>
-                                    </svg>
-                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Русский</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">RUS</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <main class="main">
-            <div class="container">
-                <nav class="breadcrumb" aria-label="breadcrumbs">
-                    <ul class="breadcrumb__list">
-                        <li class="breadcrumb__item">
-                            <a class="breadcrumb__link" href="#" title="Home">Home</a>
-                        </li>
-                        <li class="breadcrumb__item">
-                            <a class="breadcrumb__link" href="#" title="Vraag &amp; Antwoord">Vraag &amp; Antwoord</a>
-                        </li>
-                        <li class="breadcrumb__item"><span>Werk, onderwijs &amp; vrije tijd</span></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="container">
-
-                <section class="section section--faq with-aside">
-                    <div class="section__wrapper">
-                        <div class="section__content">
-
-                            <section class="hero hero--faq pt-0">
-                                <div class="container">
-                                    <div class="hero__inner">
-                                        <div class="hero__text">
-                                            <div class="hero__greeting">
-                                                <p>VRAAG &amp; ANTWOORD</p>
-                                            </div>
-                                            <h1>Werk, onderwijs &amp; vrije tijd
-                                            </h1>
-                                            <p>Phasellus et magna neque. Etiam eu auctor est. Etiam aliquam pulvinar augue quis bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam et tortor ut nisi gravida convallis. Integer eu purus magna.</p>
-                                            <h4>Waarmee kunnen we je helpen?</h4>
-                                            <form class="search" action="/" name="search">
-                                                <div class="search__icon">
-                                                    <svg>
-                                                        <use xlink:href="./images/sprites.svg#search"></use>
-                                                    </svg>
-                                                </div>
-                                                <input class="input search__field" type="search" placeholder="Type hier je vraag…" />
-                                                <button class="button button--search button-primary" type="submit">
-                                                    <svg>
-                                                        <use xlink:href="./images/sprites.svg#arrow-right"></use>
-                                                    </svg>
-                                                </button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                            <div class="filter">
-                                <div class="filter__title"><span>Filter op:</span></div>
-                                <ul>
-                                    <li>
-                                        <button class="button button--filter is-active" type="button">
-                                            <svg>
-                                                <use xlink:href="./images/sprites.svg#case"></use>
-                                            </svg><span>Werk</span>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button class="button button--filter" type="button">
-                                            <svg>
-                                                <use xlink:href="./images/sprites.svg#academic-cap"></use>
-                                            </svg><span>Educatie</span>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button class="button button--filter" type="button">
-                                            <svg>
-                                                <use xlink:href="./images/sprites.svg#subway"></use>
-                                            </svg><span>Transport</span>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <a class="card-news" href="/">
-                                        <div class="card-news__image">
-                                            <img src="./images/news.jpg" alt="" width="460" height="280" />
-                                        </div>
-                                        <div class="card-news__content">
-                                            <div class="card-news__text">
-                                                <h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
-                                                <p>Phasellus et magna neque. Etiam eu auctor est. Etiam aliquam pulvinar augue quis bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6">
-                                    <a class="card-news" href="/">
-                                        <div class="card-news__image">
-                                            <img src="./images/news.jpg" alt="" width="460" height="280" />
-                                        </div>
-                                        <div class="card-news__content">
-                                            <div class="card-news__text">
-                                                <h3>Duis eget lacinia libero praesent</h3>
-                                                <p>Etiam aliquam pulvinar augue quis bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam et tortor ut nisi gravida convallis.</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6">
-                                    <a class="card-news" href="/">
-                                        <div class="card-news__image">
-                                            <img src="./images/news.jpg" alt="" width="460" height="280" />
-                                        </div>
-                                        <div class="card-news__content">
-                                            <div class="card-news__text">
-                                                <h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
-                                                <p>Phasellus et magna neque. Etiam eu auctor est. Etiam aliquam pulvinar augue quis bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section__aside">
-                            <aside class="other-topics">
-                                <h2>Andere topics</h2>
-                                <div class="nav-cards nav-cards--in-aside">
-                                    <div class="nav-card">
-                                        <a class="nav-card__link" title="Je gast">
-                                            <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                            <p>Je gast</p>
-                                        </a>
-                                    </div>
-                                    <div class="nav-card">
-                                        <a class="nav-card__link" title="Taal &amp; cultuur">
-                                            <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                            <p>Taal &amp; cultuur</p>
-                                        </a>
-                                    </div>
-                                    <div class="nav-card">
-                                        <a class="nav-card__link" title="Zorg &amp; Welzijn">
-                                            <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                            <p>Zorg &amp; Welzijn</p>
-                                        </a>
-                                    </div>
-                                    <div class="nav-card">
-                                        <a class="nav-card__link" title="Werk/ onderwijs">
-                                            <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                            <p>Werk/ onderwijs</p>
-                                        </a>
-                                    </div>
-                                    <div class="nav-card">
-                                        <a class="nav-card__link" title="Financiële zaken">
-                                            <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                            <p>Financiële zaken</p>
-                                        </a>
-                                    </div>
-                                    <div class="nav-card">
-                                        <a class="nav-card__link" title="Vertrek">
-                                            <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                            <p>Vertrek</p>
-                                        </a>
-                                    </div>
-                                    <div class="nav-card">
-                                        <a class="nav-card__link" title="Over RHNL">
-                                            <img src="./images/news.jpg" alt="" width="152" height="165" />
-                                            <p>Over RHNL</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <section class="section background-muted">
-                <div class="container">
-                    <h2>Vraag & antwoord</h2>
-                    <ul class="accordion-list">
-                        <li class="accordion-list__item">
-                            <div class="accordion">
-                                <div class="accordion__header">
-                                    <button class="accordion__toggle" data-accordion="data-accordion" aria-expanded="false"><span class="accordion__icon"></span><span class="accordion__title">Waar in Nederland is RefugeeHomeNL actief?</span></button>
-                                </div>
-                                <div class="accordion__content">
-                                    <p>Inmiddels wordt de werkwijze van RefugeeHomeNL door heel Nederland ingezet. In belangrijke mate is dit een digitaal proces. Daarnaast kennen we in diverse grote steden fysieke punten. Hier kunnen Oekraïense ontheemden zich eveneens aanmelden.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="accordion-list__item">
-                            <div class="accordion">
-                                <div class="accordion__header">
-                                    <button class="accordion__toggle" data-accordion="data-accordion" aria-expanded="false"><span class="accordion__icon"></span><span class="accordion__title">Hoe worden gasthuishoudens gescreend? Nederland is RefugeeHomeNL actief?</span></button>
-                                </div>
-                                <div class="accordion__content">
-                                    <p>Inmiddels wordt de werkwijze van RefugeeHomeNL door heel Nederland ingezet. In belangrijke mate is dit een digitaal proces. Daarnaast kennen we in diverse grote steden fysieke punten. Hier kunnen Oekraïense ontheemden zich eveneens aanmelden.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="accordion-list__item">
-                            <div class="accordion">
-                                <div class="accordion__header">
-                                    <button class="accordion__toggle" data-accordion="data-accordion" aria-expanded="false"><span class="accordion__icon"></span><span class="accordion__title">Hoe worden gasthuishoudens gescreend? Nederland is RefugeeHomeNL actief?</span></button>
-                                </div>
-                                <div class="accordion__content">
-                                    <p>Inmiddels wordt de werkwijze van RefugeeHomeNL door heel Nederland ingezet. In belangrijke mate is dit een digitaal proces. Daarnaast kennen we in diverse grote steden fysieke punten. Hier kunnen Oekraïense ontheemden zich eveneens aanmelden.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="accordion-list__item">
-                            <div class="accordion">
-                                <div class="accordion__header">
-                                    <button class="accordion__toggle" data-accordion="data-accordion" aria-expanded="false"><span class="accordion__icon"></span><span class="accordion__title">Hoe worden gasthuishoudens gescreend? Nederland is RefugeeHomeNL actief?</span></button>
-                                </div>
-                                <div class="accordion__content">
-                                    <p>Inmiddels wordt de werkwijze van RefugeeHomeNL door heel Nederland ingezet. In belangrijke mate is dit een digitaal proces. Daarnaast kennen we in diverse grote steden fysieke punten. Hier kunnen Oekraïense ontheemden zich eveneens aanmelden.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="accordion-list__item">
-                            <div class="accordion">
-                                <div class="accordion__header">
-                                    <button class="accordion__toggle" data-accordion="data-accordion" aria-expanded="false"><span class="accordion__icon"></span><span class="accordion__title">Hoe worden gasthuishoudens gescreend? Nederland is RefugeeHomeNL actief?</span></button>
-                                </div>
-                                <div class="accordion__content">
-                                    <p>Inmiddels wordt de werkwijze van RefugeeHomeNL door heel Nederland ingezet. In belangrijke mate is dit een digitaal proces. Daarnaast kennen we in diverse grote steden fysieke punten. Hier kunnen Oekraïense ontheemden zich eveneens aanmelden.</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="section with-aside section-form">
-                <div class="container">
-                    <div class="section__wrapper">
-                        <div class="section__content">
-                            <form class="form">
-                                <h4 class="text-primary">Niet gevonden wat je zocht?</h4>
-                                <p>Phasellus et magna neque. Etiam eu auctor est. Etiam aliquam pulvinar augue quis bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                <div class="form__fields">
-                                    <input class="input" type="text" placeholder="Naam" name="name">
-                                    <input class="input" type="email" placeholder="E-mailadres" name="email">
-                                    <textarea class="textarea" name="ask" placeholder="Type hier je vraag…"></textarea>
-                                </div>
-                                <button class="button button--with-arrow" type="submit">Verstuur
-                                    <svg>
-                                        <use xlink:href="./images/sprites.svg#arrow-right"></use>
-                                    </svg>
-                                </button>
-                            </form>
-                        </div>
-                        <aside class="section__aside">
-                            <div class="registration-links">
-                                <h3>Hier kun je je aanmelden</h3>
-                                <a class="button button--round-arrow" href="/" title="Aanmelden als gastgezin">Aanmelden als gastgezin<span>
-                                        <svg>
-                                            <use xlink:href="./images/sprites.svg#arrow-right"></use>
-                                        </svg>
-                                    </span></a>
-                                <a class="button button--round-arrow" href="/" title="Aanmelden als gast">Aanmelden als gast<span>
-                                        <svg>
-                                            <use xlink:href="./images/sprites.svg#arrow-right"></use>
-                                        </svg>
-                                    </span></a>
-                                <div class="registration-links__icon">
-                                    <svg>
-                                        <use xlink:href="./images/sprites.svg#sheet"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                        </aside>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="container">
-                <a class="logo logo--footer" href="home.html">
-                    <img src="images/logo-white.svg" alt="RefugeeHomeNL logo." width="122" height="70">
-                </a>
-                <div class="footer__row">
-                    <div class="footer__col-left">
-                        <p>RefugeeHomeNL is ontstaan als samenwerkingsverband tussen het Rode Kruis, het Leger des Heils, VluchtelingenWerk en Takecarebnb op voorspraak van het Ministerie van Justitie en Veiligheid. Met onze aanpak biedt RefugeeHomeNL een humaan alternatief voor noodopvang en een duurzaam verblijf bij een particulier.</p>
-                        <ul class="footer__partners">
-                            <li class="footer__partners-item">
-                                <a href="/">
-                                    <img class="footer__partners-image" src="images/rodekruis-color.svg" alt="Rode Kruis." width="147" height="74">
-                                </a>
-                            </li>
-                            <li class="footer__partners-item">
-                                <a href="/">
-                                    <img class="footer__partners-image" src="images/vluchtelingenwerk.svg" alt="VluchtelingenWerk Nederland." width="86" height="57">
-                                </a>
-                            </li>
-                            <li class="footer__partners-item">
-                                <a href="/">
-                                    <img class="footer__partners-image" src="images/legerdesheils-color.svg" alt="Leger des Heils." width="60" height="63">
-                                </a>
-                            </li>
-                            <li class="footer__partners-item">
-                                <a href="/">
-                                    <img class="footer__partners-image" src="images/takecarebnb-color.svg" alt="Takecarebnb." width="115" height="60">
-                                </a>
-                            </li>
-                            <li class="footer__partners-item">
-                                <a href="/">
-                                    <img class="footer__partners-image" src="images/mjv-color.png" alt="Ministerie van Justitie en Veiligheid." width="135" height="65">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer__col-right">
-                        <div class="footer__social">
-                            <h3>Volg ons op Facebook</h3>
-                            <ul class="social-links">
-                                <li class="social-links__item">
-                                    <button class="social-links__link" type="button">
-                                        <svg class="fb">
-                                            <use xlink:href="./images/sprites.svg#fb"></use>
-                                        </svg>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                        <ul class="footer__links">
-                            <li>
-                                <a href="/">Privacy statement</a>
-                            </li>
-                            <li>
-                                <a href="/">Cookies</a>
-                            </li>
-                            <li>
-                                <a href="/">Disclaimer</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer__copy">
-                    <p><span>Copyright © 2022-2023&nbsp;</span><span>Het Nederlandse Rode Kruis.&nbsp;</span><span>All rights reserved.</span></p>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./js/vendor.js?v=1702371591730"></script>
-    <script src="./js/main.js?v=1702371591730"></script>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="en_GB">
+		<meta property="og:title" content="Werk, onderwijs & vrije tijd">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Werk, onderwijs & vrije tijd">
+		<title>Werk, onderwijs & vrije tijd</title><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+		<link rel="stylesheet" href="./css/main.css?v=1702371797768">
+	</head>
+	<body>
+		<div class="page-wrapper">
+			<header class="header">
+				<div class="container">
+					<div class="header__menu-toggle">
+						<button class="menu-button js-toggle-menu" type="button"><span> </span><span> </span><span></span></button>
+					</div>
+					<div class="header__inner"><a class="logo" href="home.html"><img src="images/logo.svg" alt="RefugeeHomeNL logo." width="122" height="70"></a>
+						<div class="header__menu">
+							<nav class="navbar" aria-label="main navigation">
+								<ul class="navbar__list">
+									<li class="current-menu-item"><a class="navbar__link" href="home.html">Home</a></li>
+									<li><a class="navbar__link" href="news.html">Nieuws</a></li>
+									<li>
+										<div class="dropdown dropdown--nav-cards">
+											<button class="navbar__link dropdown-link" data-toggle="dropdown">Vraag &amp; antwoord<span class="dropdown-icon">
+													<svg>
+														<use xlink:href="./images/sprites.svg#chevron-down"></use>
+													</svg></span></button>
+											<div class="dropdown-menu">
+												<div class="nav-cards">
+													<div class="nav-card"><a class="nav-card__link" href="/" title="Jij als gastgezin"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+															<p>Jij als gastgezin</p></a></div>
+													<div class="nav-card"><a class="nav-card__link" href="/" title="Je gast"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+															<p>Je gast</p></a></div>
+													<div class="nav-card"><a class="nav-card__link" href="/" title="Taal &amp; cultuur"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+															<p>Taal &amp; cultuur</p></a></div>
+													<div class="nav-card"><a class="nav-card__link" href="/" title="Zorg &amp; Welzijn"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+															<p>Zorg &amp; Welzijn</p></a></div>
+													<div class="nav-card"><a class="nav-card__link" href="/" title="Werk/ onderwijs"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+															<p>Werk/ onderwijs</p></a></div>
+													<div class="nav-card"><a class="nav-card__link" href="/" title="Financiële zaken"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+															<p>Financiële zaken</p></a></div>
+													<div class="nav-card"><a class="nav-card__link" href="/" title="Vertrek"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+															<p>Vertrek</p></a></div>
+													<div class="nav-card"><a class="nav-card__link" href="/" title="Over RHNL"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+															<p>Over RHNL</p></a></div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li><a class="navbar__link" href="downloads.html">Downloads</a></li>
+									<li><a class="navbar__link" href="about.html">Over ons</a></li>
+									<li><a class="navbar__link" href="contact.html">Contact</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="header__language">
+						<div class="dropdown">
+							<button class="button dropdown-toggle" data-toggle="dropdown"><span class="dropdown-icon">
+									<svg>
+										<use xlink:href="./images/sprites.svg#chevron-down"></use>
+									</svg></span><span class="dropdown-toggle__icon">
+									<svg>
+										<use xlink:href="./images/sprites.svg#globe"></use>
+									</svg></span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--desktop">Nederlands</span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--mobile">NL</span></button>
+							<div class="dropdown-menu"><a href="">
+									<div class="dropdown-toggle__icon-flag">
+										<svg>
+											<use xlink:href="./images/sprites.svg#nl"></use>
+										</svg>
+									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop current-lang">Nederlands</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile current-lang">NL</span></a><a href="">
+									<div class="dropdown-toggle__icon-flag">
+										<svg>
+											<use xlink:href="./images/sprites.svg#uk"></use>
+										</svg>
+									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">English</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">EN</span></a><a href="">
+									<div class="dropdown-toggle__icon-flag">
+										<svg>
+											<use xlink:href="./images/sprites.svg#ua"></use>
+										</svg>
+									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Українська</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">UKR</span></a><a href="">
+									<div class="dropdown-toggle__icon-flag">
+										<svg>
+											<use xlink:href="./images/sprites.svg#ru"></use>
+										</svg>
+									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Русский</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">RUS</span></a></div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<div class="container">
+					<nav class="breadcrumb" aria-label="breadcrumbs">
+						<ul class="breadcrumb__list">
+							<li class="breadcrumb__item"><a class="breadcrumb__link" href="#" title="Home">Home</a>
+							</li>
+							<li class="breadcrumb__item"><a class="breadcrumb__link" href="#" title="Vraag &amp; Antwoord">Vraag &amp; Antwoord</a>
+							</li>
+							<li class="breadcrumb__item"><span>Werk, onderwijs &amp; vrije tijd</span></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="container"> 
+					<section class="section section--faq with-aside">
+						<div class="section__wrapper">
+							<div class="section__content">
+								<section class="hero hero--faq pt-0">
+									<div class="container">
+										<div class="hero__inner">
+											<div class="hero__text">
+												<div class="hero__greeting">
+													<p>VRAAG &amp; ANTWOORD</p>
+												</div>
+												<h1>Werk, onderwijs &amp; vrije tijd
+												</h1>
+												<p>Phasellus et magna neque. Etiam eu auctor est. Etiam aliquam pulvinar augue quis bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam et tortor ut nisi gravida convallis. Integer eu purus magna.</p>
+												<h4>Waarmee kunnen we je helpen?</h4>
+												<form class="search" action="/" name="search">
+													<div class="search__icon">
+														<svg>
+															<use xlink:href="./images/sprites.svg#search"></use>
+														</svg>
+													</div>
+													<input class="input search__field" type="search" placeholder="Type hier je vraag…"/>
+													<button class="button button--search button-primary" type="submit">
+														<svg>
+															<use xlink:href="./images/sprites.svg#arrow-right"></use>
+														</svg>
+													</button>
+												</form>
+											</div>
+										</div>
+									</div>
+								</section>
+								<div class="filter">
+									<div class="filter__title"><span>Filter op:</span></div>
+									<ul>
+										<li>
+											<button class="button button--filter is-active" type="button">
+												<svg>
+													<use xlink:href="./images/sprites.svg#case"></use>
+												</svg><span>Werk</span>
+											</button>
+										</li>
+										<li>
+											<button class="button button--filter" type="button">
+												<svg>
+													<use xlink:href="./images/sprites.svg#academic-cap"></use>
+												</svg><span>Educatie</span>
+											</button>
+										</li>
+										<li>
+											<button class="button button--filter" type="button">
+												<svg>
+													<use xlink:href="./images/sprites.svg#subway"></use>
+												</svg><span>Transport</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+								<div class="row">
+									<div class="col-md-6"><a class="card-news" href="/">
+											<div class="card-news__image"><img src="./images/news.jpg" alt="" width="460" height="280"/>
+											</div>
+											<div class="card-news__content">
+												<div class="card-news__text">
+													<h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
+													<p>Phasellus et magna neque. Etiam eu auctor est. Etiam aliquam pulvinar augue quis bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+												</div>
+											</div></a>
+									</div>
+									<div class="col-md-6"><a class="card-news" href="/">
+											<div class="card-news__image"><img src="./images/news.jpg" alt="" width="460" height="280"/>
+											</div>
+											<div class="card-news__content">
+												<div class="card-news__text">
+													<h3>Duis eget lacinia libero praesent</h3>
+													<p>Etiam aliquam pulvinar augue quis bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam et tortor ut nisi gravida convallis.</p>
+												</div>
+											</div></a>
+									</div>
+									<div class="col-md-6"><a class="card-news" href="/">
+											<div class="card-news__image"><img src="./images/news.jpg" alt="" width="460" height="280"/>
+											</div>
+											<div class="card-news__content">
+												<div class="card-news__text">
+													<h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
+													<p>Phasellus et magna neque. Etiam eu auctor est. Etiam aliquam pulvinar augue quis bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+												</div>
+											</div></a>
+									</div>
+								</div>
+							</div>
+							<div class="section__aside">
+								<aside class="other-topics">
+									<h2>Andere topics</h2>
+									<div class="nav-cards nav-cards--in-aside">
+										<div class="nav-card"><a class="nav-card__link" title="Je gast"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+												<p>Je gast</p></a></div>
+										<div class="nav-card"><a class="nav-card__link" title="Taal &amp; cultuur"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+												<p>Taal &amp; cultuur</p></a></div>
+										<div class="nav-card"><a class="nav-card__link" title="Zorg &amp; Welzijn"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+												<p>Zorg &amp; Welzijn</p></a></div>
+										<div class="nav-card"><a class="nav-card__link" title="Werk/ onderwijs"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+												<p>Werk/ onderwijs</p></a></div>
+										<div class="nav-card"><a class="nav-card__link" title="Financiële zaken"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+												<p>Financiële zaken</p></a></div>
+										<div class="nav-card"><a class="nav-card__link" title="Vertrek"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+												<p>Vertrek</p></a></div>
+										<div class="nav-card"><a class="nav-card__link" title="Over RHNL"><img src="./images/news.jpg" alt="" width="152" height="165"/>
+												<p>Over RHNL</p></a></div>
+									</div>
+								</aside>
+							</div>
+						</div>
+					</section>
+				</div>
+				<section class="section background-muted">
+					<div class="container">
+						<h2>Vraag & antwoord</h2>
+						<ul class="accordion-list">
+							<li class="accordion-list__item">
+								<div class="accordion">
+									<div class="accordion__header">
+										<button class="accordion__toggle" data-accordion="data-accordion" aria-expanded="false"><span class="accordion__icon"></span><span class="accordion__title">Waar in Nederland is RefugeeHomeNL actief?</span></button>
+									</div>
+									<div class="accordion__content">
+										<p>Inmiddels wordt de werkwijze van RefugeeHomeNL door heel Nederland ingezet. In belangrijke mate is dit een digitaal proces. Daarnaast kennen we in diverse grote steden fysieke punten. Hier kunnen Oekraïense ontheemden zich eveneens aanmelden.</p>
+									</div>
+								</div>
+							</li>
+							<li class="accordion-list__item">
+								<div class="accordion">
+									<div class="accordion__header">
+										<button class="accordion__toggle" data-accordion="data-accordion" aria-expanded="false"><span class="accordion__icon"></span><span class="accordion__title">Hoe worden gasthuishoudens gescreend? Nederland is RefugeeHomeNL actief?</span></button>
+									</div>
+									<div class="accordion__content">
+										<p>Inmiddels wordt de werkwijze van RefugeeHomeNL door heel Nederland ingezet. In belangrijke mate is dit een digitaal proces. Daarnaast kennen we in diverse grote steden fysieke punten. Hier kunnen Oekraïense ontheemden zich eveneens aanmelden.</p>
+									</div>
+								</div>
+							</li>
+							<li class="accordion-list__item">
+								<div class="accordion">
+									<div class="accordion__header">
+										<button class="accordion__toggle" data-accordion="data-accordion" aria-expanded="false"><span class="accordion__icon"></span><span class="accordion__title">Hoe worden gasthuishoudens gescreend? Nederland is RefugeeHomeNL actief?</span></button>
+									</div>
+									<div class="accordion__content">
+										<p>Inmiddels wordt de werkwijze van RefugeeHomeNL door heel Nederland ingezet. In belangrijke mate is dit een digitaal proces. Daarnaast kennen we in diverse grote steden fysieke punten. Hier kunnen Oekraïense ontheemden zich eveneens aanmelden.</p>
+									</div>
+								</div>
+							</li>
+							<li class="accordion-list__item">
+								<div class="accordion">
+									<div class="accordion__header">
+										<button class="accordion__toggle" data-accordion="data-accordion" aria-expanded="false"><span class="accordion__icon"></span><span class="accordion__title">Hoe worden gasthuishoudens gescreend? Nederland is RefugeeHomeNL actief?</span></button>
+									</div>
+									<div class="accordion__content">
+										<p>Inmiddels wordt de werkwijze van RefugeeHomeNL door heel Nederland ingezet. In belangrijke mate is dit een digitaal proces. Daarnaast kennen we in diverse grote steden fysieke punten. Hier kunnen Oekraïense ontheemden zich eveneens aanmelden.</p>
+									</div>
+								</div>
+							</li>
+							<li class="accordion-list__item">
+								<div class="accordion">
+									<div class="accordion__header">
+										<button class="accordion__toggle" data-accordion="data-accordion" aria-expanded="false"><span class="accordion__icon"></span><span class="accordion__title">Hoe worden gasthuishoudens gescreend? Nederland is RefugeeHomeNL actief?</span></button>
+									</div>
+									<div class="accordion__content">
+										<p>Inmiddels wordt de werkwijze van RefugeeHomeNL door heel Nederland ingezet. In belangrijke mate is dit een digitaal proces. Daarnaast kennen we in diverse grote steden fysieke punten. Hier kunnen Oekraïense ontheemden zich eveneens aanmelden.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="section with-aside section-form">
+					<div class="container">
+						<div class="section__wrapper">
+							<div class="section__content">
+								<form class="form">
+									<h4 class="text-primary">Niet gevonden wat je zocht?</h4>
+									<p>Phasellus et magna neque. Etiam eu auctor est. Etiam aliquam pulvinar augue quis bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+									<div class="form__fields">
+										<input class="input" type="text" placeholder="Naam" name="name">
+										<input class="input" type="email" placeholder="E-mailadres" name="email">
+										<textarea class="textarea" name="ask" placeholder="Type hier je vraag…"></textarea>
+									</div>
+									<button class="button button--with-arrow" type="submit">Verstuur
+										<svg>
+											<use xlink:href="./images/sprites.svg#arrow-right"></use>
+										</svg>
+									</button>
+								</form>
+							</div>
+							<aside class="section__aside">
+								<div class="registration-links">
+									<h3>Hier kun je je aanmelden</h3><a class="button button--round-arrow" href="/" title="Aanmelden als gastgezin">Aanmelden als gastgezin<span> 
+											<svg>
+												<use xlink:href="./images/sprites.svg#arrow-right"></use>
+											</svg></span></a><a class="button button--round-arrow" href="/" title="Aanmelden als gast">Aanmelden als gast<span> 
+											<svg>
+												<use xlink:href="./images/sprites.svg#arrow-right"></use>
+											</svg></span></a>
+									<div class="registration-links__icon">
+										<svg>
+											<use xlink:href="./images/sprites.svg#sheet"></use>
+										</svg>
+									</div>
+								</div>
+							</aside>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="container"><a class="logo logo--footer" href="home.html"><img src="images/logo-white.svg" alt="RefugeeHomeNL logo." width="122" height="70"></a>
+					<div class="footer__row">
+						<div class="footer__col-left">
+							<p>RefugeeHomeNL is ontstaan als samenwerkingsverband tussen het Rode Kruis, het Leger des Heils, VluchtelingenWerk en Takecarebnb op voorspraak van het Ministerie van Justitie en Veiligheid. Met onze aanpak biedt RefugeeHomeNL een humaan alternatief voor noodopvang en een duurzaam verblijf bij een particulier.</p>
+							<ul class="footer__partners">
+								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/rodekruis-color.svg" alt="Rode Kruis." width="147" height="74"></a></li>
+								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/vluchtelingenwerk.svg" alt="VluchtelingenWerk Nederland." width="86" height="57"></a></li>
+								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/legerdesheils-color.svg" alt="Leger des Heils." width="60" height="63"></a></li>
+								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/takecarebnb-color.svg" alt="Takecarebnb." width="115" height="60"></a></li>
+								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/mjv-color.png" alt="Ministerie van Justitie en Veiligheid." width="135" height="65"></a></li>
+							</ul>
+						</div>
+						<div class="footer__col-right">
+							<div class="footer__social">
+								<h3>Volg ons op Facebook</h3>
+								<ul class="social-links">
+									<li class="social-links__item">
+										<button class="social-links__link" type="button">
+											<svg class="fb">
+												<use xlink:href="./images/sprites.svg#fb"></use>
+											</svg>
+										</button>
+									</li>
+									<li class="social-links__item">
+										<button class="social-links__link" type="button">
+											<svg class="tw">
+												<use xlink:href="./images/sprites.svg#tw"></use>
+											</svg>
+										</button>
+									</li>
+								</ul>
+							</div>
+							<ul class="footer__links">
+								<li><a href="/">Privacy statement</a></li>
+								<li><a href="/">Cookies</a></li>
+								<li><a href="/">Disclaimer</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__copy">
+						<p><span>Copyright © 2022-2023&nbsp;</span><span>Het Nederlandse Rode Kruis.&nbsp;</span><span>All rights reserved.</span></p>
+					</div>
+				</div>
+			</footer>
+		</div><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="./js/vendor.js?v=1702371797770"></script>
+		<script src="./js/main.js?v=1702371797770"></script>
+	</body>
 </html>
