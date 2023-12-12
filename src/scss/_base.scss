@@ -95,3 +95,9 @@ video {
     scroll-behavior: smooth;
   }
 }
+
+.svg-inverse {
+  fill: none;
+  stroke: currentColor;
+  color: white;
+}

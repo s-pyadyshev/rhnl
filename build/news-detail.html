@@ -1,309 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width">
-		<meta property="og:type" content="website">
-		<meta property="og:locale" content="en_GB">
-		<meta property="og:title" content="News detail">
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="News detail">
-		<title>News detail</title><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
-		<link rel="stylesheet" href="./css/main.css?v=1692563730752">
-	</head>
-	<body>
-		<div class="page-wrapper">
-			<header class="header">
-				<div class="container">
-					<div class="header__menu-toggle">
-						<button class="menu-button js-toggle-menu" type="button"><span> </span><span> </span><span></span></button>
-					</div>
-					<div class="header__inner"><a class="logo" href="home.html"><img src="images/logo.svg" alt="RefugeeHomeNL logo." width="122" height="70"></a>
-						<div class="header__menu">
-							<nav class="navbar" aria-label="main navigation">
-								<ul class="navbar__list">
-									<li class="current-menu-item"><a class="navbar__link" href="home.html">Home</a></li>
-									<li><a class="navbar__link" href="news.html">Nieuws</a></li>
-									<li>
-										<div class="dropdown dropdown--nav-cards">
-											<button class="navbar__link dropdown-link" data-toggle="dropdown">Vraag &amp; antwoord<span class="dropdown-icon">
-													<svg>
-														<use xlink:href="./images/sprites.svg#chevron-down"></use>
-													</svg></span></button>
-											<div class="dropdown-menu">
-												<div class="nav-cards">
-													<div class="nav-card"><a class="nav-card__link" href="/" title="Jij als gastgezin"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Jij als gastgezin</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" href="/" title="Je gast"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Je gast</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" href="/" title="Taal &amp; cultuur"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Taal &amp; cultuur</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" href="/" title="Zorg &amp; Welzijn"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Zorg &amp; Welzijn</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" href="/" title="Werk/ onderwijs"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Werk/ onderwijs</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" href="/" title="Financiële zaken"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Financiële zaken</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" href="/" title="Vertrek"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Vertrek</p></a></div>
-													<div class="nav-card"><a class="nav-card__link" href="/" title="Over RHNL"><img src="./images/news.jpg" alt="" width="152" height="165"/>
-															<p>Over RHNL</p></a></div>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li><a class="navbar__link" href="downloads.html">Downloads</a></li>
-									<li><a class="navbar__link" href="about.html">Over ons</a></li>
-									<li><a class="navbar__link" href="contact.html">Contact</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-					<div class="header__language">
-						<div class="dropdown">
-							<button class="button dropdown-toggle" data-toggle="dropdown"><span class="dropdown-icon">
-									<svg>
-										<use xlink:href="./images/sprites.svg#chevron-down"></use>
-									</svg></span><span class="dropdown-toggle__icon">
-									<svg>
-										<use xlink:href="./images/sprites.svg#globe"></use>
-									</svg></span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--desktop">Nederlands</span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--mobile">NL</span></button>
-							<div class="dropdown-menu"><a href="">
-									<div class="dropdown-toggle__icon-flag">
-										<svg>
-											<use xlink:href="./images/sprites.svg#nl"></use>
-										</svg>
-									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop current-lang">Nederlands</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile current-lang">NL</span></a><a href="">
-									<div class="dropdown-toggle__icon-flag">
-										<svg>
-											<use xlink:href="./images/sprites.svg#uk"></use>
-										</svg>
-									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">English</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">EN</span></a><a href="">
-									<div class="dropdown-toggle__icon-flag">
-										<svg>
-											<use xlink:href="./images/sprites.svg#ua"></use>
-										</svg>
-									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Українська</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">UKR</span></a><a href="">
-									<div class="dropdown-toggle__icon-flag">
-										<svg>
-											<use xlink:href="./images/sprites.svg#ru"></use>
-										</svg>
-									</div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Русский</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">RUS</span></a></div>
-						</div>
-					</div>
-				</div>
-			</header>
-			<main class="main">
-				<div class="container">
-					<nav class="breadcrumb" aria-label="breadcrumbs">
-						<ul class="breadcrumb__list">
-							<li class="breadcrumb__item"><a class="breadcrumb__link" href="#" title="Home">Home</a>
-							</li>
-							<li class="breadcrumb__item"><a class="breadcrumb__link" href="#" title="Nieuws">Nieuws</a>
-							</li>
-							<li class="breadcrumb__item"><span>Donec pretium hendrerit magna</span></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="section news-detail">
-					<div class="container">
-						<article class="news-detail__head">
-							<div class="news-detail__image"><img src="images/news-detail.jpg" alt="alt."></div>
-							<div class="news-detail__info">
-								<h1> <span>Donec pretium hendrerit magna</span></h1>
-								<div class="news-detail__date"><span>Published on:&nbsp;</span><span>2 May 2023</span></div>
-							</div>
-						</article>
-						<article class="section news-detail__row">
-							<div class="news-detail__text">
-								<p> <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra augue urna, id cursus lectus auctor in. Maecenas nisl libero, scelerisque quis aliquam sed, bibendum sit amet mi. Curabitur vehicula, est sit amet hendrerit facilisis, justo nulla laoreet sapien, sit amet iaculis justo nisi at purus.</strong></p>
-								<p>liquam fermentum vestibulum mauris, vel tempus tortor luctus gravida. Sed eu volutpat erat. Suspendisse scelerisque diam et scelerisque vehicula. Suspendisse sit amet vehicula ligula. Nam bibendum sapien vel placerat tristique. Integer rutrum efficitur ultrices. Praesent sit amet lacus tortor. Sed scelerisque ex augue. Vivamus fermentum dui quis nisi feugiat rutrum. </p>
-								<p>Integer ac varius dolor. Sed posuere vulputate condimentum. Fusce mollis massa ut enim fermentum, at interdum erat eleifend. Nunc condimentum vitae neque sed pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed blandit tincidunt libero nec faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus tempor libero orci, in pharetra erat pharetra sollicitudin. Pellentesque dictum nulla eros, quis lacinia purus tincidunt ac. Nam at magna ligula. Maecenas in sem a sem elementum iaculis vel ac quam. Proin tristique arcu ante, sed consequat tortor interdum et. Mauris feugiat risus at interdum tincidunt. Morbi vitae turpis maximus, elementum felis id, consequat sapien.</p>
-								<p>Proin euismod lacus elit, sed ultrices neque maximus in. Donec pretium hendrerit magna, non hendrerit orci tempor sed. Suspendisse justo lacus, ullamcorper sit amet semper nec, interdum et nulla. Nullam nec sapien neque. Fusce sit amet nulla vitae lacus rutrum suscipit. Nam tempor metus sit amet nisl condimentum, quis accumsan erat consequat. Duis eget lacinia libero. Praesent turpis ante, eleifend nec libero a, venenatis sollicitudin lorem. Nam auctor, erat eu facilisis accumsan, velit turpis facilisis sapien, eu vulputate justo nisi vel massa. Ut et mauris quam. Suspendisse sed tortor ac augue efficitur euismod.</p>
-								<p>Nulla facilisi. Morbi scelerisque velit sit amet felis sodales rutrum. Praesent mollis rutrum lorem non sagittis. Nullam libero tortor, aliquam at dictum et, fringilla auctor arcu. Cras auctor libero ac tellus rhoncus, sit amet condimentum nibh porta. Etiam euismod leo quis placerat tempor. Mauris porta consequat scelerisque. Vestibulum lorem mauris, accumsan eu nisl eget, viverra posuere velit. Integer quis placerat neque. Phasellus gravida ex erat, sit amet tincidunt quam placerat sed. Suspendisse potenti. Cras nisl tellus, mollis nec turpis eu, vehicula volutpat mauris.</p>
-								<div class="news-detail__share">
-									<h4>Share this article:</h4>
-									<ul class="social-links social-links--share">
-										<li class="social-links__item">
-											<button class="social-links__link" type="button">
-												<svg class="fb">
-													<use xlink:href="./images/sprites.svg#fb"></use>
-												</svg>
-											</button>
-										</li>
-										<li class="social-links__item">
-											<button class="social-links__link" type="button">
-												<svg class="tw">
-													<use xlink:href="./images/sprites.svg#tw"></use>
-												</svg>
-											</button>
-										</li>
-										<li class="social-links__item">
-											<button class="social-links__link" type="button">
-												<svg class="mail">
-													<use xlink:href="./images/sprites.svg#mail"></use>
-												</svg>
-											</button>
-										</li>
-									</ul>
-									<button class="news-detail__copy" type="button">Copy article link</button>
-								</div>
-							</div>
-							<aside class="recent-news background-muted">
-								<div class="swiper recent-news-slider">
-									<h2>Recente nieuwsberichten</h2>
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="card-news">
-												<div class="card-news__image"><img src="./images/news.jpg" alt="" width="436" height="251"/>
-													<div class="card-news__label"><span>02-05-2023</span></div>
-												</div>
-												<div class="card-news__content">
-													<div class="card-news__text">
-														<h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum</p>
-													</div><a class="button button--with-arrow" href="/news-detail.html">Lees verder
-														<svg>
-															<use xlink:href="./images/sprites.svg#arrow-right"></use>
-														</svg></a>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="card-news">
-												<div class="card-news__image"><img src="./images/news.jpg" alt="" width="436" height="251"/>
-													<div class="card-news__label"><span>02-05-2023</span></div>
-												</div>
-												<div class="card-news__content">
-													<div class="card-news__text">
-														<h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum</p>
-													</div><a class="button button--with-arrow" href="/news-detail.html">Lees verder
-														<svg>
-															<use xlink:href="./images/sprites.svg#arrow-right"></use>
-														</svg></a>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="card-news">
-												<div class="card-news__image"><img src="./images/news.jpg" alt="" width="436" height="251"/>
-													<div class="card-news__label"><span>02-05-2023</span></div>
-												</div>
-												<div class="card-news__content">
-													<div class="card-news__text">
-														<h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum</p>
-													</div><a class="button button--with-arrow" href="/news-detail.html">Lees verder
-														<svg>
-															<use xlink:href="./images/sprites.svg#arrow-right"></use>
-														</svg></a>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="card-news">
-												<div class="card-news__image"><img src="./images/news.jpg" alt="" width="436" height="251"/>
-													<div class="card-news__label"><span>02-05-2023</span></div>
-												</div>
-												<div class="card-news__content">
-													<div class="card-news__text">
-														<h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum</p>
-													</div><a class="button button--with-arrow" href="/news-detail.html">Lees verder
-														<svg>
-															<use xlink:href="./images/sprites.svg#arrow-right"></use>
-														</svg></a>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="card-news">
-												<div class="card-news__image"><img src="./images/news.jpg" alt="" width="436" height="251"/>
-													<div class="card-news__label"><span>02-05-2023</span></div>
-												</div>
-												<div class="card-news__content">
-													<div class="card-news__text">
-														<h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum</p>
-													</div><a class="button button--with-arrow" href="/news-detail.html">Lees verder
-														<svg>
-															<use xlink:href="./images/sprites.svg#arrow-right"></use>
-														</svg></a>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="card-news">
-												<div class="card-news__image"><img src="./images/news.jpg" alt="" width="436" height="251"/>
-													<div class="card-news__label"><span>02-05-2023</span></div>
-												</div>
-												<div class="card-news__content">
-													<div class="card-news__text">
-														<h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum</p>
-													</div><a class="button button--with-arrow" href="/news-detail.html">Lees verder
-														<svg>
-															<use xlink:href="./images/sprites.svg#arrow-right"></use>
-														</svg></a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-pagination"></div>
-								</div>
-							</aside>
-						</article>
-					</div>
-				</div>
-			</main>
-			<footer class="footer">
-				<div class="container"><a class="logo logo--footer" href="home.html"><img src="images/logo-white.svg" alt="RefugeeHomeNL logo." width="122" height="70"></a>
-					<div class="footer__row">
-						<div class="footer__col-left">
-							<p>RefugeeHomeNL is ontstaan als samenwerkingsverband tussen het Rode Kruis, het Leger des Heils, VluchtelingenWerk en Takecarebnb op voorspraak van het Ministerie van Justitie en Veiligheid. Met onze aanpak biedt RefugeeHomeNL een humaan alternatief voor noodopvang en een duurzaam verblijf bij een particulier.</p>
-							<ul class="footer__partners">
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/rodekruis-color.svg" alt="Rode Kruis." width="147" height="74"></a></li>
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/vluchtelingenwerk.svg" alt="VluchtelingenWerk Nederland." width="86" height="57"></a></li>
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/legerdesheils-color.svg" alt="Leger des Heils." width="60" height="63"></a></li>
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/takecarebnb-color.svg" alt="Takecarebnb." width="115" height="60"></a></li>
-								<li class="footer__partners-item"><a href="/"><img class="footer__partners-image" src="images/mjv-color.png" alt="Ministerie van Justitie en Veiligheid." width="135" height="65"></a></li>
-							</ul>
-						</div>
-						<div class="footer__col-right">
-							<div class="footer__social">
-								<h3>Volg ons op Facebook</h3>
-								<ul class="social-links">
-									<li class="social-links__item">
-										<button class="social-links__link" type="button">
-											<svg class="fb">
-												<use xlink:href="./images/sprites.svg#fb"></use>
-											</svg>
-										</button>
-									</li>
-								</ul>
-							</div>
-							<ul class="footer__links">
-								<li><a href="/">Privacy statement</a></li>
-								<li><a href="/">Cookies</a></li>
-								<li><a href="/">Disclaimer</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="footer__copy">
-						<p><span>Copyright © 2022-2023&nbsp;</span><span>Het Nederlandse Rode Kruis.&nbsp;</span><span>All rights reserved.</span></p>
-					</div>
-				</div>
-			</footer>
-		</div><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-		<script src="./js/vendor.js?v=1692563730753"></script>
-		<script src="./js/main.js?v=1692563730753"></script>
-	</body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="News detail">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="News detail">
+    <title>News detail</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./css/main.css?v=1702370890047">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__menu-toggle">
+                    <button class="menu-button js-toggle-menu" type="button"><span> </span><span> </span><span></span></button>
+                </div>
+                <div class="header__inner">
+                    <a class="logo" href="home.html">
+                        <img src="images/logo.svg" alt="RefugeeHomeNL logo." width="122" height="70">
+                    </a>
+                    <div class="header__menu">
+                        <nav class="navbar" aria-label="main navigation">
+                            <ul class="navbar__list">
+                                <li class="current-menu-item">
+                                    <a class="navbar__link" href="home.html">Home</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="news.html">Nieuws</a>
+                                </li>
+                                <li>
+                                    <div class="dropdown dropdown--nav-cards">
+                                        <button class="navbar__link dropdown-link" data-toggle="dropdown">Vraag &amp; antwoord<span class="dropdown-icon">
+                                                <svg>
+                                                    <use xlink:href="./images/sprites.svg#chevron-down"></use>
+                                                </svg>
+                                            </span></button>
+                                        <div class="dropdown-menu">
+                                            <div class="nav-cards">
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" href="/" title="Jij als gastgezin">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Jij als gastgezin</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" href="/" title="Je gast">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Je gast</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" href="/" title="Taal &amp; cultuur">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Taal &amp; cultuur</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" href="/" title="Zorg &amp; Welzijn">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Zorg &amp; Welzijn</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" href="/" title="Werk/ onderwijs">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Werk/ onderwijs</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" href="/" title="Financiële zaken">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Financiële zaken</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" href="/" title="Vertrek">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Vertrek</p>
+                                                    </a>
+                                                </div>
+                                                <div class="nav-card">
+                                                    <a class="nav-card__link" href="/" title="Over RHNL">
+                                                        <img src="./images/news.jpg" alt="" width="152" height="165" />
+                                                        <p>Over RHNL</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="downloads.html">Downloads</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="about.html">Over ons</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header__language">
+                    <div class="dropdown">
+                        <button class="button dropdown-toggle" data-toggle="dropdown"><span class="dropdown-icon">
+                                <svg>
+                                    <use xlink:href="./images/sprites.svg#chevron-down"></use>
+                                </svg>
+                            </span><span class="dropdown-toggle__icon">
+                                <svg>
+                                    <use xlink:href="./images/sprites.svg#globe"></use>
+                                </svg>
+                            </span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--desktop">Nederlands</span><span class="dropdown-toggle__lang-title dropdown-toggle__lang-title--mobile">NL</span></button>
+                        <div class="dropdown-menu">
+                            <a href="">
+                                <div class="dropdown-toggle__icon-flag">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#nl"></use>
+                                    </svg>
+                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop current-lang">Nederlands</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile current-lang">NL</span>
+                            </a>
+                            <a href="">
+                                <div class="dropdown-toggle__icon-flag">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#uk"></use>
+                                    </svg>
+                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">English</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">EN</span>
+                            </a>
+                            <a href="">
+                                <div class="dropdown-toggle__icon-flag">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#ua"></use>
+                                    </svg>
+                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Українська</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">UKR</span>
+                            </a>
+                            <a href="">
+                                <div class="dropdown-toggle__icon-flag">
+                                    <svg>
+                                        <use xlink:href="./images/sprites.svg#ru"></use>
+                                    </svg>
+                                </div><span class="dropdown-toggle__lang dropdown-toggle__lang--desktop">Русский</span><span class="dropdown-toggle__lang dropdown-toggle__lang--mobile">RUS</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="breadcrumbs">
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item">
+                            <a class="breadcrumb__link" href="#" title="Home">Home</a>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <a class="breadcrumb__link" href="#" title="Nieuws">Nieuws</a>
+                        </li>
+                        <li class="breadcrumb__item"><span>Donec pretium hendrerit magna</span></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="section news-detail">
+                <div class="container">
+                    <article class="news-detail__head">
+                        <div class="news-detail__image">
+                            <img src="images/news-detail.jpg" alt="alt.">
+                        </div>
+                        <div class="news-detail__info">
+                            <h1> <span>Donec pretium hendrerit magna</span></h1>
+                            <div class="news-detail__date"><span>Published on:&nbsp;</span><span>2 May 2023</span></div>
+                        </div>
+                    </article>
+                    <article class="section news-detail__row">
+                        <div class="news-detail__text">
+                            <p> <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra augue urna, id cursus lectus auctor in. Maecenas nisl libero, scelerisque quis aliquam sed, bibendum sit amet mi. Curabitur vehicula, est sit amet hendrerit facilisis, justo nulla laoreet sapien, sit amet iaculis justo nisi at purus.</strong></p>
+                            <p>liquam fermentum vestibulum mauris, vel tempus tortor luctus gravida. Sed eu volutpat erat. Suspendisse scelerisque diam et scelerisque vehicula. Suspendisse sit amet vehicula ligula. Nam bibendum sapien vel placerat tristique. Integer rutrum efficitur ultrices. Praesent sit amet lacus tortor. Sed scelerisque ex augue. Vivamus fermentum dui quis nisi feugiat rutrum. </p>
+                            <p>Integer ac varius dolor. Sed posuere vulputate condimentum. Fusce mollis massa ut enim fermentum, at interdum erat eleifend. Nunc condimentum vitae neque sed pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed blandit tincidunt libero nec faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus tempor libero orci, in pharetra erat pharetra sollicitudin. Pellentesque dictum nulla eros, quis lacinia purus tincidunt ac. Nam at magna ligula. Maecenas in sem a sem elementum iaculis vel ac quam. Proin tristique arcu ante, sed consequat tortor interdum et. Mauris feugiat risus at interdum tincidunt. Morbi vitae turpis maximus, elementum felis id, consequat sapien.</p>
+                            <p>Proin euismod lacus elit, sed ultrices neque maximus in. Donec pretium hendrerit magna, non hendrerit orci tempor sed. Suspendisse justo lacus, ullamcorper sit amet semper nec, interdum et nulla. Nullam nec sapien neque. Fusce sit amet nulla vitae lacus rutrum suscipit. Nam tempor metus sit amet nisl condimentum, quis accumsan erat consequat. Duis eget lacinia libero. Praesent turpis ante, eleifend nec libero a, venenatis sollicitudin lorem. Nam auctor, erat eu facilisis accumsan, velit turpis facilisis sapien, eu vulputate justo nisi vel massa. Ut et mauris quam. Suspendisse sed tortor ac augue efficitur euismod.</p>
+                            <p>Nulla facilisi. Morbi scelerisque velit sit amet felis sodales rutrum. Praesent mollis rutrum lorem non sagittis. Nullam libero tortor, aliquam at dictum et, fringilla auctor arcu. Cras auctor libero ac tellus rhoncus, sit amet condimentum nibh porta. Etiam euismod leo quis placerat tempor. Mauris porta consequat scelerisque. Vestibulum lorem mauris, accumsan eu nisl eget, viverra posuere velit. Integer quis placerat neque. Phasellus gravida ex erat, sit amet tincidunt quam placerat sed. Suspendisse potenti. Cras nisl tellus, mollis nec turpis eu, vehicula volutpat mauris.</p>
+                            <div class="news-detail__share">
+                                <h4>Share this article:</h4>
+                                <ul class="social-links social-links--share">
+                                    <li class="social-links__item">
+                                        <button class="social-links__link" type="button">
+                                            <svg class="fb">
+                                                <use xlink:href="./images/sprites.svg#fb"></use>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                    <li class="social-links__item">
+                                        <button class="social-links__link" type="button">
+                                            <svg class="tw">
+                                                <use xlink:href="./images/sprites.svg#tw"></use>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                    <li class="social-links__item">
+                                        <button class="social-links__link" type="button">
+                                            <svg class="mail">
+                                                <use xlink:href="./images/sprites.svg#mail"></use>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <button class="news-detail__copy" type="button">Copy article link</button>
+                            </div>
+                        </div>
+                        <aside class="recent-news background-muted">
+                            <div class="swiper recent-news-slider">
+                                <h2>Recente nieuwsberichten</h2>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card-news">
+                                            <div class="card-news__image">
+                                                <img src="./images/news.jpg" alt="" width="436" height="251" />
+                                                <div class="card-news__label"><span>02-05-2023</span></div>
+                                            </div>
+                                            <div class="card-news__content">
+                                                <div class="card-news__text">
+                                                    <h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum</p>
+                                                </div>
+                                                <a class="button button--with-arrow" href="/news-detail.html">Lees verder
+                                                    <svg>
+                                                        <use xlink:href="./images/sprites.svg#arrow-right"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-news">
+                                            <div class="card-news__image">
+                                                <img src="./images/news.jpg" alt="" width="436" height="251" />
+                                                <div class="card-news__label"><span>02-05-2023</span></div>
+                                            </div>
+                                            <div class="card-news__content">
+                                                <div class="card-news__text">
+                                                    <h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum</p>
+                                                </div>
+                                                <a class="button button--with-arrow" href="/news-detail.html">Lees verder
+                                                    <svg>
+                                                        <use xlink:href="./images/sprites.svg#arrow-right"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-news">
+                                            <div class="card-news__image">
+                                                <img src="./images/news.jpg" alt="" width="436" height="251" />
+                                                <div class="card-news__label"><span>02-05-2023</span></div>
+                                            </div>
+                                            <div class="card-news__content">
+                                                <div class="card-news__text">
+                                                    <h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum</p>
+                                                </div>
+                                                <a class="button button--with-arrow" href="/news-detail.html">Lees verder
+                                                    <svg>
+                                                        <use xlink:href="./images/sprites.svg#arrow-right"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-news">
+                                            <div class="card-news__image">
+                                                <img src="./images/news.jpg" alt="" width="436" height="251" />
+                                                <div class="card-news__label"><span>02-05-2023</span></div>
+                                            </div>
+                                            <div class="card-news__content">
+                                                <div class="card-news__text">
+                                                    <h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum</p>
+                                                </div>
+                                                <a class="button button--with-arrow" href="/news-detail.html">Lees verder
+                                                    <svg>
+                                                        <use xlink:href="./images/sprites.svg#arrow-right"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-news">
+                                            <div class="card-news__image">
+                                                <img src="./images/news.jpg" alt="" width="436" height="251" />
+                                                <div class="card-news__label"><span>02-05-2023</span></div>
+                                            </div>
+                                            <div class="card-news__content">
+                                                <div class="card-news__text">
+                                                    <h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum</p>
+                                                </div>
+                                                <a class="button button--with-arrow" href="/news-detail.html">Lees verder
+                                                    <svg>
+                                                        <use xlink:href="./images/sprites.svg#arrow-right"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-news">
+                                            <div class="card-news__image">
+                                                <img src="./images/news.jpg" alt="" width="436" height="251" />
+                                                <div class="card-news__label"><span>02-05-2023</span></div>
+                                            </div>
+                                            <div class="card-news__content">
+                                                <div class="card-news__text">
+                                                    <h3>Nullam nec sapien neque, fusce sit amet nulla vitae lacus rutrum suscipit</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet laoreet leo, vitae suscipit lectus interdum at. Quisque vitae velit a elit consectetur facilisis nec eget ante. Sed posuere vulputate condimentum</p>
+                                                </div>
+                                                <a class="button button--with-arrow" href="/news-detail.html">Lees verder
+                                                    <svg>
+                                                        <use xlink:href="./images/sprites.svg#arrow-right"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </aside>
+                    </article>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <a class="logo logo--footer" href="home.html">
+                    <img src="images/logo-white.svg" alt="RefugeeHomeNL logo." width="122" height="70">
+                </a>
+                <div class="footer__row">
+                    <div class="footer__col-left">
+                        <p>RefugeeHomeNL is ontstaan als samenwerkingsverband tussen het Rode Kruis, het Leger des Heils, VluchtelingenWerk en Takecarebnb op voorspraak van het Ministerie van Justitie en Veiligheid. Met onze aanpak biedt RefugeeHomeNL een humaan alternatief voor noodopvang en een duurzaam verblijf bij een particulier.</p>
+                        <ul class="footer__partners">
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/rodekruis-color.svg" alt="Rode Kruis." width="147" height="74">
+                                </a>
+                            </li>
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/vluchtelingenwerk.svg" alt="VluchtelingenWerk Nederland." width="86" height="57">
+                                </a>
+                            </li>
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/legerdesheils-color.svg" alt="Leger des Heils." width="60" height="63">
+                                </a>
+                            </li>
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/takecarebnb-color.svg" alt="Takecarebnb." width="115" height="60">
+                                </a>
+                            </li>
+                            <li class="footer__partners-item">
+                                <a href="/">
+                                    <img class="footer__partners-image" src="images/mjv-color.png" alt="Ministerie van Justitie en Veiligheid." width="135" height="65">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col-right">
+                        <div class="footer__social">
+                            <h3>Volg ons op Facebook</h3>
+                            <ul class="social-links">
+                                <li class="social-links__item">
+                                    <button class="social-links__link" type="button">
+                                        <svg class="fb">
+                                            <use xlink:href="./images/sprites.svg#fb"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="footer__links">
+                            <li>
+                                <a href="/">Privacy statement</a>
+                            </li>
+                            <li>
+                                <a href="/">Cookies</a>
+                            </li>
+                            <li>
+                                <a href="/">Disclaimer</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__copy">
+                    <p><span>Copyright © 2022-2023&nbsp;</span><span>Het Nederlandse Rode Kruis.&nbsp;</span><span>All rights reserved.</span></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/vendor.js?v=1702370890048"></script>
+    <script src="./js/main.js?v=1702370890048"></script>
+</body>
 </html>

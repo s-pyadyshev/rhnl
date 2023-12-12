@@ -1673,6 +1673,12 @@ video {
   height: 100%;
 }
 
+.svg-inverse {
+  fill: none;
+  stroke: currentColor;
+  color: white;
+}
+
 h1,
 h2,
 h3,
